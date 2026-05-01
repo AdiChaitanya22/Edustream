@@ -180,11 +180,11 @@ export class AuthService {
     };
 
     const accessToken = this.jwtService.sign(payload, {
-      expiresIn: this.ACCESS_TOKEN_EXPIRATION,
+      expiresIn: this.ACCESS_TOKEN_EXPIRATION as any,
     });
 
     const refreshToken = this.jwtService.sign(payload, {
-      expiresIn: this.REFRESH_TOKEN_EXPIRATION,
+      expiresIn: this.REFRESH_TOKEN_EXPIRATION as any,
     });
 
     this.logger.debug(`Tokens generated for user: ${userId}`);
