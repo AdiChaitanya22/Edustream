@@ -81,6 +81,7 @@ export class UserResponseDto {
   bio?: string;
   subscriptionTier: 'free' | 'premium';
   lastLogin?: Date;
+  enrolledCourses?: any[];
   createdAt: Date;
   updatedAt: Date;
 }

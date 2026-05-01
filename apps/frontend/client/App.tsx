@@ -10,6 +10,8 @@ import Index from "./pages/Index";
 import Browse from "./pages/Browse";
 import MyLearning from "./pages/MyLearning";
 import Watch from "./pages/Watch";
+import Auth from "./pages/Auth";
+import Admin from "./pages/Admin";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +26,8 @@ export default function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/auth" element={<Auth />} />
+            <Route path="/admin" element={<Admin />} />
             <Route path="/browse" element={<Browse />} />
             <Route path="/my-learning" element={<MyLearning />} />
             <Route path="/watch/:id" element={<Watch />} />

@@ -41,6 +41,9 @@ export class User extends Document {
   @Prop({ enum: ['free', 'premium'], default: 'free' })
   subscriptionTier: 'free' | 'premium';
 
+  @Prop({ type: [{ courseId: String, title: String, progress: Number, image: String }], default: [] })
+  enrolledCourses: any[];
+
   @Prop({ type: String, nullable: true, select: false })
   refreshToken?: string;
 

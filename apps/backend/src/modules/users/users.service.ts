@@ -29,11 +29,17 @@ export class UsersService {
     const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(createUserDto.password, salt);
 
-    // Create user
+    // Create user with dummy enrolled courses
+    const dummyCourses = [
+      { courseId: 'react-basics', title: 'React Basics', progress: 0, image: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800' },
+      { courseId: 'python-beginners', title: 'Python for Beginners', progress: 0, image: 'https://images.unsplash.com/photo-1526379095098-d400fd0bfce8?w=800' }
+    ];
+
     const user = new this.userModel({
       ...createUserDto,
       password: hashedPassword,
       role: createUserDto.role || UserRole.STUDENT,
+      enrolledCourses: dummyCourses
     });
 
     const savedUser = await user.save();
@@ -169,6 +175,7 @@ export class UsersService {
       avatar: user.avatar,
       bio: user.bio,
       subscriptionTier: user.subscriptionTier,
+      enrolledCourses: user.enrolledCourses,
       lastLogin: user.lastLogin,
       createdAt: user.createdAt,
       updatedAt: user.updatedAt,

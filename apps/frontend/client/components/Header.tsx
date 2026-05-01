@@ -39,6 +39,12 @@ export default function Header() {
             >
               My Learning
             </Link>
+            <Link
+              to="/admin"
+              className="text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+            >
+              Admin
+            </Link>
           </nav>
 
           {/* Right Actions */}
@@ -49,9 +55,12 @@ export default function Header() {
             <button className="hidden sm:inline-flex h-10 w-10 rounded-full bg-card hover:bg-card/80 transition-colors items-center justify-center">
               <Bell className="h-5 w-5 text-foreground/70" />
             </button>
-            <button className="h-10 w-10 rounded-full bg-gradient-to-br from-primary via-secondary to-accent flex items-center justify-center hover:shadow-lg hover:shadow-primary/25 transition-all">
+            <Link 
+              to="/auth"
+              className="h-10 w-10 rounded-full bg-gradient-to-br from-primary via-secondary to-accent flex items-center justify-center hover:shadow-lg hover:shadow-primary/25 transition-all"
+            >
               <User className="h-5 w-5 text-primary-foreground" />
-            </button>
+            </Link>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="md:hidden h-10 w-10 rounded-full bg-card hover:bg-card/80 transition-colors flex items-center justify-center"
@@ -81,6 +90,12 @@ export default function Header() {
               className="px-4 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors hover:bg-card/50 rounded-lg"
             >
               My Learning
+            </Link>
+            <Link
+              to="/admin"
+              className="px-4 py-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors hover:bg-card/50 rounded-lg"
+            >
+              Admin
             </Link>
           </nav>
         )}
