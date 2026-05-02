@@ -176,7 +176,6 @@ export class AuthService {
       email,
       role,
       iat: Math.floor(Date.now() / 1000),
-      exp: 0, // Will be set by JWT library
     };
 
     const accessToken = this.jwtService.sign(payload, {

@@ -9,7 +9,7 @@ import { MongooseModuleOptions, MongooseOptionsFactory } from '@nestjs/mongoose'
 export class DatabaseConfig implements MongooseOptionsFactory {
   createMongooseOptions(): MongooseModuleOptions {
     const uri =
-      process.env.MONGODB_URI || 'mongodb://localhost:27017/edustream';
+      process.env.MONGODB_URI || 'mongodb://admin:admin123@localhost:27017/edustream?authSource=admin';
     const retryAttempts = 5;
     const retryDelay = 3000;
 

@@ -414,135 +414,78 @@ Failed to start application: Error: listen EADDRINUSE: address already in use ::
   address: '::',
   port: 3000
 }
-:14:28 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/analytics/track, POST} route[39m[38;5;3m +0ms[39m
-[32m[Nest] 31171  - [39m05/02/2026, 2:14:28 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/analytics/video/:videoId/metrics, GET} route[39m[38;5;3m +0ms[39m
-[32m[Nest] 31171  - [39m05/02/2026, 2:14:29 PM [32m    LOG[39m [38;5;3m[RabbitMQService] [39m[32m✓ RabbitMQ connected[39m
-[32m[Nest] 31171  - [39m05/02/2026, 2:14:29 PM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +4ms[39m
-[31m[Nest] 31171  - [39m05/02/2026, 2:14:29 PM [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::3000[39m[38;5;3m +5ms[39m
-Failed to start application: Error: listen EADDRINUSE: address already in use :::3000
-    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
-    at listenInCluster (node:net:1965:12)
-    at Server.listen (node:net:2067:7)
-    at ExpressAdapter.listen (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/@nestjs/platform-express/adapters/express-adapter.js:115:32)
-    at /Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/@nestjs/core/nest-application.js:188:30
-    at new Promise (<anonymous>)
-    at NestApplication.listen (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/@nestjs/core/nest-application.js:178:16)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async bootstrap (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/apps/backend/dist/main.js:41:5) {
-  code: 'EADDRINUSE',
-  errno: -48,
-  syscall: 'listen',
-  address: '::',
-  port: 3000
-}
-[2J[3J[H[[90m2:14:46 PM[0m] File change detected. Starting incremental compilation...
+[2J[3J[H[[90m4:16:48 PM[0m] File change detected. Starting incremental compilation...
 
-[96msrc/modules/notifications/notification.service.ts[0m:[93m65[0m:[93m31[0m - [91merror[0m[90m TS2339: [0mProperty 'createdAt' does not exist on type 'Notification'.
+[[90m4:16:49 PM[0m] Found 0 errors. Watching for file changes.
 
-[7m65[0m       createdAt: notification.createdAt,
-[7m  [0m [91m                              ~~~~~~~~~[0m
-
-[[90m2:14:47 PM[0m] Found 1 error. Watching for file changes.
-
-[2J[3J[H[[90m2:15:00 PM[0m] File change detected. Starting incremental compilation...
-
-[96msrc/modules/notifications/notification.service.ts[0m:[93m65[0m:[93m31[0m - [91merror[0m[90m TS2339: [0mProperty 'createdAt' does not exist on type 'Notification'.
-
-[7m65[0m       createdAt: notification.createdAt,
-[7m  [0m [91m                              ~~~~~~~~~[0m
-
-[[90m2:15:02 PM[0m] Found 1 error. Watching for file changes.
-
-[2J[3J[H[[90m2:15:13 PM[0m] File change detected. Starting incremental compilation...
-
-[96msrc/modules/notifications/notification.service.ts[0m:[93m65[0m:[93m31[0m - [91merror[0m[90m TS2339: [0mProperty 'createdAt' does not exist on type 'Notification'.
-
-[7m65[0m       createdAt: notification.createdAt,
-[7m  [0m [91m                              ~~~~~~~~~[0m
-
-[[90m2:15:14 PM[0m] Found 1 error. Watching for file changes.
-
-[2J[3J[H[[90m2:15:46 PM[0m] File change detected. Starting incremental compilation...
-
-[96msrc/modules/notifications/notification.service.ts[0m:[93m65[0m:[93m31[0m - [91merror[0m[90m TS2339: [0mProperty 'createdAt' does not exist on type 'Notification'.
-
-[7m65[0m       createdAt: notification.createdAt,
-[7m  [0m [91m                              ~~~~~~~~~[0m
-
-[[90m2:15:48 PM[0m] Found 1 error. Watching for file changes.
-
-[2J[3J[H[[90m2:39:05 PM[0m] File change detected. Starting incremental compilation...
-
-[[90m2:39:09 PM[0m] Found 0 errors. Watching for file changes.
-
-(node:33956) [MONGOOSE] Warning: Duplicate schema index on {"email":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(node:35684) [MONGOOSE] Warning: Duplicate schema index on {"email":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
 (Use `node --trace-warnings ...` to show where the warning was created)
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:14 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +32ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mRabbitMQConfig dependencies initialized[39m[38;5;3m +0ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPassportModule dependencies initialized[39m[38;5;3m +0ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +18ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mThrottlerModule dependencies initialized[39m[38;5;3m +1ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mJwtModule dependencies initialized[39m[38;5;3m +0ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +3ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseCoreModule dependencies initialized[39m[38;5;3m +213ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +3ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +6ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +0ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +2ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +0ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +0ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mUsersModule dependencies initialized[39m[38;5;3m +3ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mContentModule dependencies initialized[39m[38;5;3m +0ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAnalyticsModule dependencies initialized[39m[38;5;3m +0ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mNotificationsModule dependencies initialized[39m[38;5;3m +1ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mEncodingModule dependencies initialized[39m[38;5;3m +0ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAuthModule dependencies initialized[39m[38;5;3m +0ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mStreamingModule dependencies initialized[39m[38;5;3m +0ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mHealthController {/health}:[39m[38;5;3m +241ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/health, GET} route[39m[38;5;3m +3ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAuthController {/auth}:[39m[38;5;3m +1ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/register, POST} route[39m[38;5;3m +0ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/login, POST} route[39m[38;5;3m +0ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/refresh, POST} route[39m[38;5;3m +6ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/logout, POST} route[39m[38;5;3m +1ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/me, GET} route[39m[38;5;3m +0ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mUsersController {/users}:[39m[38;5;3m +0ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users/profile, GET} route[39m[38;5;3m +9ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users/profile, PUT} route[39m[38;5;3m +1ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users/:id, GET} route[39m[38;5;3m +0ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users, GET} route[39m[38;5;3m +1ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users/:id/role, PATCH} route[39m[38;5;3m +0ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users/:id, DELETE} route[39m[38;5;3m +0ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mContentController {/content}:[39m[38;5;3m +0ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content, POST} route[39m[38;5;3m +0ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content/:id, GET} route[39m[38;5;3m +0ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content/:id, PUT} route[39m[38;5;3m +0ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content/:id, DELETE} route[39m[38;5;3m +0ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content, GET} route[39m[38;5;3m +0ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content/trending/list, GET} route[39m[38;5;3m +0ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content/user/:userId, GET} route[39m[38;5;3m +0ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mStreamingController {/streaming}:[39m[38;5;3m +0ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/streaming/:videoId/manifest.m3u8, GET} route[39m[38;5;3m +0ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/streaming/:videoId/:quality/playlist.m3u8, GET} route[39m[38;5;3m +0ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/streaming/session/start, POST} route[39m[38;5;3m +1ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/streaming/session/heartbeat, POST} route[39m[38;5;3m +0ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/streaming/session/end, POST} route[39m[38;5;3m +0ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/streaming/quality/recommend, GET} route[39m[38;5;3m +0ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mEncodingController {/encoding}:[39m[38;5;3m +0ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/encoding/video/:videoId, GET} route[39m[38;5;3m +0ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/encoding/:id, GET} route[39m[38;5;3m +0ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAnalyticsController {/analytics}:[39m[38;5;3m +0ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/analytics/track, POST} route[39m[38;5;3m +0ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/analytics/video/:videoId/metrics, GET} route[39m[38;5;3m +0ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mNotificationController {/notifications}:[39m[38;5;3m +0ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/notifications, POST} route[39m[38;5;3m +0ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/notifications, GET} route[39m[38;5;3m +0ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/notifications/:id/read, PATCH} route[39m[38;5;3m +0ms[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[RabbitMQService] [39m[32m✓ RabbitMQ connected[39m
-[32m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1ms[39m
-[31m[Nest] 33956  - [39m05/02/2026, 2:39:15 PM [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::3000[39m[38;5;3m +1ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:51 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:51 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +41ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:51 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mRabbitMQConfig dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:51 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPassportModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:51 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +17ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:51 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mThrottlerModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:51 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mJwtModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:51 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:51 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:51 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseCoreModule dependencies initialized[39m[38;5;3m +151ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:51 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:51 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:51 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:51 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:51 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:51 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:51 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mUsersModule dependencies initialized[39m[38;5;3m +4ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:51 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mContentModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:51 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAnalyticsModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:51 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mNotificationsModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:51 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mEncodingModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:51 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAuthModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:51 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mStreamingModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:52 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mHealthController {/health}:[39m[38;5;3m +119ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:52 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/health, GET} route[39m[38;5;3m +3ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:52 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAuthController {/auth}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:52 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/register, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:52 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/login, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:52 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/refresh, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:52 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/logout, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:52 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/me, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:52 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mUsersController {/users}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:52 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users/profile, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:52 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users/profile, PUT} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:52 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:52 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:52 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users/:id/role, PATCH} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:52 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users/:id, DELETE} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:52 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mContentController {/content}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:52 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:52 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:52 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content/:id, PUT} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:52 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content/:id, DELETE} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:52 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:52 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content/trending/list, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:52 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content/user/:userId, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:52 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mStreamingController {/streaming}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:52 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/streaming/:videoId/manifest.m3u8, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:52 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/streaming/:videoId/:quality/playlist.m3u8, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:52 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/streaming/session/start, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:52 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/streaming/session/heartbeat, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:52 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/streaming/session/end, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:52 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/streaming/quality/recommend, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:52 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mEncodingController {/encoding}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:52 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/encoding/video/:videoId, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:52 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/encoding/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:52 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAnalyticsController {/analytics}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:52 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/analytics/track, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:52 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/analytics/video/:videoId/metrics, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:52 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mNotificationController {/notifications}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:52 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/notifications, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:52 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/notifications, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:52 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/notifications/:id/read, PATCH} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:52 PM [32m    LOG[39m [38;5;3m[RabbitMQService] [39m[32m✓ RabbitMQ connected[39m
+[32m[Nest] 35684  - [39m05/02/2026, 4:16:52 PM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +3ms[39m
+[31m[Nest] 35684  - [39m05/02/2026, 4:16:52 PM [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::3000[39m[38;5;3m +6ms[39m
 Failed to start application: Error: listen EADDRINUSE: address already in use :::3000
     at Server.setupListenHandle [as _listen2] (node:net:1908:16)
     at listenInCluster (node:net:1965:12)
@@ -559,3 +502,209 @@ Failed to start application: Error: listen EADDRINUSE: address already in use ::
   address: '::',
   port: 3000
 }
+[2J[3J[H[[90m4:21:03 PM[0m] File change detected. Starting incremental compilation...
+
+[96msrc/modules/auth/auth.service.ts[0m:[93m174[0m:[93m11[0m - [91merror[0m[90m TS2741: [0mProperty 'exp' is missing in type '{ sub: string; email: string; role: UserRole; iat: number; }' but required in type 'ITokenPayload'.
+
+[7m174[0m     const payload: ITokenPayload = {
+[7m   [0m [91m          ~~~~~~~[0m
+
+  [96msrc/types/user.types.ts[0m:[93m32[0m:[93m3[0m
+    [7m32[0m   exp: number;
+    [7m  [0m [96m  ~~~[0m
+    'exp' is declared here.
+
+[[90m4:21:05 PM[0m] Found 1 error. Watching for file changes.
+
+[2J[3J[H[[90m4:21:26 PM[0m] File change detected. Starting incremental compilation...
+
+[[90m4:21:29 PM[0m] Found 0 errors. Watching for file changes.
+
+(node:35996) [MONGOOSE] Warning: Duplicate schema index on {"email":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:30 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:30 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +28ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:30 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mRabbitMQConfig dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:30 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPassportModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:30 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +31ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:30 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mThrottlerModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:30 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mJwtModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:30 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:30 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseCoreModule dependencies initialized[39m[38;5;3m +67ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +2ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mUsersModule dependencies initialized[39m[38;5;3m +4ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mContentModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAnalyticsModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mNotificationsModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mEncodingModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAuthModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mStreamingModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mHealthController {/health}:[39m[38;5;3m +99ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/health, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAuthController {/auth}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/register, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/login, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/refresh, POST} route[39m[38;5;3m +7ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/logout, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/me, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mUsersController {/users}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users/profile, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users/profile, PUT} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users, GET} route[39m[38;5;3m +7ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users/:id/role, PATCH} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users/:id, DELETE} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mContentController {/content}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content/:id, PUT} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content/:id, DELETE} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content/trending/list, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content/user/:userId, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mStreamingController {/streaming}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/streaming/:videoId/manifest.m3u8, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/streaming/:videoId/:quality/playlist.m3u8, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/streaming/session/start, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/streaming/session/heartbeat, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/streaming/session/end, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/streaming/quality/recommend, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mEncodingController {/encoding}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/encoding/video/:videoId, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/encoding/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAnalyticsController {/analytics}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/analytics/track, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/analytics/video/:videoId/metrics, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mNotificationController {/notifications}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/notifications, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/notifications, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/notifications/:id/read, PATCH} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RabbitMQService] [39m[32m✓ RabbitMQ connected[39m
+[32m[Nest] 35996  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1ms[39m
+[31m[Nest] 35996  - [39m05/02/2026, 4:21:31 PM [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::3000[39m[38;5;3m +15ms[39m
+Failed to start application: Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at ExpressAdapter.listen (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/@nestjs/platform-express/adapters/express-adapter.js:115:32)
+    at /Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/@nestjs/core/nest-application.js:188:30
+    at new Promise (<anonymous>)
+    at NestApplication.listen (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/@nestjs/core/nest-application.js:178:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async bootstrap (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/apps/backend/dist/main.js:41:5) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+ 4:16:52 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/encoding/video/:videoId, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35649  - [39m05/02/2026, 4:16:52 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/encoding/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35649  - [39m05/02/2026, 4:16:52 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAnalyticsController {/analytics}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 35649  - [39m05/02/2026, 4:16:52 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/analytics/track, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35649  - [39m05/02/2026, 4:16:52 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/analytics/video/:videoId/metrics, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35649  - [39m05/02/2026, 4:16:52 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mNotificationController {/notifications}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 35649  - [39m05/02/2026, 4:16:52 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/notifications, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35649  - [39m05/02/2026, 4:16:52 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/notifications, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 35649  - [39m05/02/2026, 4:16:52 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/notifications/:id/read, PATCH} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35649  - [39m05/02/2026, 4:16:52 PM [32m    LOG[39m [38;5;3m[RabbitMQService] [39m[32m✓ RabbitMQ connected[39m
+[32m[Nest] 35649  - [39m05/02/2026, 4:16:52 PM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +3ms[39m
+[32m[Nest] 35649  - [39m05/02/2026, 4:16:52 PM [32m    LOG[39m [38;5;3m[Bootstrap] [39m[32m✓ EduStream API running on http://localhost:3000[39m
+[32m[Nest] 35649  - [39m05/02/2026, 4:16:52 PM [32m    LOG[39m [38;5;3m[Bootstrap] [39m[32m✓ API Docs: http://localhost:3000/api/docs[39m
+[32m[Nest] 35649  - [39m05/02/2026, 4:16:52 PM [32m    LOG[39m [38;5;3m[Bootstrap] [39m[32m✓ Health Check: http://localhost:3000/health[39m
+[32m[Nest] 35649  - [39m05/02/2026, 4:16:57 PM [32m    LOG[39m [38;5;3m[EncodingConsumer] [39m[32mEncoding consumer started, listening on queue: video-encoding[39m
+[2J[3J[H[[90m4:21:03 PM[0m] File change detected. Starting incremental compilation...
+
+[96msrc/modules/auth/auth.service.ts[0m:[93m174[0m:[93m11[0m - [91merror[0m[90m TS2741: [0mProperty 'exp' is missing in type '{ sub: string; email: string; role: UserRole; iat: number; }' but required in type 'ITokenPayload'.
+
+[7m174[0m     const payload: ITokenPayload = {
+[7m   [0m [91m          ~~~~~~~[0m
+
+  [96msrc/types/user.types.ts[0m:[93m32[0m:[93m3[0m
+    [7m32[0m   exp: number;
+    [7m  [0m [96m  ~~~[0m
+    'exp' is declared here.
+
+[[90m4:21:05 PM[0m] Found 1 error. Watching for file changes.
+
+[2J[3J[H[[90m4:21:26 PM[0m] File change detected. Starting incremental compilation...
+
+[[90m4:21:29 PM[0m] Found 0 errors. Watching for file changes.
+
+(node:35997) [MONGOOSE] Warning: Duplicate schema index on {"email":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:30 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:30 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +17ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:30 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mRabbitMQConfig dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:30 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPassportModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:30 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +72ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:30 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mThrottlerModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:30 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mJwtModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:30 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:30 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseCoreModule dependencies initialized[39m[38;5;3m +50ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mUsersModule dependencies initialized[39m[38;5;3m +2ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mContentModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAnalyticsModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mNotificationsModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mEncodingModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAuthModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mStreamingModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mHealthController {/health}:[39m[38;5;3m +124ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/health, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAuthController {/auth}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/register, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/login, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/refresh, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/logout, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/me, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mUsersController {/users}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users/profile, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users/profile, PUT} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users/:id/role, PATCH} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users/:id, DELETE} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mContentController {/content}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content/:id, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content/:id, PUT} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content/:id, DELETE} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content/trending/list, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content/user/:userId, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mStreamingController {/streaming}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/streaming/:videoId/manifest.m3u8, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/streaming/:videoId/:quality/playlist.m3u8, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/streaming/session/start, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/streaming/session/heartbeat, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/streaming/session/end, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/streaming/quality/recommend, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mEncodingController {/encoding}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/encoding/video/:videoId, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/encoding/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAnalyticsController {/analytics}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/analytics/track, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/analytics/video/:videoId/metrics, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mNotificationController {/notifications}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/notifications, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/notifications, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/notifications/:id/read, PATCH} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[RabbitMQService] [39m[32m✓ RabbitMQ connected[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1ms[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[Bootstrap] [39m[32m✓ EduStream API running on http://localhost:3000[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[Bootstrap] [39m[32m✓ API Docs: http://localhost:3000/api/docs[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:31 PM [32m    LOG[39m [38;5;3m[Bootstrap] [39m[32m✓ Health Check: http://localhost:3000/health[39m
+[32m[Nest] 35997  - [39m05/02/2026, 4:21:36 PM [32m    LOG[39m [38;5;3m[EncodingConsumer] [39m[32mEncoding consumer started, listening on queue: video-encoding[39m

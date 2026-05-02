@@ -28,8 +28,8 @@ export interface ITokenPayload {
   sub: string;
   email: string;
   role: UserRole;
-  iat: number;
-  exp: number;
+  iat?: number;
+  exp?: number;
 }
 
 export interface IAuthResponse {
