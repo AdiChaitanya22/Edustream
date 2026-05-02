@@ -32,7 +32,7 @@ export default function Auth() {
       
       localStorage.setItem('accessToken', data.accessToken);
       toast({ title: "Welcome back!", description: "You have successfully logged in." });
-      navigate("/my-learning");
+      navigate("/dashboard");
     } catch (err: any) {
       toast({ title: "Error", description: err.message, variant: "destructive" });
     } finally {
@@ -61,7 +61,7 @@ export default function Auth() {
       
       localStorage.setItem('accessToken', data.accessToken);
       toast({ title: "Success!", description: "Account created successfully." });
-      navigate("/my-learning");
+      navigate("/dashboard");
     } catch (err: any) {
       toast({ title: "Error", description: err.message, variant: "destructive" });
     } finally {

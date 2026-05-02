@@ -12,6 +12,7 @@ import MyLearning from "./pages/MyLearning";
 import Watch from "./pages/Watch";
 import Auth from "./pages/Auth";
 import Admin from "./pages/Admin";
+import Dashboard from "./pages/Dashboard";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,6 +30,7 @@ export default function App() {
             <Route path="/auth" element={<Auth />} />
             <Route path="/admin" element={<Admin />} />
             <Route path="/browse" element={<Browse />} />
+            <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/my-learning" element={<MyLearning />} />
             <Route path="/watch/:id" element={<Watch />} />
             <Route path="*" element={<NotFound />} />

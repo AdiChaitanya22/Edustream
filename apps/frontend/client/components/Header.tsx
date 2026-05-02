@@ -36,6 +36,12 @@ export default function Header() {
               Browse
             </Link>
             <Link
+              to="/dashboard"
+              className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
+            >
+              Dashboard
+            </Link>
+            <Link
               to="/my-learning"
               className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
             >
@@ -82,6 +88,12 @@ export default function Header() {
               className="px-4 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors hover:bg-card/50 rounded-lg"
             >
               Browse
+            </Link>
+            <Link
+              to="/dashboard"
+              className="px-4 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors hover:bg-card/50 rounded-lg"
+            >
+              Dashboard
             </Link>
             <Link
               to="/my-learning"
