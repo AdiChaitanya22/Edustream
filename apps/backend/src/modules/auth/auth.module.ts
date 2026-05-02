@@ -17,7 +17,7 @@ import { UsersModule } from '../users/users.module';
     JwtModule.register({
       secret: process.env.JWT_SECRET || 'your-secret-key-change-in-production',
       signOptions: {
-        expiresIn: process.env.JWT_EXPIRATION || '7d',
+        expiresIn: (process.env.JWT_EXPIRATION || '7d') as any,
         algorithm: 'HS256',
       },
     }),
