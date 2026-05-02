@@ -32,7 +32,7 @@ export class UsersService {
     // Create user with dummy enrolled courses
     const dummyCourses = [
       { courseId: 'react-basics', title: 'React Basics', progress: 0, image: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800' },
-      { courseId: 'python-beginners', title: 'Python for Beginners', progress: 0, image: 'https://images.unsplash.com/photo-1526379095098-d400fd0bfce8?w=800' }
+      { courseId: 'python-beginners', title: 'Python for Beginners', progress: 0, image: 'https://images.unsplash.com/photo-1649180556628-9ba704115795?w=800' }
     ];
 
     const user = new this.userModel({

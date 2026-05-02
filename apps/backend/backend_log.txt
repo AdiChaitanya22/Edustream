@@ -2630,3 +2630,21 @@ Error: Cannot find module '/Users/adichaitanya/git-lab/my-first-repo/edustream/E
 }
 
 Node.js v20.20.2
+[2J[3J[H[[90m4:48:45 AM[0m] File change detected. Starting incremental compilation...
+
+[[90m4:48:53 AM[0m] Found 0 errors. Watching for file changes.
+
+node:internal/modules/cjs/loader:1210
+  throw err;
+  ^
+
+Error: Cannot find module '/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/apps/backend/dist/main'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+    at Module._load (node:internal/modules/cjs/loader:1038:27)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+    at node:internal/main/run_main_module:28:49 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v20.20.2

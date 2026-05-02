@@ -29,7 +29,7 @@ const CATEGORIES = [
 
 const continueWatching = [
   { title: "React Basics", progress: 65, image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800" },
-  { title: "Python for Beginners", progress: 40, image: "https://images.unsplash.com/photo-1526379095098-d400fd0bfce8?w=800" },
+  { title: "Python for Beginners", progress: 40, image: "https://images.unsplash.com/photo-1649180556628-9ba704115795?w=800" },
   { title: "AWS Cloud Intro", progress: 80, image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800" },
 ];
 
@@ -50,7 +50,7 @@ export default function Index() {
     : [
         { title: "JavaScript Masterclass", image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800" },
         { title: "Learn React Fast", image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800" },
-        { title: "Python AI Projects", image: "https://images.unsplash.com/photo-1526379095098-d400fd0bfce8?w=800" },
+        { title: "Python AI Projects", image: "https://images.unsplash.com/photo-1649180556628-9ba704115795?w=800" },
         { title: "Cloud Computing Basics", image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800" },
       ];
 
