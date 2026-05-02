@@ -7,6 +7,9 @@ import {
 } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
+import * as fs from 'fs';
+import * as path from 'path';
+import { v4 as uuidv4 } from 'uuid';
 import { Video } from './schemas/video.schema';
 import { CreateVideoDto, UpdateVideoDto, VideoResponseDto, VideoListQueryDto } from './dto/content.dto';
 import { VideoStatus } from '../../types/content.types';
@@ -20,12 +23,54 @@ import { RabbitMQService } from '../../config/rabbitmq.service';
 export class ContentService {
   private readonly logger = new Logger(ContentService.name);
   private readonly ENCODING_QUEUE = 'video-encoding';
+  private readonly UPLOAD_DIR = path.join(process.cwd(), 'uploads', 'videos');
 
   constructor(
     @InjectModel(Video.name) private videoModel: Model<Video>,
     private rabbitMQService: RabbitMQService,
   ) {
-    // RabbitMQService is injected via global module
+    // Ensure upload directory exists
+    if (!fs.existsSync(this.UPLOAD_DIR)) {
+      fs.mkdirSync(this.UPLOAD_DIR, { recursive: true });
+    }
+  }
+
+  /**
+   * Handle Direct Video Upload
+   */
+  async upload(
+    userId: string,
+    file: any,
+    metadata: { title: string; description?: string; courseId: string },
+  ): Promise<VideoResponseDto> {
+    if (!file) {
+      throw new BadRequestException('No video file uploaded');
+    }
+
+    const fileExt = path.extname(file.originalname);
+    const fileName = `${uuidv4()}${fileExt}`;
+    const filePath = path.join(this.UPLOAD_DIR, fileName);
+
+    // Save file
+    fs.writeFileSync(filePath, file.buffer);
+
+    const videoUrl = `/uploads/videos/${fileName}`;
+
+    const video = new this.videoModel({
+      title: metadata.title,
+      description: metadata.description,
+      courseId: metadata.courseId,
+      uploadedBy: userId,
+      status: VideoStatus.READY, // Set to READY for immediate viewing
+      originalUrl: videoUrl,
+      fileSize: file.size,
+      duration: 0, // Should ideally extract duration, but 0 for now
+    });
+
+    const savedVideo = await video.save();
+    this.logger.log(`Video uploaded and saved: ${savedVideo._id}`);
+
+    return this.toResponseDto(savedVideo);
   }
 
   /**
@@ -126,8 +171,7 @@ export class ContentService {
       .find(filter)
       .sort(search ? { score: { $meta: 'textScore' } } : { createdAt: -1 })
       .skip(skip)
-      .limit(limit)
-      .populate('uploadedBy', 'firstName lastName email');
+      .limit(limit);
 
     return videos.map((video) => this.toResponseDto(video));
   }

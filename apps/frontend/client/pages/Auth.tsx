@@ -8,11 +8,14 @@ import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { User, Lock, Mail, ArrowRight, PlayCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { API_BASE_URL } from "@/services/api";
+import { useAuthStore } from "@/store/authStore";
 
 export default function Auth() {
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
   const navigate = useNavigate();
+  const setAuth = useAuthStore((state) => state.setAuth);
 
   const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -22,7 +25,7 @@ export default function Auth() {
     const password = formData.get('password');
 
     try {
-      const res = await fetch('http://localhost:3000/auth/login', {
+      const res = await fetch(`${API_BASE_URL}/auth/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password })
@@ -30,9 +33,9 @@ export default function Auth() {
       const data = await res.json();
       if (!res.ok) throw new Error(data.message || 'Login failed');
       
-      localStorage.setItem('accessToken', data.accessToken);
+      setAuth(data);
       toast({ title: "Welcome back!", description: "You have successfully logged in." });
-      navigate("/dashboard");
+      navigate(data.user?.role === "admin" ? "/admin" : "/dashboard");
     } catch (err: any) {
       toast({ title: "Error", description: err.message, variant: "destructive" });
     } finally {
@@ -51,7 +54,7 @@ export default function Auth() {
     const lastName = rest.join(' ') || 'User';
 
     try {
-      const res = await fetch('http://localhost:3000/auth/register', {
+      const res = await fetch(`${API_BASE_URL}/auth/register`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ firstName, lastName, email, password })
@@ -59,7 +62,7 @@ export default function Auth() {
       const data = await res.json();
       if (!res.ok) throw new Error(data.message || 'Registration failed');
       
-      localStorage.setItem('accessToken', data.accessToken);
+      setAuth(data);
       toast({ title: "Success!", description: "Account created successfully." });
       navigate("/dashboard");
     } catch (err: any) {

@@ -849,3 +849,1784 @@ Failed to start application: Error: listen EADDRINUSE: address already in use ::
   address: '::',
   port: 3000
 }
+[2J[3J[H[[90m4:47:15 PM[0m] File change detected. Starting incremental compilation...
+
+[[90m4:47:35 PM[0m] Found 0 errors. Watching for file changes.
+
+[2J[3J[H[[90m4:47:50 PM[0m] File change detected. Starting incremental compilation...
+
+[[90m4:48:45 PM[0m] Found 0 errors. Watching for file changes.
+
+[2J[3J[H[[90m4:48:46 PM[0m] File change detected. Starting incremental compilation...
+
+(node:37257) [MONGOOSE] Warning: Duplicate schema index on {"email":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[Nest] 37257  - [39m05/02/2026, 4:49:36 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:49:38 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +1413ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:49:38 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mRabbitMQConfig dependencies initialized[39m[38;5;3m +35ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:49:38 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPassportModule dependencies initialized[39m[38;5;3m +336ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:49:40 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +2320ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:49:40 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mThrottlerModule dependencies initialized[39m[38;5;3m +2ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:49:40 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mJwtModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:49:40 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:49:40 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +4ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:49:52 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseCoreModule dependencies initialized[39m[38;5;3m +11644ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:49:52 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +5ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:49:52 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +27ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:49:52 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:49:52 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:49:52 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +31ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:49:52 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +4ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:49:52 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mUsersModule dependencies initialized[39m[38;5;3m +309ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:49:52 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mContentModule dependencies initialized[39m[38;5;3m +20ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:49:52 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mNotificationsModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:49:52 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAnalyticsModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:49:52 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mEncodingModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:49:52 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAuthModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:49:52 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mStreamingModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:50:01 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mHealthController {/health}:[39m[38;5;3m +9098ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:50:02 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/health, GET} route[39m[38;5;3m +410ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:50:02 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAuthController {/auth}:[39m[38;5;3m +2ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:50:02 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/register, POST} route[39m[38;5;3m +2ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:50:02 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/login, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:50:02 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/refresh, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:50:02 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/logout, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:50:02 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/me, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:50:02 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mUsersController {/users}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:50:02 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users/profile, GET} route[39m[38;5;3m +234ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:50:02 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users/profile, PUT} route[39m[38;5;3m +5ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:50:02 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users/:id, GET} route[39m[38;5;3m +4ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:50:02 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:50:02 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users/:id/role, PATCH} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:50:02 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users/:id, DELETE} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:50:02 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mContentController {/content}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:50:02 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content, POST} route[39m[38;5;3m +2ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:50:02 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:50:02 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content/:id, PUT} route[39m[38;5;3m +35ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:50:02 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content/:id, DELETE} route[39m[38;5;3m +178ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:50:02 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content, GET} route[39m[38;5;3m +4ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:50:02 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content/trending/list, GET} route[39m[38;5;3m +7ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:50:02 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content/user/:userId, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:50:02 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mStreamingController {/streaming}:[39m[38;5;3m +3ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:50:02 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/streaming/:videoId/manifest.m3u8, GET} route[39m[38;5;3m +26ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:50:03 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/streaming/:videoId/:quality/playlist.m3u8, GET} route[39m[38;5;3m +394ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:50:03 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/streaming/session/start, POST} route[39m[38;5;3m +445ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:50:03 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/streaming/session/heartbeat, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:50:03 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/streaming/session/end, POST} route[39m[38;5;3m +49ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:50:03 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/streaming/quality/recommend, GET} route[39m[38;5;3m +3ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:50:03 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mEncodingController {/encoding}:[39m[38;5;3m +15ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:50:03 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/encoding/video/:videoId, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:50:03 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/encoding/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:50:03 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAnalyticsController {/analytics}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:50:03 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/analytics/track, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:50:03 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/analytics/video/:videoId/metrics, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:50:03 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mNotificationController {/notifications}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:50:03 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/notifications, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:50:03 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/notifications, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:50:03 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/notifications/:id/read, PATCH} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:50:09 PM [32m    LOG[39m [38;5;3m[RabbitMQService] [39m[32m✓ RabbitMQ connected[39m
+[32m[Nest] 37257  - [39m05/02/2026, 4:50:09 PM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +384ms[39m
+[31m[Nest] 37257  - [39m05/02/2026, 4:50:10 PM [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::3000[39m[38;5;3m +403ms[39m
+Failed to start application: Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at ExpressAdapter.listen (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/@nestjs/platform-express/adapters/express-adapter.js:115:32)
+    at /Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/@nestjs/core/nest-application.js:188:30
+    at new Promise (<anonymous>)
+    at NestApplication.listen (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/@nestjs/core/nest-application.js:178:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async bootstrap (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/apps/backend/dist/main.js:41:5) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m16[0m:[93m1[0m - [91merror[0m[90m TS1068: [0mUnexpected token. A constructor, method, accessor, or property was expected.
+
+[7m16[0m import { UsersService } from '../users/users.service';
+[7m  [0m [91m~~~~~~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m19[0m:[93m46[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m19[0m     @InjectModel(AnalyticsEvent.name) private eventModel: Model<AnalyticsEvent>,
+[7m  [0m [91m                                             [0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m19[0m:[93m47[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m19[0m     @InjectModel(AnalyticsEvent.name) private eventModel: Model<AnalyticsEvent>,
+[7m  [0m [91m                                              ~~~~~~~~~~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m19[0m:[93m57[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m19[0m     @InjectModel(AnalyticsEvent.name) private eventModel: Model<AnalyticsEvent>,
+[7m  [0m [91m                                                        ~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m20[0m:[93m13[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m20[0m     private usersService: UsersService,
+[7m  [0m [91m            ~~~~~~~~~~~~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m20[0m:[93m25[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m20[0m     private usersService: UsersService,
+[7m  [0m [91m                        ~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m21[0m:[93m5[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m21[0m   ) {}
+[7m  [0m [91m    ~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m26[0m   async getUserStats(userId: string): Promise<any> {
+[7m  [0m [91m  ~~~~~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m26[0m:[93m28[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m26[0m   async getUserStats(userId: string): Promise<any> {
+[7m  [0m [91m                           ~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m26[0m:[93m37[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m26[0m   async getUserStats(userId: string): Promise<any> {
+[7m  [0m [91m                                    ~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m27[0m:[93m11[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m27[0m     const user = await this.usersService.findById(userId);
+[7m  [0m [91m          ~~~~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m27[0m:[93m58[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m27[0m     const user = await this.usersService.findById(userId);
+[7m  [0m [91m                                                         ~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m28[0m:[93m11[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m28[0m     const events = await this.eventModel.find({ userId }).sort({ timestamp: -1 });
+[7m  [0m [91m          ~~~~~~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m28[0m:[93m82[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m28[0m     const events = await this.eventModel.find({ userId }).sort({ timestamp: -1 });
+[7m  [0m [91m                                                                                 ~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m30[0m:[93m11[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m30[0m     const streamStarts = events.filter((e) => e.eventType === AnalyticsEventType.STREAM_START);
+[7m  [0m [91m          ~~~~~~~~~~~~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m30[0m:[93m95[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m30[0m     const streamStarts = events.filter((e) => e.eventType === AnalyticsEventType.STREAM_START);
+[7m  [0m [91m                                                                                              ~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m31[0m:[93m11[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m31[0m     const streamEnds = events.filter((e) => e.eventType === AnalyticsEventType.STREAM_END);
+[7m  [0m [91m          ~~~~~~~~~~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m31[0m:[93m91[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m31[0m     const streamEnds = events.filter((e) => e.eventType === AnalyticsEventType.STREAM_END);
+[7m  [0m [91m                                                                                          ~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m33[0m:[93m11[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m33[0m     const totalWatchTimeMinutes = this.calculateTotalMinutes(streamStarts, streamEnds);
+[7m  [0m [91m          ~~~~~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m33[0m:[93m87[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m33[0m     const totalWatchTimeMinutes = this.calculateTotalMinutes(streamStarts, streamEnds);
+[7m  [0m [91m                                                                                      ~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m34[0m:[93m11[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m34[0m     const completedCourses = streamEnds.length;
+[7m  [0m [91m          ~~~~~~~~~~~~~~~~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m34[0m:[93m47[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m34[0m     const completedCourses = streamEnds.length;
+[7m  [0m [91m                                              ~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m35[0m:[93m11[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m35[0m     const inProgressCourses = user.enrolledCourses?.length || 0;
+[7m  [0m [91m          ~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m35[0m:[93m64[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m35[0m     const inProgressCourses = user.enrolledCourses?.length || 0;
+[7m  [0m [91m                                                               ~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m36[0m:[93m11[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m36[0m     const badgesEarned = Math.floor(completedCourses / 2) + 1; // Arbitrary logic for badges
+[7m  [0m [91m          ~~~~~~~~~~~~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m36[0m:[93m62[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m36[0m     const badgesEarned = Math.floor(completedCourses / 2) + 1; // Arbitrary logic for badges
+[7m  [0m [91m                                                             ~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m39[0m:[93m11[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m39[0m     const recentActivity = events.slice(0, 5).map(e => {
+[7m  [0m [91m          ~~~~~~~~~~~~~~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m56[0m:[93m7[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m56[0m     });
+[7m  [0m [91m      ~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m58[0m:[93m12[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m58[0m     return {
+[7m  [0m [91m           ~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m64[0m:[93m6[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m64[0m     };
+[7m  [0m [91m     ~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m70[0m:[93m3[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m70[0m   async trackEvent(userId: string, trackEventDto: TrackEventDto): Promise<void> {
+[7m  [0m [91m  ~~~~~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m70[0m:[93m26[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m70[0m   async trackEvent(userId: string, trackEventDto: TrackEventDto): Promise<void> {
+[7m  [0m [91m                         ~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m70[0m:[93m49[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m70[0m   async trackEvent(userId: string, trackEventDto: TrackEventDto): Promise<void> {
+[7m  [0m [91m                                                ~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m70[0m:[93m65[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m70[0m   async trackEvent(userId: string, trackEventDto: TrackEventDto): Promise<void> {
+[7m  [0m [91m                                                                ~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m70[0m:[93m79[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m70[0m   async trackEvent(userId: string, trackEventDto: TrackEventDto): Promise<void> {
+[7m  [0m [91m                                                                              ~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m71[0m:[93m11[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m71[0m     const event = new this.eventModel({
+[7m  [0m [91m          ~~~~~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m75[0m:[93m7[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m75[0m     });
+[7m  [0m [91m      ~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m77[0m:[93m11[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m77[0m     await event.save();
+[7m  [0m [91m          ~~~~~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m77[0m:[93m16[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m77[0m     await event.save();
+[7m  [0m [91m               ~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m77[0m:[93m23[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m77[0m     await event.save();
+[7m  [0m [91m                      ~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m78[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m78[0m     this.logger.debug(`Event tracked: ${trackEventDto.eventType} for video ${trackEventDto.videoId}`);
+[7m  [0m [91m        ~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m78[0m:[93m102[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m78[0m     this.logger.debug(`Event tracked: ${trackEventDto.eventType} for video ${trackEventDto.videoId}`);
+[7m  [0m [91m                                                                                                     ~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m84[0m:[93m3[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m84[0m   async getVideoMetrics(videoId: string): Promise<VideoMetricsResponseDto> {
+[7m  [0m [91m  ~~~~~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m84[0m:[93m32[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m84[0m   async getVideoMetrics(videoId: string): Promise<VideoMetricsResponseDto> {
+[7m  [0m [91m                               ~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m84[0m:[93m41[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m84[0m   async getVideoMetrics(videoId: string): Promise<VideoMetricsResponseDto> {
+[7m  [0m [91m                                        ~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m85[0m:[93m11[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m85[0m     const events = await this.eventModel.find({ videoId });
+[7m  [0m [91m          ~~~~~~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m85[0m:[93m59[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m85[0m     const events = await this.eventModel.find({ videoId });
+[7m  [0m [91m                                                          ~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m87[0m:[93m11[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m87[0m     const streamStarts = events.filter((e) => e.eventType === AnalyticsEventType.STREAM_START);
+[7m  [0m [91m          ~~~~~~~~~~~~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m87[0m:[93m95[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m87[0m     const streamStarts = events.filter((e) => e.eventType === AnalyticsEventType.STREAM_START);
+[7m  [0m [91m                                                                                              ~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m88[0m:[93m11[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m88[0m     const streamEnds = events.filter((e) => e.eventType === AnalyticsEventType.STREAM_END);
+[7m  [0m [91m          ~~~~~~~~~~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m88[0m:[93m91[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m88[0m     const streamEnds = events.filter((e) => e.eventType === AnalyticsEventType.STREAM_END);
+[7m  [0m [91m                                                                                          ~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m89[0m:[93m11[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m89[0m     const bufferEvents = events.filter((e) => e.eventType === AnalyticsEventType.BUFFER_EVENT);
+[7m  [0m [91m          ~~~~~~~~~~~~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m89[0m:[93m95[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m89[0m     const bufferEvents = events.filter((e) => e.eventType === AnalyticsEventType.BUFFER_EVENT);
+[7m  [0m [91m                                                                                              ~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m92[0m:[93m11[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m92[0m     const totalViews = streamStarts.length;
+[7m  [0m [91m          ~~~~~~~~~~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m92[0m:[93m43[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m92[0m     const totalViews = streamStarts.length;
+[7m  [0m [91m                                          ~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m93[0m:[93m11[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m93[0m     const totalMinutesWatched = this.calculateTotalMinutes(streamStarts, streamEnds);
+[7m  [0m [91m          ~~~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m93[0m:[93m85[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m93[0m     const totalMinutesWatched = this.calculateTotalMinutes(streamStarts, streamEnds);
+[7m  [0m [91m                                                                                    ~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m94[0m:[93m11[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m94[0m     const averageQuality = this.calculateAverageQuality(events);
+[7m  [0m [91m          ~~~~~~~~~~~~~~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m94[0m:[93m64[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m94[0m     const averageQuality = this.calculateAverageQuality(events);
+[7m  [0m [91m                                                               ~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m95[0m:[93m11[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m95[0m     const bufferingEventCount = bufferEvents.length;
+[7m  [0m [91m          ~~~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m95[0m:[93m52[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m95[0m     const bufferingEventCount = bufferEvents.length;
+[7m  [0m [91m                                                   ~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m96[0m:[93m11[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m96[0m     const averageStartupTime = this.calculateAverageStartupTime(events);
+[7m  [0m [91m          ~~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m96[0m:[93m72[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m96[0m     const averageStartupTime = this.calculateAverageStartupTime(events);
+[7m  [0m [91m                                                                       ~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m97[0m:[93m11[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m97[0m     const completionRate = this.calculateCompletionRate(streamStarts, streamEnds);
+[7m  [0m [91m          ~~~~~~~~~~~~~~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m97[0m:[93m82[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m97[0m     const completionRate = this.calculateCompletionRate(streamStarts, streamEnds);
+[7m  [0m [91m                                                                                 ~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m99[0m:[93m12[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m99[0m     return {
+[7m  [0m [91m           ~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m107[0m:[93m6[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m107[0m     };
+[7m   [0m [91m     ~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m113[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m113[0m   private calculateTotalMinutes(starts: AnalyticsEvent[], ends: AnalyticsEvent[]): number {
+[7m   [0m [91m  ~~~~~~~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m113[0m:[93m39[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m113[0m   private calculateTotalMinutes(starts: AnalyticsEvent[], ends: AnalyticsEvent[]): number {
+[7m   [0m [91m                                      ~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m113[0m:[93m56[0m - [91merror[0m[90m TS1011: [0mAn element access expression should take an argument.
+
+[7m113[0m   private calculateTotalMinutes(starts: AnalyticsEvent[], ends: AnalyticsEvent[]): number {
+[7m   [0m [91m                                                       [0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m113[0m:[93m63[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m113[0m   private calculateTotalMinutes(starts: AnalyticsEvent[], ends: AnalyticsEvent[]): number {
+[7m   [0m [91m                                                              ~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m113[0m:[93m80[0m - [91merror[0m[90m TS1011: [0mAn element access expression should take an argument.
+
+[7m113[0m   private calculateTotalMinutes(starts: AnalyticsEvent[], ends: AnalyticsEvent[]): number {
+[7m   [0m [91m                                                                               [0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m113[0m:[93m82[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m113[0m   private calculateTotalMinutes(starts: AnalyticsEvent[], ends: AnalyticsEvent[]): number {
+[7m   [0m [91m                                                                                 ~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m113[0m:[93m84[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m113[0m   private calculateTotalMinutes(starts: AnalyticsEvent[], ends: AnalyticsEvent[]): number {
+[7m   [0m [91m                                                                                   ~~~~~~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m128[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m128[0m   private calculateAverageQuality(events: AnalyticsEvent[]): string {
+[7m   [0m [91m  ~~~~~~~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m128[0m:[93m41[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m128[0m   private calculateAverageQuality(events: AnalyticsEvent[]): string {
+[7m   [0m [91m                                        ~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m128[0m:[93m58[0m - [91merror[0m[90m TS1011: [0mAn element access expression should take an argument.
+
+[7m128[0m   private calculateAverageQuality(events: AnalyticsEvent[]): string {
+[7m   [0m [91m                                                         [0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m128[0m:[93m60[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m128[0m   private calculateAverageQuality(events: AnalyticsEvent[]): string {
+[7m   [0m [91m                                                           ~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m128[0m:[93m62[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m128[0m   private calculateAverageQuality(events: AnalyticsEvent[]): string {
+[7m   [0m [91m                                                             ~~~~~~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m145[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m145[0m   private calculateAverageStartupTime(events: AnalyticsEvent[]): number {
+[7m   [0m [91m  ~~~~~~~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m145[0m:[93m45[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m145[0m   private calculateAverageStartupTime(events: AnalyticsEvent[]): number {
+[7m   [0m [91m                                            ~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m145[0m:[93m62[0m - [91merror[0m[90m TS1011: [0mAn element access expression should take an argument.
+
+[7m145[0m   private calculateAverageStartupTime(events: AnalyticsEvent[]): number {
+[7m   [0m [91m                                                             [0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m145[0m:[93m64[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m145[0m   private calculateAverageStartupTime(events: AnalyticsEvent[]): number {
+[7m   [0m [91m                                                               ~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m145[0m:[93m66[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m145[0m   private calculateAverageStartupTime(events: AnalyticsEvent[]): number {
+[7m   [0m [91m                                                                 ~~~~~~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m160[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m160[0m   private calculateCompletionRate(starts: AnalyticsEvent[], ends: AnalyticsEvent[]): number {
+[7m   [0m [91m  ~~~~~~~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m160[0m:[93m41[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m160[0m   private calculateCompletionRate(starts: AnalyticsEvent[], ends: AnalyticsEvent[]): number {
+[7m   [0m [91m                                        ~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m160[0m:[93m58[0m - [91merror[0m[90m TS1011: [0mAn element access expression should take an argument.
+
+[7m160[0m   private calculateCompletionRate(starts: AnalyticsEvent[], ends: AnalyticsEvent[]): number {
+[7m   [0m [91m                                                         [0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m160[0m:[93m65[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m160[0m   private calculateCompletionRate(starts: AnalyticsEvent[], ends: AnalyticsEvent[]): number {
+[7m   [0m [91m                                                                ~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m160[0m:[93m82[0m - [91merror[0m[90m TS1011: [0mAn element access expression should take an argument.
+
+[7m160[0m   private calculateCompletionRate(starts: AnalyticsEvent[], ends: AnalyticsEvent[]): number {
+[7m   [0m [91m                                                                                 [0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m160[0m:[93m84[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m160[0m   private calculateCompletionRate(starts: AnalyticsEvent[], ends: AnalyticsEvent[]): number {
+[7m   [0m [91m                                                                                   ~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m160[0m:[93m86[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m160[0m   private calculateCompletionRate(starts: AnalyticsEvent[], ends: AnalyticsEvent[]): number {
+[7m   [0m [91m                                                                                     ~~~~~~[0m
+
+[96msrc/modules/analytics/analytics.service.ts[0m:[93m164[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m164[0m }
+[7m   [0m [91m~[0m
+
+[[90m4:50:23 PM[0m] Found 92 errors. Watching for file changes.
+
+[2J[3J[H[[90m4:50:24 PM[0m] File change detected. Starting incremental compilation...
+
+[[90m4:51:18 PM[0m] Found 0 errors. Watching for file changes.
+
+(node:37969) [MONGOOSE] Warning: Duplicate schema index on {"email":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:14 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:15 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +633ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:15 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mRabbitMQConfig dependencies initialized[39m[38;5;3m +79ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:15 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPassportModule dependencies initialized[39m[38;5;3m +72ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:15 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +323ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:15 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mThrottlerModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:15 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mJwtModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:15 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:15 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +3ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:18 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseCoreModule dependencies initialized[39m[38;5;3m +2439ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:18 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:18 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:18 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:18 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:18 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:18 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:18 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mUsersModule dependencies initialized[39m[38;5;3m +76ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:18 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mContentModule dependencies initialized[39m[38;5;3m +3ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:18 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mNotificationsModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:18 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAnalyticsModule dependencies initialized[39m[38;5;3m +10ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:18 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mEncodingModule dependencies initialized[39m[38;5;3m +9ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:18 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAuthModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:18 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mStreamingModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:22 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mHealthController {/health}:[39m[38;5;3m +4396ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:22 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/health, GET} route[39m[38;5;3m +34ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:22 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAuthController {/auth}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:22 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/register, POST} route[39m[38;5;3m +2ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:22 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/login, POST} route[39m[38;5;3m +7ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:22 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/refresh, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:22 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/logout, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:22 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/me, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:22 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mUsersController {/users}:[39m[38;5;3m +1ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:22 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users/profile, GET} route[39m[38;5;3m +60ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:22 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users/profile, PUT} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:23 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users/:id, GET} route[39m[38;5;3m +237ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:23 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users, GET} route[39m[38;5;3m +37ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:23 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users/:id/role, PATCH} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:23 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users/:id, DELETE} route[39m[38;5;3m +6ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:23 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mContentController {/content}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:23 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:23 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:23 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content/:id, PUT} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:23 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content/:id, DELETE} route[39m[38;5;3m +18ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:23 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content, GET} route[39m[38;5;3m +11ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:23 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content/trending/list, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:23 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content/user/:userId, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:23 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mStreamingController {/streaming}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:23 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/streaming/:videoId/manifest.m3u8, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:23 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/streaming/:videoId/:quality/playlist.m3u8, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:23 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/streaming/session/start, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:23 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/streaming/session/heartbeat, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:23 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/streaming/session/end, POST} route[39m[38;5;3m +3ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:23 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/streaming/quality/recommend, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:23 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mEncodingController {/encoding}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:23 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/encoding/video/:videoId, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:23 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/encoding/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:23 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAnalyticsController {/analytics}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:23 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/analytics/user/stats, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:23 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/analytics/track, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:23 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/analytics/video/:videoId/metrics, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:23 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mNotificationController {/notifications}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:23 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/notifications, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:23 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/notifications, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:23 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/notifications/:id/read, PATCH} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:24 PM [32m    LOG[39m [38;5;3m[RabbitMQService] [39m[32m✓ RabbitMQ connected[39m
+[32m[Nest] 37969  - [39m05/02/2026, 4:52:24 PM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +8ms[39m
+[31m[Nest] 37969  - [39m05/02/2026, 4:52:24 PM [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::3000[39m[38;5;3m +3ms[39m
+Failed to start application: Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at ExpressAdapter.listen (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/@nestjs/platform-express/adapters/express-adapter.js:115:32)
+    at /Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/@nestjs/core/nest-application.js:188:30
+    at new Promise (<anonymous>)
+    at NestApplication.listen (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/@nestjs/core/nest-application.js:178:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async bootstrap (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/apps/backend/dist/main.js:41:5) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+[2J[3J[H[[90m5:17:46 PM[0m] File change detected. Starting incremental compilation...
+
+[[90m5:17:48 PM[0m] Found 0 errors. Watching for file changes.
+
+(node:38808) [MONGOOSE] Warning: Duplicate schema index on {"email":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +106ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mRabbitMQConfig dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPassportModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +88ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mThrottlerModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mJwtModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mServeStaticModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseCoreModule dependencies initialized[39m[38;5;3m +84ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mUsersModule dependencies initialized[39m[38;5;3m +3ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mContentModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mNotificationsModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAnalyticsModule dependencies initialized[39m[38;5;3m +2ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mEncodingModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAuthModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mStreamingModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mHealthController {/health}:[39m[38;5;3m +318ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/health, GET} route[39m[38;5;3m +16ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAuthController {/auth}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/register, POST} route[39m[38;5;3m +2ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/login, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/refresh, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/logout, POST} route[39m[38;5;3m +2ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/me, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mUsersController {/users}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users/profile, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users/profile, PUT} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users/:id, GET} route[39m[38;5;3m +10ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users, GET} route[39m[38;5;3m +4ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users/:id/role, PATCH} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users/:id, DELETE} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mContentController {/content}:[39m[38;5;3m +2ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content/:id, PUT} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content/:id, DELETE} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content/trending/list, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content/user/:userId, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mStreamingController {/streaming}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/streaming/:videoId/manifest.m3u8, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/streaming/:videoId/:quality/playlist.m3u8, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/streaming/session/start, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/streaming/session/heartbeat, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/streaming/session/end, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/streaming/quality/recommend, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mEncodingController {/encoding}:[39m[38;5;3m +1ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/encoding/video/:videoId, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/encoding/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAnalyticsController {/analytics}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/analytics/user/stats, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/analytics/track, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/analytics/video/:videoId/metrics, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mNotificationController {/notifications}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/notifications, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/notifications, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/notifications/:id/read, PATCH} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[RabbitMQService] [39m[32m✓ RabbitMQ connected[39m
+[32m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +2ms[39m
+[31m[Nest] 38808  - [39m05/02/2026, 5:17:51 PM [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::3000[39m[38;5;3m +1ms[39m
+Failed to start application: Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at ExpressAdapter.listen (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/@nestjs/platform-express/adapters/express-adapter.js:115:32)
+    at /Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/@nestjs/core/nest-application.js:188:30
+    at new Promise (<anonymous>)
+    at NestApplication.listen (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/@nestjs/core/nest-application.js:178:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async bootstrap (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/apps/backend/dist/main.js:41:5) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+[2J[3J[H[[90m5:17:57 PM[0m] File change detected. Starting incremental compilation...
+
+[96msrc/modules/content/content.controller.ts[0m:[93m70[0m:[93m32[0m - [91merror[0m[90m TS2339: [0mProperty 'upload' does not exist on type 'ContentService'.
+
+[7m70[0m     return this.contentService.upload(userId, file, { title, description, courseId });
+[7m  [0m [91m                               ~~~~~~[0m
+
+[[90m5:17:59 PM[0m] Found 1 error. Watching for file changes.
+
+[2J[3J[H[[90m5:18:08 PM[0m] File change detected. Starting incremental compilation...
+
+[[90m5:18:11 PM[0m] Found 0 errors. Watching for file changes.
+
+(node:38859) [MONGOOSE] Warning: Duplicate schema index on {"email":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:13 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +31ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mRabbitMQConfig dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPassportModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +18ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mThrottlerModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mJwtModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mServeStaticModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseCoreModule dependencies initialized[39m[38;5;3m +42ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mUsersModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mContentModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mNotificationsModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAnalyticsModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mEncodingModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAuthModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mStreamingModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mHealthController {/health}:[39m[38;5;3m +309ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/health, GET} route[39m[38;5;3m +2ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAuthController {/auth}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/register, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/login, POST} route[39m[38;5;3m +3ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/refresh, POST} route[39m[38;5;3m +2ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/logout, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/me, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mUsersController {/users}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users/profile, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users/profile, PUT} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users/:id/role, PATCH} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users/:id, DELETE} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mContentController {/content}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content/upload, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content/:id, PUT} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content/:id, DELETE} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content/trending/list, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content/user/:userId, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mStreamingController {/streaming}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/streaming/:videoId/manifest.m3u8, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/streaming/:videoId/:quality/playlist.m3u8, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/streaming/session/start, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/streaming/session/heartbeat, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/streaming/session/end, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/streaming/quality/recommend, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mEncodingController {/encoding}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/encoding/video/:videoId, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/encoding/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAnalyticsController {/analytics}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/analytics/user/stats, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/analytics/track, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/analytics/video/:videoId/metrics, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mNotificationController {/notifications}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/notifications, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/notifications, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/notifications/:id/read, PATCH} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[RabbitMQService] [39m[32m✓ RabbitMQ connected[39m
+[32m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +5ms[39m
+[31m[Nest] 38859  - [39m05/02/2026, 5:18:14 PM [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::3000[39m[38;5;3m +3ms[39m
+Failed to start application: Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at ExpressAdapter.listen (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/@nestjs/platform-express/adapters/express-adapter.js:115:32)
+    at /Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/@nestjs/core/nest-application.js:188:30
+    at new Promise (<anonymous>)
+    at NestApplication.listen (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/@nestjs/core/nest-application.js:178:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async bootstrap (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/apps/backend/dist/main.js:41:5) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+[2J[3J[H[[90m6:00:35 PM[0m] File change detected. Starting incremental compilation...
+
+[[90m6:00:38 PM[0m] Found 0 errors. Watching for file changes.
+
+(node:40401) [MONGOOSE] Warning: Duplicate schema index on {"email":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[Nest] 40401  - [39m05/02/2026, 6:00:41 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 40401  - [39m05/02/2026, 6:00:41 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +22ms[39m
+[32m[Nest] 40401  - [39m05/02/2026, 6:00:41 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mRabbitMQConfig dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 40401  - [39m05/02/2026, 6:00:41 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPassportModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 40401  - [39m05/02/2026, 6:00:41 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMulterModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 40401  - [39m05/02/2026, 6:00:41 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +167ms[39m
+[32m[Nest] 40401  - [39m05/02/2026, 6:00:41 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mThrottlerModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 40401  - [39m05/02/2026, 6:00:41 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mJwtModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 40401  - [39m05/02/2026, 6:00:41 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 40401  - [39m05/02/2026, 6:00:41 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mServeStaticModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 40401  - [39m05/02/2026, 6:00:41 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +0ms[39m
+[31m[Nest] 40401  - [39m05/02/2026, 6:00:46 PM [31m  ERROR[39m [38;5;3m[MongooseModule] [39m[31mUnable to connect to the database. Retrying (1)...[39m
+MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongoose/lib/connection.js:1169:11)
+    at NativeConnection.asPromise (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongoose/lib/connection.js:1639:11)
+    at async /Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/@nestjs/mongoose/dist/mongoose-core.module.js:65:112
+[31m[Nest] 40401  - [39m05/02/2026, 6:00:54 PM [31m  ERROR[39m [38;5;3m[MongooseModule] [39m[31mUnable to connect to the database. Retrying (2)...[39m
+MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongoose/lib/connection.js:1169:11)
+    at NativeConnection.asPromise (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongoose/lib/connection.js:1639:11)
+    at async /Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/@nestjs/mongoose/dist/mongoose-core.module.js:65:112
+[31m[Nest] 40401  - [39m05/02/2026, 6:01:02 PM [31m  ERROR[39m [38;5;3m[MongooseModule] [39m[31mUnable to connect to the database. Retrying (3)...[39m
+MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongoose/lib/connection.js:1169:11)
+    at NativeConnection.asPromise (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongoose/lib/connection.js:1639:11)
+    at async /Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/@nestjs/mongoose/dist/mongoose-core.module.js:65:112
+[31m[Nest] 40401  - [39m05/02/2026, 6:01:10 PM [31m  ERROR[39m [38;5;3m[MongooseModule] [39m[31mUnable to connect to the database. Retrying (4)...[39m
+MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongoose/lib/connection.js:1169:11)
+    at NativeConnection.asPromise (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongoose/lib/connection.js:1639:11)
+    at async /Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/@nestjs/mongoose/dist/mongoose-core.module.js:65:112
+[31m[Nest] 40401  - [39m05/02/2026, 6:01:18 PM [31m  ERROR[39m [38;5;3m[MongooseModule] [39m[31mUnable to connect to the database. Retrying (5)...[39m
+MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongoose/lib/connection.js:1169:11)
+    at NativeConnection.asPromise (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongoose/lib/connection.js:1639:11)
+    at async /Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/@nestjs/mongoose/dist/mongoose-core.module.js:65:112
+[31m[Nest] 40401  - [39m05/02/2026, 6:01:18 PM [31m  ERROR[39m [38;5;3m[ExceptionHandler] [39mMongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/[4mmongoose[24m/lib/connection.js:1169:11)
+    at NativeConnection.asPromise (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/[4mmongoose[24m/lib/connection.js:1639:11)
+    at async /Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/[4m@nestjs/mongoose[24m/dist/mongoose-core.module.js:65:112 {
+  errorLabelSet: Set(0) {},
+  reason: TopologyDescription {
+    type: [32m'Unknown'[39m,
+    servers: Map(1) {
+      [32m'localhost:27017'[39m => ServerDescription {
+        address: [32m'localhost:27017'[39m,
+        type: [32m'Unknown'[39m,
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: [33m0[39m,
+        maxWireVersion: [33m0[39m,
+        roundTripTime: [33m-1[39m,
+        minRoundTripTime: [33m0[39m,
+        lastUpdateTime: [33m8104376047[39m,
+        lastWriteDate: [33m0[39m,
+        error: MongoNetworkError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+            at Socket.<anonymous> (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/[4mmongodb[24m/lib/cmap/connect.js:286:44)
+        [90m    at Object.onceWrapper (node:events:639:26)[39m
+        [90m    at Socket.emit (node:events:524:28)[39m
+        [90m    at emitErrorNT (node:internal/streams/destroy:169:8)[39m
+        [90m    at emitErrorCloseNT (node:internal/streams/destroy:128:3)[39m
+        [90m    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)[39m {
+          errorLabelSet: Set(1) {
+            [32m'ResetPool'[39m
+          },
+          beforeHandshake: [33mfalse[39m,
+          [cause]: AggregateError [ECONNREFUSED]: 
+          [90m    at internalConnectMultiple (node:net:1122:18)[39m
+          [90m    at afterConnectMultiple (node:net:1689:7)[39m {
+            code: [32m'ECONNREFUSED'[39m,
+            [errors]: [36m[Array][39m
+          }
+        },
+        topologyVersion: [1mnull[22m,
+        setName: [1mnull[22m,
+        setVersion: [1mnull[22m,
+        electionId: [1mnull[22m,
+        logicalSessionTimeoutMinutes: [1mnull[22m,
+        maxMessageSizeBytes: [1mnull[22m,
+        maxWriteBatchSize: [1mnull[22m,
+        maxBsonObjectSize: [1mnull[22m,
+        primary: [1mnull[22m,
+        me: [1mnull[22m,
+        [32m'$clusterTime'[39m: [1mnull[22m,
+        iscryptd: [33mfalse[39m
+      }
+    },
+    stale: [33mfalse[39m,
+    compatible: [33mtrue[39m,
+    heartbeatFrequencyMS: [33m10000[39m,
+    localThresholdMS: [33m15[39m,
+    setName: [1mnull[22m,
+    maxElectionId: [1mnull[22m,
+    maxSetVersion: [1mnull[22m,
+    commonWireVersion: [33m0[39m,
+    logicalSessionTimeoutMinutes: [1mnull[22m
+  },
+  code: [90mundefined[39m,
+  cause: TopologyDescription {
+    type: [32m'Unknown'[39m,
+    servers: Map(1) {
+      [32m'localhost:27017'[39m => ServerDescription {
+        address: [32m'localhost:27017'[39m,
+        type: [32m'Unknown'[39m,
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: [33m0[39m,
+        maxWireVersion: [33m0[39m,
+        roundTripTime: [33m-1[39m,
+        minRoundTripTime: [33m0[39m,
+        lastUpdateTime: [33m8104376047[39m,
+        lastWriteDate: [33m0[39m,
+        error: MongoNetworkError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+            at Socket.<anonymous> (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/[4mmongodb[24m/lib/cmap/connect.js:286:44)
+        [90m    at Object.onceWrapper (node:events:639:26)[39m
+        [90m    at Socket.emit (node:events:524:28)[39m
+        [90m    at emitErrorNT (node:internal/streams/destroy:169:8)[39m
+        [90m    at emitErrorCloseNT (node:internal/streams/destroy:128:3)[39m
+        [90m    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)[39m {
+          errorLabelSet: Set(1) {
+            [32m'ResetPool'[39m
+          },
+          beforeHandshake: [33mfalse[39m,
+          [cause]: AggregateError [ECONNREFUSED]: 
+          [90m    at internalConnectMultiple (node:net:1122:18)[39m
+          [90m    at afterConnectMultiple (node:net:1689:7)[39m {
+            code: [32m'ECONNREFUSED'[39m,
+            [errors]: [36m[Array][39m
+          }
+        },
+        topologyVersion: [1mnull[22m,
+        setName: [1mnull[22m,
+        setVersion: [1mnull[22m,
+        electionId: [1mnull[22m,
+        logicalSessionTimeoutMinutes: [1mnull[22m,
+        maxMessageSizeBytes: [1mnull[22m,
+        maxWriteBatchSize: [1mnull[22m,
+        maxBsonObjectSize: [1mnull[22m,
+        primary: [1mnull[22m,
+        me: [1mnull[22m,
+        [32m'$clusterTime'[39m: [1mnull[22m,
+        iscryptd: [33mfalse[39m
+      }
+    },
+    stale: [33mfalse[39m,
+    compatible: [33mtrue[39m,
+    heartbeatFrequencyMS: [33m10000[39m,
+    localThresholdMS: [33m15[39m,
+    setName: [1mnull[22m,
+    maxElectionId: [1mnull[22m,
+    maxSetVersion: [1mnull[22m,
+    commonWireVersion: [33m0[39m,
+    logicalSessionTimeoutMinutes: [1mnull[22m
+  }
+}
+[2J[3J[H[[90m6:08:41 PM[0m] File change detected. Starting incremental compilation...
+
+[[90m6:08:45 PM[0m] Found 0 errors. Watching for file changes.
+
+(node:40744) [MONGOOSE] Warning: Duplicate schema index on {"email":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[Nest] 40744  - [39m05/02/2026, 6:08:48 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 40744  - [39m05/02/2026, 6:08:48 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +38ms[39m
+[32m[Nest] 40744  - [39m05/02/2026, 6:08:48 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mRabbitMQConfig dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 40744  - [39m05/02/2026, 6:08:48 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPassportModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 40744  - [39m05/02/2026, 6:08:48 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMulterModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 40744  - [39m05/02/2026, 6:08:48 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +91ms[39m
+[32m[Nest] 40744  - [39m05/02/2026, 6:08:48 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mThrottlerModule dependencies initialized[39m[38;5;3m +2ms[39m
+[32m[Nest] 40744  - [39m05/02/2026, 6:08:48 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mJwtModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 40744  - [39m05/02/2026, 6:08:48 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 40744  - [39m05/02/2026, 6:08:48 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mServeStaticModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 40744  - [39m05/02/2026, 6:08:48 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +14ms[39m
+[31m[Nest] 40744  - [39m05/02/2026, 6:08:53 PM [31m  ERROR[39m [38;5;3m[MongooseModule] [39m[31mUnable to connect to the database. Retrying (1)...[39m
+MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongoose/lib/connection.js:1169:11)
+    at NativeConnection.asPromise (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongoose/lib/connection.js:1639:11)
+    at async /Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/@nestjs/mongoose/dist/mongoose-core.module.js:65:112
+[31m[Nest] 40744  - [39m05/02/2026, 6:09:01 PM [31m  ERROR[39m [38;5;3m[MongooseModule] [39m[31mUnable to connect to the database. Retrying (2)...[39m
+MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongoose/lib/connection.js:1169:11)
+    at NativeConnection.asPromise (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongoose/lib/connection.js:1639:11)
+    at async /Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/@nestjs/mongoose/dist/mongoose-core.module.js:65:112
+[2J[3J[H[[90m6:09:03 PM[0m] File change detected. Starting incremental compilation...
+
+[96msrc/modules/content/content.controller.ts[0m:[93m66[0m:[93m29[0m - [91merror[0m[90m TS2304: [0mCannot find name 'UploadVideoDto'.
+
+[7m66[0m     @Body() uploadVideoDto: UploadVideoDto,
+[7m  [0m [91m                            ~~~~~~~~~~~~~~[0m
+
+[[90m6:09:07 PM[0m] Found 1 error. Watching for file changes.
+
+[31m[Nest] 40744  - [39m05/02/2026, 6:09:09 PM [31m  ERROR[39m [38;5;3m[MongooseModule] [39m[31mUnable to connect to the database. Retrying (3)...[39m
+MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongoose/lib/connection.js:1169:11)
+    at NativeConnection.asPromise (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongoose/lib/connection.js:1639:11)
+    at async /Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/@nestjs/mongoose/dist/mongoose-core.module.js:65:112
+[2J[3J[H[[90m6:09:17 PM[0m] File change detected. Starting incremental compilation...
+
+[31m[Nest] 40744  - [39m05/02/2026, 6:09:17 PM [31m  ERROR[39m [38;5;3m[MongooseModule] [39m[31mUnable to connect to the database. Retrying (4)...[39m
+MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongoose/lib/connection.js:1169:11)
+    at NativeConnection.asPromise (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongoose/lib/connection.js:1639:11)
+    at async /Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/@nestjs/mongoose/dist/mongoose-core.module.js:65:112
+[[90m6:09:20 PM[0m] Found 0 errors. Watching for file changes.
+
+(node:40999) [MONGOOSE] Warning: Duplicate schema index on {"email":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[Nest] 40999  - [39m05/02/2026, 6:09:23 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 40999  - [39m05/02/2026, 6:09:23 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +281ms[39m
+[32m[Nest] 40999  - [39m05/02/2026, 6:09:23 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mRabbitMQConfig dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 40999  - [39m05/02/2026, 6:09:23 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPassportModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 40999  - [39m05/02/2026, 6:09:23 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMulterModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 40999  - [39m05/02/2026, 6:09:23 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +22ms[39m
+[32m[Nest] 40999  - [39m05/02/2026, 6:09:23 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mThrottlerModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 40999  - [39m05/02/2026, 6:09:23 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mJwtModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 40999  - [39m05/02/2026, 6:09:23 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 40999  - [39m05/02/2026, 6:09:23 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mServeStaticModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 40999  - [39m05/02/2026, 6:09:23 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +0ms[39m
+[31m[Nest] 40999  - [39m05/02/2026, 6:09:28 PM [31m  ERROR[39m [38;5;3m[MongooseModule] [39m[31mUnable to connect to the database. Retrying (1)...[39m
+MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongoose/lib/connection.js:1169:11)
+    at NativeConnection.asPromise (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongoose/lib/connection.js:1639:11)
+    at async /Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/@nestjs/mongoose/dist/mongoose-core.module.js:65:112
+[31m[Nest] 40999  - [39m05/02/2026, 6:09:36 PM [31m  ERROR[39m [38;5;3m[MongooseModule] [39m[31mUnable to connect to the database. Retrying (2)...[39m
+MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongoose/lib/connection.js:1169:11)
+    at NativeConnection.asPromise (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongoose/lib/connection.js:1639:11)
+    at async /Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/@nestjs/mongoose/dist/mongoose-core.module.js:65:112
+[31m[Nest] 40999  - [39m05/02/2026, 6:09:44 PM [31m  ERROR[39m [38;5;3m[MongooseModule] [39m[31mUnable to connect to the database. Retrying (3)...[39m
+MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongoose/lib/connection.js:1169:11)
+    at NativeConnection.asPromise (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongoose/lib/connection.js:1639:11)
+    at async /Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/@nestjs/mongoose/dist/mongoose-core.module.js:65:112
+[31m[Nest] 40999  - [39m05/02/2026, 6:09:52 PM [31m  ERROR[39m [38;5;3m[MongooseModule] [39m[31mUnable to connect to the database. Retrying (4)...[39m
+MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongoose/lib/connection.js:1169:11)
+    at NativeConnection.asPromise (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongoose/lib/connection.js:1639:11)
+    at async /Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/@nestjs/mongoose/dist/mongoose-core.module.js:65:112
+[31m[Nest] 40999  - [39m05/02/2026, 6:10:00 PM [31m  ERROR[39m [38;5;3m[MongooseModule] [39m[31mUnable to connect to the database. Retrying (5)...[39m
+MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongoose/lib/connection.js:1169:11)
+    at NativeConnection.asPromise (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongoose/lib/connection.js:1639:11)
+    at async /Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/@nestjs/mongoose/dist/mongoose-core.module.js:65:112
+[31m[Nest] 40999  - [39m05/02/2026, 6:10:00 PM [31m  ERROR[39m [38;5;3m[ExceptionHandler] [39mMongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/[4mmongoose[24m/lib/connection.js:1169:11)
+    at NativeConnection.asPromise (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/[4mmongoose[24m/lib/connection.js:1639:11)
+    at async /Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/[4m@nestjs/mongoose[24m/dist/mongoose-core.module.js:65:112 {
+  errorLabelSet: Set(0) {},
+  reason: TopologyDescription {
+    type: [32m'Unknown'[39m,
+    servers: Map(1) {
+      [32m'localhost:27017'[39m => ServerDescription {
+        address: [32m'localhost:27017'[39m,
+        type: [32m'Unknown'[39m,
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: [33m0[39m,
+        maxWireVersion: [33m0[39m,
+        roundTripTime: [33m-1[39m,
+        minRoundTripTime: [33m0[39m,
+        lastUpdateTime: [33m8104897828[39m,
+        lastWriteDate: [33m0[39m,
+        error: MongoNetworkError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+            at Socket.<anonymous> (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/[4mmongodb[24m/lib/cmap/connect.js:286:44)
+        [90m    at Object.onceWrapper (node:events:639:26)[39m
+        [90m    at Socket.emit (node:events:524:28)[39m
+        [90m    at emitErrorNT (node:internal/streams/destroy:169:8)[39m
+        [90m    at emitErrorCloseNT (node:internal/streams/destroy:128:3)[39m
+        [90m    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)[39m {
+          errorLabelSet: Set(1) {
+            [32m'ResetPool'[39m
+          },
+          beforeHandshake: [33mfalse[39m,
+          [cause]: AggregateError [ECONNREFUSED]: 
+          [90m    at internalConnectMultiple (node:net:1122:18)[39m
+          [90m    at afterConnectMultiple (node:net:1689:7)[39m {
+            code: [32m'ECONNREFUSED'[39m,
+            [errors]: [36m[Array][39m
+          }
+        },
+        topologyVersion: [1mnull[22m,
+        setName: [1mnull[22m,
+        setVersion: [1mnull[22m,
+        electionId: [1mnull[22m,
+        logicalSessionTimeoutMinutes: [1mnull[22m,
+        maxMessageSizeBytes: [1mnull[22m,
+        maxWriteBatchSize: [1mnull[22m,
+        maxBsonObjectSize: [1mnull[22m,
+        primary: [1mnull[22m,
+        me: [1mnull[22m,
+        [32m'$clusterTime'[39m: [1mnull[22m,
+        iscryptd: [33mfalse[39m
+      }
+    },
+    stale: [33mfalse[39m,
+    compatible: [33mtrue[39m,
+    heartbeatFrequencyMS: [33m10000[39m,
+    localThresholdMS: [33m15[39m,
+    setName: [1mnull[22m,
+    maxElectionId: [1mnull[22m,
+    maxSetVersion: [1mnull[22m,
+    commonWireVersion: [33m0[39m,
+    logicalSessionTimeoutMinutes: [1mnull[22m
+  },
+  code: [90mundefined[39m,
+  cause: TopologyDescription {
+    type: [32m'Unknown'[39m,
+    servers: Map(1) {
+      [32m'localhost:27017'[39m => ServerDescription {
+        address: [32m'localhost:27017'[39m,
+        type: [32m'Unknown'[39m,
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: [33m0[39m,
+        maxWireVersion: [33m0[39m,
+        roundTripTime: [33m-1[39m,
+        minRoundTripTime: [33m0[39m,
+        lastUpdateTime: [33m8104897828[39m,
+        lastWriteDate: [33m0[39m,
+        error: MongoNetworkError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+            at Socket.<anonymous> (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/[4mmongodb[24m/lib/cmap/connect.js:286:44)
+        [90m    at Object.onceWrapper (node:events:639:26)[39m
+        [90m    at Socket.emit (node:events:524:28)[39m
+        [90m    at emitErrorNT (node:internal/streams/destroy:169:8)[39m
+        [90m    at emitErrorCloseNT (node:internal/streams/destroy:128:3)[39m
+        [90m    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)[39m {
+          errorLabelSet: Set(1) {
+            [32m'ResetPool'[39m
+          },
+          beforeHandshake: [33mfalse[39m,
+          [cause]: AggregateError [ECONNREFUSED]: 
+          [90m    at internalConnectMultiple (node:net:1122:18)[39m
+          [90m    at afterConnectMultiple (node:net:1689:7)[39m {
+            code: [32m'ECONNREFUSED'[39m,
+            [errors]: [36m[Array][39m
+          }
+        },
+        topologyVersion: [1mnull[22m,
+        setName: [1mnull[22m,
+        setVersion: [1mnull[22m,
+        electionId: [1mnull[22m,
+        logicalSessionTimeoutMinutes: [1mnull[22m,
+        maxMessageSizeBytes: [1mnull[22m,
+        maxWriteBatchSize: [1mnull[22m,
+        maxBsonObjectSize: [1mnull[22m,
+        primary: [1mnull[22m,
+        me: [1mnull[22m,
+        [32m'$clusterTime'[39m: [1mnull[22m,
+        iscryptd: [33mfalse[39m
+      }
+    },
+    stale: [33mfalse[39m,
+    compatible: [33mtrue[39m,
+    heartbeatFrequencyMS: [33m10000[39m,
+    localThresholdMS: [33m15[39m,
+    setName: [1mnull[22m,
+    maxElectionId: [1mnull[22m,
+    maxSetVersion: [1mnull[22m,
+    commonWireVersion: [33m0[39m,
+    logicalSessionTimeoutMinutes: [1mnull[22m
+  }
+}
+[2J[3J[H[[90m6:44:05 PM[0m] File change detected. Starting incremental compilation...
+
+[[90m6:44:06 PM[0m] Found 0 errors. Watching for file changes.
+
+(node:42223) [MONGOOSE] Warning: Duplicate schema index on {"email":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[Nest] 42223  - [39m05/02/2026, 6:44:09 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 42223  - [39m05/02/2026, 6:44:09 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +86ms[39m
+[32m[Nest] 42223  - [39m05/02/2026, 6:44:09 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mRabbitMQConfig dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 42223  - [39m05/02/2026, 6:44:09 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPassportModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 42223  - [39m05/02/2026, 6:44:09 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMulterModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 42223  - [39m05/02/2026, 6:44:09 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +79ms[39m
+[32m[Nest] 42223  - [39m05/02/2026, 6:44:09 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mThrottlerModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 42223  - [39m05/02/2026, 6:44:09 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mJwtModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 42223  - [39m05/02/2026, 6:44:09 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 42223  - [39m05/02/2026, 6:44:09 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mServeStaticModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 42223  - [39m05/02/2026, 6:44:09 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +0ms[39m
+[31m[Nest] 42223  - [39m05/02/2026, 6:44:14 PM [31m  ERROR[39m [38;5;3m[MongooseModule] [39m[31mUnable to connect to the database. Retrying (1)...[39m
+MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongoose/lib/connection.js:1169:11)
+    at NativeConnection.asPromise (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongoose/lib/connection.js:1639:11)
+    at async /Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/@nestjs/mongoose/dist/mongoose-core.module.js:65:112
+[31m[Nest] 42223  - [39m05/02/2026, 6:44:22 PM [31m  ERROR[39m [38;5;3m[MongooseModule] [39m[31mUnable to connect to the database. Retrying (2)...[39m
+MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongoose/lib/connection.js:1169:11)
+    at NativeConnection.asPromise (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongoose/lib/connection.js:1639:11)
+    at async /Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/@nestjs/mongoose/dist/mongoose-core.module.js:65:112
+[31m[Nest] 42223  - [39m05/02/2026, 6:44:30 PM [31m  ERROR[39m [38;5;3m[MongooseModule] [39m[31mUnable to connect to the database. Retrying (3)...[39m
+MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongoose/lib/connection.js:1169:11)
+    at NativeConnection.asPromise (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongoose/lib/connection.js:1639:11)
+    at async /Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/@nestjs/mongoose/dist/mongoose-core.module.js:65:112
+[31m[Nest] 42223  - [39m05/02/2026, 6:44:38 PM [31m  ERROR[39m [38;5;3m[MongooseModule] [39m[31mUnable to connect to the database. Retrying (4)...[39m
+MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongoose/lib/connection.js:1169:11)
+    at NativeConnection.asPromise (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongoose/lib/connection.js:1639:11)
+    at async /Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/@nestjs/mongoose/dist/mongoose-core.module.js:65:112
+[31m[Nest] 42223  - [39m05/02/2026, 6:44:46 PM [31m  ERROR[39m [38;5;3m[MongooseModule] [39m[31mUnable to connect to the database. Retrying (5)...[39m
+MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongoose/lib/connection.js:1169:11)
+    at NativeConnection.asPromise (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongoose/lib/connection.js:1639:11)
+    at async /Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/@nestjs/mongoose/dist/mongoose-core.module.js:65:112
+[31m[Nest] 42223  - [39m05/02/2026, 6:44:46 PM [31m  ERROR[39m [38;5;3m[ExceptionHandler] [39mMongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/[4mmongoose[24m/lib/connection.js:1169:11)
+    at NativeConnection.asPromise (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/[4mmongoose[24m/lib/connection.js:1639:11)
+    at async /Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/[4m@nestjs/mongoose[24m/dist/mongoose-core.module.js:65:112 {
+  errorLabelSet: Set(0) {},
+  reason: TopologyDescription {
+    type: [32m'Unknown'[39m,
+    servers: Map(1) {
+      [32m'127.0.0.1:27017'[39m => ServerDescription {
+        address: [32m'127.0.0.1:27017'[39m,
+        type: [32m'Unknown'[39m,
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: [33m0[39m,
+        maxWireVersion: [33m0[39m,
+        roundTripTime: [33m-1[39m,
+        minRoundTripTime: [33m0[39m,
+        lastUpdateTime: [33m8106984123[39m,
+        lastWriteDate: [33m0[39m,
+        error: MongoNetworkError: connect ECONNREFUSED 127.0.0.1:27017
+            at Socket.<anonymous> (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/[4mmongodb[24m/lib/cmap/connect.js:286:44)
+        [90m    at Object.onceWrapper (node:events:639:26)[39m
+        [90m    at Socket.emit (node:events:524:28)[39m
+        [90m    at emitErrorNT (node:internal/streams/destroy:169:8)[39m
+        [90m    at emitErrorCloseNT (node:internal/streams/destroy:128:3)[39m
+        [90m    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)[39m {
+          errorLabelSet: Set(1) {
+            [32m'ResetPool'[39m
+          },
+          beforeHandshake: [33mfalse[39m,
+          [cause]: Error: connect ECONNREFUSED 127.0.0.1:27017
+          [90m    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)[39m {
+            errno: [33m-61[39m,
+            code: [32m'ECONNREFUSED'[39m,
+            syscall: [32m'connect'[39m,
+            address: [32m'127.0.0.1'[39m,
+            port: [33m27017[39m
+          }
+        },
+        topologyVersion: [1mnull[22m,
+        setName: [1mnull[22m,
+        setVersion: [1mnull[22m,
+        electionId: [1mnull[22m,
+        logicalSessionTimeoutMinutes: [1mnull[22m,
+        maxMessageSizeBytes: [1mnull[22m,
+        maxWriteBatchSize: [1mnull[22m,
+        maxBsonObjectSize: [1mnull[22m,
+        primary: [1mnull[22m,
+        me: [1mnull[22m,
+        [32m'$clusterTime'[39m: [1mnull[22m,
+        iscryptd: [33mfalse[39m
+      }
+    },
+    stale: [33mfalse[39m,
+    compatible: [33mtrue[39m,
+    heartbeatFrequencyMS: [33m10000[39m,
+    localThresholdMS: [33m15[39m,
+    setName: [1mnull[22m,
+    maxElectionId: [1mnull[22m,
+    maxSetVersion: [1mnull[22m,
+    commonWireVersion: [33m0[39m,
+    logicalSessionTimeoutMinutes: [1mnull[22m
+  },
+  code: [90mundefined[39m,
+  cause: TopologyDescription {
+    type: [32m'Unknown'[39m,
+    servers: Map(1) {
+      [32m'127.0.0.1:27017'[39m => ServerDescription {
+        address: [32m'127.0.0.1:27017'[39m,
+        type: [32m'Unknown'[39m,
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: [33m0[39m,
+        maxWireVersion: [33m0[39m,
+        roundTripTime: [33m-1[39m,
+        minRoundTripTime: [33m0[39m,
+        lastUpdateTime: [33m8106984123[39m,
+        lastWriteDate: [33m0[39m,
+        error: MongoNetworkError: connect ECONNREFUSED 127.0.0.1:27017
+            at Socket.<anonymous> (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/[4mmongodb[24m/lib/cmap/connect.js:286:44)
+        [90m    at Object.onceWrapper (node:events:639:26)[39m
+        [90m    at Socket.emit (node:events:524:28)[39m
+        [90m    at emitErrorNT (node:internal/streams/destroy:169:8)[39m
+        [90m    at emitErrorCloseNT (node:internal/streams/destroy:128:3)[39m
+        [90m    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)[39m {
+          errorLabelSet: Set(1) {
+            [32m'ResetPool'[39m
+          },
+          beforeHandshake: [33mfalse[39m,
+          [cause]: Error: connect ECONNREFUSED 127.0.0.1:27017
+          [90m    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)[39m {
+            errno: [33m-61[39m,
+            code: [32m'ECONNREFUSED'[39m,
+            syscall: [32m'connect'[39m,
+            address: [32m'127.0.0.1'[39m,
+            port: [33m27017[39m
+          }
+        },
+        topologyVersion: [1mnull[22m,
+        setName: [1mnull[22m,
+        setVersion: [1mnull[22m,
+        electionId: [1mnull[22m,
+        logicalSessionTimeoutMinutes: [1mnull[22m,
+        maxMessageSizeBytes: [1mnull[22m,
+        maxWriteBatchSize: [1mnull[22m,
+        maxBsonObjectSize: [1mnull[22m,
+        primary: [1mnull[22m,
+        me: [1mnull[22m,
+        [32m'$clusterTime'[39m: [1mnull[22m,
+        iscryptd: [33mfalse[39m
+      }
+    },
+    stale: [33mfalse[39m,
+    compatible: [33mtrue[39m,
+    heartbeatFrequencyMS: [33m10000[39m,
+    localThresholdMS: [33m15[39m,
+    setName: [1mnull[22m,
+    maxElectionId: [1mnull[22m,
+    maxSetVersion: [1mnull[22m,
+    commonWireVersion: [33m0[39m,
+    logicalSessionTimeoutMinutes: [1mnull[22m
+  }
+}
+[2J[3J[H[[90m6:57:41 PM[0m] File change detected. Starting incremental compilation...
+
+[[90m6:57:51 PM[0m] Found 0 errors. Watching for file changes.
+
+(node:50149) [MONGOOSE] Warning: Duplicate schema index on {"email":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[Nest] 50149  - [39m05/02/2026, 6:57:58 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 50149  - [39m05/02/2026, 6:57:59 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +217ms[39m
+[32m[Nest] 50149  - [39m05/02/2026, 6:57:59 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mRabbitMQConfig dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 50149  - [39m05/02/2026, 6:57:59 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPassportModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 50149  - [39m05/02/2026, 6:57:59 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMulterModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 50149  - [39m05/02/2026, 6:57:59 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +98ms[39m
+[32m[Nest] 50149  - [39m05/02/2026, 6:57:59 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mThrottlerModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 50149  - [39m05/02/2026, 6:57:59 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mJwtModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 50149  - [39m05/02/2026, 6:57:59 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 50149  - [39m05/02/2026, 6:57:59 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mServeStaticModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 50149  - [39m05/02/2026, 6:57:59 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +1ms[39m
+[31m[Nest] 50149  - [39m05/02/2026, 6:58:04 PM [31m  ERROR[39m [38;5;3m[MongooseModule] [39m[31mUnable to connect to the database. Retrying (1)...[39m
+MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongoose/lib/connection.js:1169:11)
+    at NativeConnection.asPromise (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongoose/lib/connection.js:1639:11)
+    at async /Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/@nestjs/mongoose/dist/mongoose-core.module.js:65:112
+[31m[Nest] 50149  - [39m05/02/2026, 6:58:12 PM [31m  ERROR[39m [38;5;3m[MongooseModule] [39m[31mUnable to connect to the database. Retrying (2)...[39m
+MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongoose/lib/connection.js:1169:11)
+    at NativeConnection.asPromise (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongoose/lib/connection.js:1639:11)
+    at async /Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/@nestjs/mongoose/dist/mongoose-core.module.js:65:112
+[31m[Nest] 50149  - [39m05/02/2026, 6:58:20 PM [31m  ERROR[39m [38;5;3m[MongooseModule] [39m[31mUnable to connect to the database. Retrying (3)...[39m
+MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongoose/lib/connection.js:1169:11)
+    at NativeConnection.asPromise (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongoose/lib/connection.js:1639:11)
+    at async /Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/@nestjs/mongoose/dist/mongoose-core.module.js:65:112
+[31m[Nest] 50149  - [39m05/02/2026, 6:58:28 PM [31m  ERROR[39m [38;5;3m[MongooseModule] [39m[31mUnable to connect to the database. Retrying (4)...[39m
+MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongoose/lib/connection.js:1169:11)
+    at NativeConnection.asPromise (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongoose/lib/connection.js:1639:11)
+    at async /Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/@nestjs/mongoose/dist/mongoose-core.module.js:65:112
+[31m[Nest] 50149  - [39m05/02/2026, 6:58:36 PM [31m  ERROR[39m [38;5;3m[MongooseModule] [39m[31mUnable to connect to the database. Retrying (5)...[39m
+MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongoose/lib/connection.js:1169:11)
+    at NativeConnection.asPromise (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongoose/lib/connection.js:1639:11)
+    at async /Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/@nestjs/mongoose/dist/mongoose-core.module.js:65:112
+[31m[Nest] 50149  - [39m05/02/2026, 6:58:36 PM [31m  ERROR[39m [38;5;3m[ExceptionHandler] [39mMongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/[4mmongoose[24m/lib/connection.js:1169:11)
+    at NativeConnection.asPromise (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/[4mmongoose[24m/lib/connection.js:1639:11)
+    at async /Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/[4m@nestjs/mongoose[24m/dist/mongoose-core.module.js:65:112 {
+  errorLabelSet: Set(0) {},
+  reason: TopologyDescription {
+    type: [32m'Unknown'[39m,
+    servers: Map(1) {
+      [32m'127.0.0.1:27017'[39m => ServerDescription {
+        address: [32m'127.0.0.1:27017'[39m,
+        type: [32m'Unknown'[39m,
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: [33m0[39m,
+        maxWireVersion: [33m0[39m,
+        roundTripTime: [33m-1[39m,
+        minRoundTripTime: [33m0[39m,
+        lastUpdateTime: [33m8107813590[39m,
+        lastWriteDate: [33m0[39m,
+        error: MongoNetworkError: connect ECONNREFUSED 127.0.0.1:27017
+            at Socket.<anonymous> (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/[4mmongodb[24m/lib/cmap/connect.js:286:44)
+        [90m    at Object.onceWrapper (node:events:639:26)[39m
+        [90m    at Socket.emit (node:events:524:28)[39m
+        [90m    at emitErrorNT (node:internal/streams/destroy:169:8)[39m
+        [90m    at emitErrorCloseNT (node:internal/streams/destroy:128:3)[39m
+        [90m    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)[39m {
+          errorLabelSet: Set(1) {
+            [32m'ResetPool'[39m
+          },
+          beforeHandshake: [33mfalse[39m,
+          [cause]: Error: connect ECONNREFUSED 127.0.0.1:27017
+          [90m    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)[39m {
+            errno: [33m-61[39m,
+            code: [32m'ECONNREFUSED'[39m,
+            syscall: [32m'connect'[39m,
+            address: [32m'127.0.0.1'[39m,
+            port: [33m27017[39m
+          }
+        },
+        topologyVersion: [1mnull[22m,
+        setName: [1mnull[22m,
+        setVersion: [1mnull[22m,
+        electionId: [1mnull[22m,
+        logicalSessionTimeoutMinutes: [1mnull[22m,
+        maxMessageSizeBytes: [1mnull[22m,
+        maxWriteBatchSize: [1mnull[22m,
+        maxBsonObjectSize: [1mnull[22m,
+        primary: [1mnull[22m,
+        me: [1mnull[22m,
+        [32m'$clusterTime'[39m: [1mnull[22m,
+        iscryptd: [33mfalse[39m
+      }
+    },
+    stale: [33mfalse[39m,
+    compatible: [33mtrue[39m,
+    heartbeatFrequencyMS: [33m10000[39m,
+    localThresholdMS: [33m15[39m,
+    setName: [1mnull[22m,
+    maxElectionId: [1mnull[22m,
+    maxSetVersion: [1mnull[22m,
+    commonWireVersion: [33m0[39m,
+    logicalSessionTimeoutMinutes: [1mnull[22m
+  },
+  code: [90mundefined[39m,
+  cause: TopologyDescription {
+    type: [32m'Unknown'[39m,
+    servers: Map(1) {
+      [32m'127.0.0.1:27017'[39m => ServerDescription {
+        address: [32m'127.0.0.1:27017'[39m,
+        type: [32m'Unknown'[39m,
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: [33m0[39m,
+        maxWireVersion: [33m0[39m,
+        roundTripTime: [33m-1[39m,
+        minRoundTripTime: [33m0[39m,
+        lastUpdateTime: [33m8107813590[39m,
+        lastWriteDate: [33m0[39m,
+        error: MongoNetworkError: connect ECONNREFUSED 127.0.0.1:27017
+            at Socket.<anonymous> (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/[4mmongodb[24m/lib/cmap/connect.js:286:44)
+        [90m    at Object.onceWrapper (node:events:639:26)[39m
+        [90m    at Socket.emit (node:events:524:28)[39m
+        [90m    at emitErrorNT (node:internal/streams/destroy:169:8)[39m
+        [90m    at emitErrorCloseNT (node:internal/streams/destroy:128:3)[39m
+        [90m    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)[39m {
+          errorLabelSet: Set(1) {
+            [32m'ResetPool'[39m
+          },
+          beforeHandshake: [33mfalse[39m,
+          [cause]: Error: connect ECONNREFUSED 127.0.0.1:27017
+          [90m    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)[39m {
+            errno: [33m-61[39m,
+            code: [32m'ECONNREFUSED'[39m,
+            syscall: [32m'connect'[39m,
+            address: [32m'127.0.0.1'[39m,
+            port: [33m27017[39m
+          }
+        },
+        topologyVersion: [1mnull[22m,
+        setName: [1mnull[22m,
+        setVersion: [1mnull[22m,
+        electionId: [1mnull[22m,
+        logicalSessionTimeoutMinutes: [1mnull[22m,
+        maxMessageSizeBytes: [1mnull[22m,
+        maxWriteBatchSize: [1mnull[22m,
+        maxBsonObjectSize: [1mnull[22m,
+        primary: [1mnull[22m,
+        me: [1mnull[22m,
+        [32m'$clusterTime'[39m: [1mnull[22m,
+        iscryptd: [33mfalse[39m
+      }
+    },
+    stale: [33mfalse[39m,
+    compatible: [33mtrue[39m,
+    heartbeatFrequencyMS: [33m10000[39m,
+    localThresholdMS: [33m15[39m,
+    setName: [1mnull[22m,
+    maxElectionId: [1mnull[22m,
+    maxSetVersion: [1mnull[22m,
+    commonWireVersion: [33m0[39m,
+    logicalSessionTimeoutMinutes: [1mnull[22m
+  }
+}
+[2J[3J[H[[90m6:59:34 PM[0m] File change detected. Starting incremental compilation...
+
+[[90m6:59:41 PM[0m] Found 0 errors. Watching for file changes.
+
+(node:56265) [MONGOOSE] Warning: Duplicate schema index on {"email":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[Nest] 56265  - [39m05/02/2026, 6:59:47 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 56265  - [39m05/02/2026, 6:59:47 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +52ms[39m
+[32m[Nest] 56265  - [39m05/02/2026, 6:59:47 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mRabbitMQConfig dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 56265  - [39m05/02/2026, 6:59:47 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPassportModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 56265  - [39m05/02/2026, 6:59:47 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMulterModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 56265  - [39m05/02/2026, 6:59:48 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +24ms[39m
+[32m[Nest] 56265  - [39m05/02/2026, 6:59:48 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mThrottlerModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 56265  - [39m05/02/2026, 6:59:48 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mJwtModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 56265  - [39m05/02/2026, 6:59:48 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 56265  - [39m05/02/2026, 6:59:48 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mServeStaticModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 56265  - [39m05/02/2026, 6:59:48 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +1ms[39m
+[31m[Nest] 56265  - [39m05/02/2026, 6:59:48 PM [31m  ERROR[39m [38;5;3m[MongooseModule] [39m[31mUnable to connect to the database. Retrying (1)...[39m
+MongoServerError: Authentication failed.
+    at Connection.sendCommand (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongodb/lib/cmap/connection.js:306:27)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Connection.command (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongodb/lib/cmap/connection.js:334:26)
+    at async executeScram (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongodb/lib/cmap/auth/scram.js:79:22)
+    at async ScramSHA256.auth (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongodb/lib/cmap/auth/scram.js:39:16)
+    at async performInitialHandshake (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongodb/lib/cmap/connect.js:104:13)
+    at async connect (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongodb/lib/cmap/connect.js:24:9)
+[31m[Nest] 56265  - [39m05/02/2026, 7:01:16 PM [31m  ERROR[39m [38;5;3m[MongooseModule] [39m[31mUnable to connect to the database. Retrying (2)...[39m
+MongoServerError: Authentication failed.
+    at Connection.sendCommand (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongodb/lib/cmap/connection.js:306:27)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Connection.command (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongodb/lib/cmap/connection.js:334:26)
+    at async executeScram (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongodb/lib/cmap/auth/scram.js:79:22)
+    at async ScramSHA256.auth (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongodb/lib/cmap/auth/scram.js:39:16)
+    at async performInitialHandshake (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongodb/lib/cmap/connect.js:104:13)
+    at async connect (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongodb/lib/cmap/connect.js:24:9)
+[31m[Nest] 56265  - [39m05/02/2026, 7:01:19 PM [31m  ERROR[39m [38;5;3m[MongooseModule] [39m[31mUnable to connect to the database. Retrying (3)...[39m
+MongoServerError: Authentication failed.
+    at Connection.sendCommand (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongodb/lib/cmap/connection.js:306:27)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Connection.command (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongodb/lib/cmap/connection.js:334:26)
+    at async executeScram (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongodb/lib/cmap/auth/scram.js:79:22)
+    at async ScramSHA256.auth (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongodb/lib/cmap/auth/scram.js:39:16)
+    at async performInitialHandshake (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongodb/lib/cmap/connect.js:104:13)
+    at async connect (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongodb/lib/cmap/connect.js:24:9)
+[31m[Nest] 56265  - [39m05/02/2026, 7:01:22 PM [31m  ERROR[39m [38;5;3m[MongooseModule] [39m[31mUnable to connect to the database. Retrying (4)...[39m
+MongoServerError: Authentication failed.
+    at Connection.sendCommand (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongodb/lib/cmap/connection.js:306:27)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Connection.command (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongodb/lib/cmap/connection.js:334:26)
+    at async executeScram (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongodb/lib/cmap/auth/scram.js:79:22)
+    at async ScramSHA256.auth (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongodb/lib/cmap/auth/scram.js:39:16)
+    at async performInitialHandshake (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongodb/lib/cmap/connect.js:104:13)
+    at async connect (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongodb/lib/cmap/connect.js:24:9)
+[31m[Nest] 56265  - [39m05/02/2026, 7:01:25 PM [31m  ERROR[39m [38;5;3m[MongooseModule] [39m[31mUnable to connect to the database. Retrying (5)...[39m
+MongoServerError: Authentication failed.
+    at Connection.sendCommand (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongodb/lib/cmap/connection.js:306:27)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Connection.command (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongodb/lib/cmap/connection.js:334:26)
+    at async executeScram (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongodb/lib/cmap/auth/scram.js:79:22)
+    at async ScramSHA256.auth (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongodb/lib/cmap/auth/scram.js:39:16)
+    at async performInitialHandshake (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongodb/lib/cmap/connect.js:104:13)
+    at async connect (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/mongodb/lib/cmap/connect.js:24:9)
+[31m[Nest] 56265  - [39m05/02/2026, 7:01:25 PM [31m  ERROR[39m [38;5;3m[ExceptionHandler] [39mMongoServerError: Authentication failed.
+    at Connection.sendCommand (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/[4mmongodb[24m/lib/cmap/connection.js:306:27)
+[90m    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)[39m
+    at async Connection.command (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/[4mmongodb[24m/lib/cmap/connection.js:334:26)
+    at async executeScram (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/[4mmongodb[24m/lib/cmap/auth/scram.js:79:22)
+    at async ScramSHA256.auth (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/[4mmongodb[24m/lib/cmap/auth/scram.js:39:16)
+    at async performInitialHandshake (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/[4mmongodb[24m/lib/cmap/connect.js:104:13)
+    at async connect (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/[4mmongodb[24m/lib/cmap/connect.js:24:9) {
+  errorLabelSet: Set(2) {
+    [32m'HandshakeError'[39m,
+    [32m'ResetPool'[39m
+  },
+  errorResponse: {
+    ok: [33m0[39m,
+    errmsg: [32m'Authentication failed.'[39m,
+    code: [33m18[39m,
+    codeName: [32m'AuthenticationFailed'[39m
+  },
+  ok: [33m0[39m,
+  code: [33m18[39m,
+  codeName: [32m'AuthenticationFailed'[39m,
+  connectionGeneration: [33m0[39m
+}
+[2J[3J[H[[90m7:35:04 PM[0m] File change detected. Starting incremental compilation...
+
+[[90m7:39:11 PM[0m] Found 0 errors. Watching for file changes.
+
+[2J[3J[H[[90m7:39:13 PM[0m] File change detected. Starting incremental compilation...
+
+node:internal/modules/cjs/loader:1210
+  throw err;
+  ^
+
+Error: Cannot find module './schemas/user.schema'
+Require stack:
+- /Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/apps/backend/dist/modules/users/users.service.js
+- /Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/apps/backend/dist/modules/auth/auth.service.js
+- /Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/apps/backend/dist/modules/auth/auth.module.js
+- /Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/apps/backend/dist/app.module.js
+- /Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/apps/backend/dist/main.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+    at Module._load (node:internal/modules/cjs/loader:1038:27)
+    at Module.require (node:internal/modules/cjs/loader:1289:19)
+    at require (node:internal/modules/helpers:182:18)
+    at Object.<anonymous> (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/apps/backend/dist/modules/users/users.service.js:53:23)
+    at Module._compile (node:internal/modules/cjs/loader:1521:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+    at Module.load (node:internal/modules/cjs/loader:1266:32)
+    at Module._load (node:internal/modules/cjs/loader:1091:12)
+    at Module.require (node:internal/modules/cjs/loader:1289:19) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/apps/backend/dist/modules/users/users.service.js',
+    '/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/apps/backend/dist/modules/auth/auth.service.js',
+    '/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/apps/backend/dist/modules/auth/auth.module.js',
+    '/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/apps/backend/dist/app.module.js',
+    '/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/apps/backend/dist/main.js'
+  ]
+}
+
+Node.js v20.20.2
+[[90m7:43:23 PM[0m] Found 0 errors. Watching for file changes.
+
+(node:63724) [MONGOOSE] Warning: Duplicate schema index on {"email":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:48 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:48 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +12ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:48 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mRabbitMQConfig dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:48 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPassportModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:48 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMulterModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:48 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +18ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:48 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mThrottlerModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:48 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:48 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:48 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mServeStaticModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:48 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mJwtModule dependencies initialized[39m[38;5;3m +2ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:48 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:48 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseCoreModule dependencies initialized[39m[38;5;3m +147ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:48 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:48 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:48 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:48 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:48 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:48 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:48 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mUsersModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:48 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mNotificationsModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:48 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mContentModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:48 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAnalyticsModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:48 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mEncodingModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:48 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAuthModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:48 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mStreamingModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:49 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mHealthController {/health}:[39m[38;5;3m +453ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:49 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/health, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:49 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAuthController {/auth}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:49 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/register, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:49 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/login, POST} route[39m[38;5;3m +2ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:49 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/refresh, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:49 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/logout, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:49 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/me, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:49 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mUsersController {/users}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:49 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users/profile, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:49 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users/profile, PUT} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:49 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users/:id, GET} route[39m[38;5;3m +8ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:49 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:49 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users/:id/role, PATCH} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:49 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users/:id, DELETE} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:49 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mContentController {/content}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:49 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content/upload, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:49 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:49 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content/trending/list, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:49 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content/user/:userId, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:49 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:49 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content/:id, PUT} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:49 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content/:id, DELETE} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:49 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/content, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:49 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mStreamingController {/streaming}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:49 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/streaming/:videoId/manifest.m3u8, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:49 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/streaming/:videoId/:quality/playlist.m3u8, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:49 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/streaming/session/start, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:49 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/streaming/session/heartbeat, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:49 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/streaming/session/end, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:49 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/streaming/quality/recommend, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:49 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mEncodingController {/encoding}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:49 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/encoding/video/:videoId, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:49 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/encoding/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:49 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAnalyticsController {/analytics}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:49 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/analytics/user/stats, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:49 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/analytics/track, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:49 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/analytics/video/:videoId/metrics, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:49 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mNotificationController {/notifications}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:49 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/notifications, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:49 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/notifications, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:49 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/notifications/:id/read, PATCH} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:49 PM [32m    LOG[39m [38;5;3m[RabbitMQService] [39m[32m✓ RabbitMQ connected[39m
+[32m[Nest] 63724  - [39m05/02/2026, 7:43:49 PM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +5ms[39m
+[31m[Nest] 63724  - [39m05/02/2026, 7:43:49 PM [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::3000[39m[38;5;3m +2ms[39m
+Failed to start application: Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at ExpressAdapter.listen (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/@nestjs/platform-express/adapters/express-adapter.js:115:32)
+    at /Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/@nestjs/core/nest-application.js:188:30
+    at new Promise (<anonymous>)
+    at NestApplication.listen (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/node_modules/@nestjs/core/nest-application.js:178:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async bootstrap (/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/apps/backend/dist/main.js:41:5) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+[2J[3J[H[[90m7:56:48 PM[0m] File change detected. Starting incremental compilation...
+
+[[90m7:57:28 PM[0m] Found 0 errors. Watching for file changes.
+
+node:internal/modules/cjs/loader:1210
+  throw err;
+  ^
+
+Error: Cannot find module '/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/apps/backend/dist/main'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+    at Module._load (node:internal/modules/cjs/loader:1038:27)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+    at node:internal/main/run_main_module:28:49 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v20.20.2

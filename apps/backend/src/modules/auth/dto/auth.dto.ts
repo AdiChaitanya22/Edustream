@@ -1,5 +1,6 @@
-import { IsEmail, IsString, MinLength, MaxLength } from 'class-validator';
-import { ApiProperty } from '@nestjs/swagger';
+import { IsEmail, IsEnum, IsOptional, IsString, MinLength, MaxLength } from 'class-validator';
+import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
+import { UserRole } from '../../../types/user.types';
 
 /**
  * Register DTO
@@ -27,6 +28,11 @@ export class RegisterDto {
   @MinLength(8, { message: 'Password must be at least 8 characters' })
   @MaxLength(100)
   password: string;
+
+  @ApiPropertyOptional({ enum: UserRole, default: UserRole.STUDENT })
+  @IsOptional()
+  @IsEnum(UserRole)
+  role?: UserRole;
 }
 
 /**

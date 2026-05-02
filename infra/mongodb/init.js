@@ -1,10 +1,3 @@
-db = db.getSiblingDB('admin');
-db.createUser({
-  user: 'admin',
-  pwd: 'admin123',
-  roles: ['root']
-});
-
 db = db.getSiblingDB('edustream');
 db.createUser({
   user: 'edustream-user',

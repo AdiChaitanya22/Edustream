@@ -4,6 +4,7 @@ import { Model } from 'mongoose';
 import { AnalyticsEvent } from './schemas/analytics-event.schema';
 import { TrackEventDto, VideoMetricsResponseDto } from './dto/analytics.dto';
 import { AnalyticsEventType } from '../../types/analytics.types';
+import { UsersService } from '../users/users.service';
 
 /**
  * Analytics Service
@@ -15,7 +16,52 @@ export class AnalyticsService {
 
   constructor(
     @InjectModel(AnalyticsEvent.name) private eventModel: Model<AnalyticsEvent>,
+    private usersService: UsersService,
   ) {}
+
+  /**
+   * Get User Statistics
+   */
+  async getUserStats(userId: string): Promise<any> {
+    const user = await this.usersService.findById(userId);
+    const events = await this.eventModel.find({ userId }).sort({ timestamp: -1 });
+
+    const streamStarts = events.filter((e) => e.eventType === AnalyticsEventType.STREAM_START);
+    const streamEnds = events.filter((e) => e.eventType === AnalyticsEventType.STREAM_END);
+
+    const totalWatchTimeMinutes = this.calculateTotalMinutes(streamStarts, streamEnds);
+    const completedCourses = streamEnds.length;
+    const inProgressCourses = user.enrolledCourses?.length || 0;
+    const badgesEarned = Math.floor(completedCourses / 2) + 1; // Arbitrary logic for badges
+
+    // Map recent activity from events
+    const recentActivity = events.slice(0, 5).map(e => {
+      let type: 'completed' | 'started' | 'badge' = 'started';
+      let title = `Watched video ${e.videoId}`;
+      
+      if (e.eventType === AnalyticsEventType.STREAM_END) {
+        type = 'completed';
+        title = `Finished video ${e.videoId}`;
+      } else if (e.eventType === AnalyticsEventType.QUALITY_CHANGE) {
+        title = `Changed quality on ${e.videoId}`;
+      }
+
+      return {
+        id: e._id.toString(),
+        type,
+        title,
+        timestamp: e.timestamp,
+      };
+    });
+
+    return {
+      totalWatchTimeMinutes,
+      completedCourses,
+      inProgressCourses,
+      badgesEarned,
+      recentActivity,
+    };
+  }
 
   /**
    * Track an analytics event

@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import { Link, useNavigate } from "react-router-dom";
 import ContentRow from "@/components/ContentRow";
 import { Loader2 } from "lucide-react";
+import { API_BASE_URL } from "@/services/api";
 
 export default function MyLearning() {
   const [user, setUser] = useState<any>(null);
@@ -18,7 +19,7 @@ export default function MyLearning() {
           return;
         }
 
-        const res = await fetch('http://localhost:3000/auth/me', {
+        const res = await fetch(`${API_BASE_URL}/auth/me`, {
           headers: {
             'Authorization': `Bearer ${token}`
           }
@@ -27,6 +28,8 @@ export default function MyLearning() {
         if (!res.ok) {
           if (res.status === 401) {
             localStorage.removeItem('accessToken');
+            localStorage.removeItem('refreshToken');
+            localStorage.removeItem('user');
             navigate('/auth');
           }
           throw new Error('Failed to fetch profile');

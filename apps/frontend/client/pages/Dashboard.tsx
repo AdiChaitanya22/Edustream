@@ -6,14 +6,22 @@ import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import ContentRow from "@/components/ContentRow";
+import { API_BASE_URL } from "@/services/api";
 
 export default function Dashboard() {
   const [user, setUser] = useState<any>(null);
+  const [stats, setStats] = useState<any>({
+    totalWatchTimeMinutes: 0,
+    completedCourses: 0,
+    inProgressCourses: 0,
+    badgesEarned: 0,
+    recentActivity: []
+  });
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
   useEffect(() => {
-    const fetchProfile = async () => {
+    const fetchData = async () => {
       try {
         const token = localStorage.getItem('accessToken');
         if (!token) {
@@ -21,30 +29,40 @@ export default function Dashboard() {
           return;
         }
 
-        const res = await fetch('http://localhost:3000/auth/me', {
-          headers: {
-            'Authorization': `Bearer ${token}`
-          }
-        });
+        const headers = {
+          'Authorization': `Bearer ${token}`
+        };
 
-        if (!res.ok) {
-          if (res.status === 401) {
+        const [profileRes, statsRes] = await Promise.all([
+          fetch(`${API_BASE_URL}/auth/me`, { headers }),
+          fetch(`${API_BASE_URL}/analytics/user/stats`, { headers }).catch(() => null)
+        ]);
+
+        if (!profileRes.ok) {
+          if (profileRes.status === 401) {
             localStorage.removeItem('accessToken');
+            localStorage.removeItem('refreshToken');
+            localStorage.removeItem('user');
             navigate('/auth');
           }
           throw new Error('Failed to fetch profile');
         }
 
-        const data = await res.json();
-        setUser(data);
+        const userData = await profileRes.json();
+        setUser(userData);
+
+        if (statsRes && statsRes.ok) {
+          const statsData = await statsRes.json();
+          setStats(statsData);
+        }
       } catch (err) {
-        console.error("Error fetching user profile:", err);
+        console.error("Error fetching dashboard data:", err);
       } finally {
         setLoading(false);
       }
     };
 
-    fetchProfile();
+    fetchData();
   }, [navigate]);
 
   if (loading) {
@@ -146,8 +164,8 @@ export default function Dashboard() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="text-2xl font-bold">12h 45m</div>
-                  <p className="text-xs text-zinc-500 mt-1">+2.5h this week</p>
+                  <div className="text-2xl font-bold">{Math.floor(stats.totalWatchTimeMinutes / 60)}h {Math.round(stats.totalWatchTimeMinutes % 60)}m</div>
+                  <p className="text-xs text-zinc-500 mt-1">Total stream time</p>
                 </CardContent>
               </Card>
 
@@ -158,8 +176,8 @@ export default function Dashboard() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="text-2xl font-bold">4 Courses</div>
-                  <p className="text-xs text-zinc-500 mt-1">Top 15% of students</p>
+                  <div className="text-2xl font-bold">{stats.completedCourses} Courses</div>
+                  <p className="text-xs text-zinc-500 mt-1">Keep it up!</p>
                 </CardContent>
               </Card>
 
@@ -170,8 +188,8 @@ export default function Dashboard() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="text-2xl font-bold">{user?.enrolledCourses?.length || 0}</div>
-                  <p className="text-xs text-zinc-500 mt-1">Keep it up!</p>
+                  <div className="text-2xl font-bold">{stats.inProgressCourses}</div>
+                  <p className="text-xs text-zinc-500 mt-1">Active courses</p>
                 </CardContent>
               </Card>
 
@@ -182,8 +200,8 @@ export default function Dashboard() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="text-2xl font-bold">7</div>
-                  <p className="text-xs text-zinc-500 mt-1">2 new earned</p>
+                  <div className="text-2xl font-bold">{stats.badgesEarned}</div>
+                  <p className="text-xs text-zinc-500 mt-1">Earned so far</p>
                 </CardContent>
               </Card>
             </div>
@@ -192,24 +210,19 @@ export default function Dashboard() {
             <div className="mt-8 p-6 rounded-xl bg-zinc-900/30 border border-zinc-800">
                <h3 className="font-semibold mb-4 text-zinc-200">Recent Activity</h3>
                <ul className="space-y-4">
-                 <li className="flex items-center gap-3 text-sm">
-                   <div className="h-8 w-8 rounded-full bg-green-500/20 flex items-center justify-center text-green-500">
-                     <CheckCircle className="h-4 w-4" />
-                   </div>
-                   <div>
-                     <p className="text-zinc-300">Finished <span className="font-medium text-white">React Basics</span></p>
-                     <p className="text-zinc-500 text-xs">2 days ago</p>
-                   </div>
-                 </li>
-                 <li className="flex items-center gap-3 text-sm">
-                   <div className="h-8 w-8 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-500">
-                     <Award className="h-4 w-4" />
-                   </div>
-                   <div>
-                     <p className="text-zinc-300">Earned <span className="font-medium text-white">Fast Learner</span> Badge</p>
-                     <p className="text-zinc-500 text-xs">4 days ago</p>
-                   </div>
-                 </li>
+                 {stats.recentActivity && stats.recentActivity.length > 0 ? stats.recentActivity.map((activity: any) => (
+                   <li key={activity.id} className="flex items-center gap-3 text-sm">
+                     <div className={`h-8 w-8 rounded-full flex items-center justify-center ${activity.type === 'completed' ? 'bg-green-500/20 text-green-500' : 'bg-blue-500/20 text-blue-500'}`}>
+                       {activity.type === 'completed' ? <CheckCircle className="h-4 w-4" /> : <PlayCircle className="h-4 w-4" />}
+                     </div>
+                     <div>
+                       <p className="text-zinc-300"><span className="font-medium text-white">{activity.title}</span></p>
+                       <p className="text-zinc-500 text-xs">{new Date(activity.timestamp).toLocaleDateString()}</p>
+                     </div>
+                   </li>
+                 )) : (
+                   <li className="text-sm text-zinc-500">No recent activity</li>
+                 )}
                </ul>
             </div>
 

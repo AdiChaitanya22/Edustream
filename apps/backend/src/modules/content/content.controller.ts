@@ -10,17 +10,22 @@ import {
   UseGuards,
   HttpCode,
   HttpStatus,
+  UseInterceptors,
+  UploadedFile,
 } from '@nestjs/common';
-import { ApiTags, ApiOperation, ApiBearerAuth, ApiResponse, ApiQuery } from '@nestjs/swagger';
+import { FileInterceptor } from '@nestjs/platform-express';
+import { ApiTags, ApiOperation, ApiBearerAuth, ApiResponse, ApiQuery, ApiConsumes, ApiBody } from '@nestjs/swagger';
 import { ContentService } from './content.service';
 import {
   CreateVideoDto,
   UpdateVideoDto,
   VideoResponseDto,
   VideoListQueryDto,
+  UploadVideoDto,
 } from './dto/content.dto';
 import { JwtAuthGuard } from '../../common/guards/jwt.guard';
 import { CurrentUser } from '../../common/decorators/current-user.decorator';
+import { Public } from '../../common/decorators/public.decorator';
 import { Roles } from '../../common/decorators/roles.decorator';
 import { RolesGuard } from '../../common/guards/roles.guard';
 import { UserRole } from '../../types/user.types';
@@ -31,15 +36,44 @@ import { UserRole } from '../../types/user.types';
  */
 @ApiTags('Content')
 @Controller('content')
-@UseGuards(JwtAuthGuard)
 @ApiBearerAuth()
 export class ContentController {
   constructor(private contentService: ContentService) {}
 
   /**
+   * Upload Video File
+   */
+  @Post('upload')
+  @UseGuards(JwtAuthGuard, RolesGuard)
+  @Roles(UserRole.ADMIN)
+  @UseInterceptors(FileInterceptor('file'))
+  @ApiConsumes('multipart/form-data')
+  @ApiBody({
+    schema: {
+      type: 'object',
+      properties: {
+        file: { type: 'string', format: 'binary' },
+        title: { type: 'string' },
+        description: { type: 'string' },
+        courseId: { type: 'string' },
+      },
+    },
+  })
+  @ApiOperation({ summary: 'Upload a new video file (Admin only)' })
+  @ApiResponse({ status: 201, type: VideoResponseDto })
+  async uploadVideo(
+    @CurrentUser('id') userId: string,
+    @UploadedFile() file: any,
+    @Body() uploadVideoDto: UploadVideoDto,
+  ): Promise<VideoResponseDto> {
+    return this.contentService.upload(userId, file, uploadVideoDto);
+  }
+
+  /**
    * Upload/Create Video
    */
   @Post()
+  @UseGuards(JwtAuthGuard)
   @HttpCode(HttpStatus.CREATED)
   @ApiOperation({ summary: 'Create a new video' })
   @ApiResponse({
@@ -58,6 +92,45 @@ export class ContentController {
   /**
    * Get Video by ID
    */
+  @Public()
+  @Get('trending/list')
+  @ApiOperation({ summary: 'Get trending videos' })
+  @ApiQuery({ name: 'limit', required: false, type: Number })
+  @ApiResponse({
+    status: 200,
+    description: 'Trending videos retrieved',
+    type: [VideoResponseDto],
+  })
+  async getTrending(@Query('limit') limit?: number): Promise<VideoResponseDto[]> {
+    return this.contentService.getTrending(limit ? parseInt(limit.toString()) : 10);
+  }
+
+  /**
+   * Get User's Videos
+   */
+  @Get('user/:userId')
+  @UseGuards(JwtAuthGuard)
+  @ApiOperation({ summary: "Get user's videos" })
+  @ApiQuery({ name: 'skip', required: false, type: Number })
+  @ApiQuery({ name: 'limit', required: false, type: Number })
+  @ApiResponse({
+    status: 200,
+    description: "User's videos retrieved",
+    type: [VideoResponseDto],
+  })
+  async getUserVideos(
+    @Param('userId') userId: string,
+    @Query('skip') skip?: number,
+    @Query('limit') limit?: number,
+  ): Promise<VideoResponseDto[]> {
+    return this.contentService.getUserVideos(
+      userId,
+      skip ? parseInt(skip.toString()) : 0,
+      limit ? parseInt(limit.toString()) : 10,
+    );
+  }
+
+  @Public()
   @Get(':id')
   @ApiOperation({ summary: 'Get video by ID' })
   @ApiResponse({
@@ -74,6 +147,7 @@ export class ContentController {
    * Update Video (Owner Only)
    */
   @Put(':id')
+  @UseGuards(JwtAuthGuard)
   @ApiOperation({ summary: 'Update video metadata (owner only)' })
   @ApiResponse({
     status: 200,
@@ -94,6 +168,7 @@ export class ContentController {
    * Delete Video (Owner Only)
    */
   @Delete(':id')
+  @UseGuards(JwtAuthGuard)
   @HttpCode(HttpStatus.OK)
   @ApiOperation({ summary: 'Delete video (owner only)' })
   @ApiResponse({ status: 200, description: 'Video deleted successfully' })
@@ -110,6 +185,7 @@ export class ContentController {
    * List Videos
    */
   @Get()
+  @Public()
   @ApiOperation({ summary: 'List videos with filters and pagination' })
   @ApiResponse({
     status: 200,
@@ -120,42 +196,4 @@ export class ContentController {
     return this.contentService.findAll(query);
   }
 
-  /**
-   * Get Trending Videos
-   */
-  @Get('trending/list')
-  @ApiOperation({ summary: 'Get trending videos' })
-  @ApiQuery({ name: 'limit', required: false, type: Number })
-  @ApiResponse({
-    status: 200,
-    description: 'Trending videos retrieved',
-    type: [VideoResponseDto],
-  })
-  async getTrending(@Query('limit') limit?: number): Promise<VideoResponseDto[]> {
-    return this.contentService.getTrending(limit ? parseInt(limit.toString()) : 10);
-  }
-
-  /**
-   * Get User's Videos
-   */
-  @Get('user/:userId')
-  @ApiOperation({ summary: "Get user's videos" })
-  @ApiQuery({ name: 'skip', required: false, type: Number })
-  @ApiQuery({ name: 'limit', required: false, type: Number })
-  @ApiResponse({
-    status: 200,
-    description: "User's videos retrieved",
-    type: [VideoResponseDto],
-  })
-  async getUserVideos(
-    @Param('userId') userId: string,
-    @Query('skip') skip?: number,
-    @Query('limit') limit?: number,
-  ): Promise<VideoResponseDto[]> {
-    return this.contentService.getUserVideos(
-      userId,
-      skip ? parseInt(skip.toString()) : 0,
-      limit ? parseInt(limit.toString()) : 10,
-    );
-  }
 }

@@ -1,10 +1,12 @@
-import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowLeft, PlayCircle, Clock, BookOpen, Share2, BookmarkPlus } from "lucide-react";
+import { ArrowLeft, PlayCircle, Clock, BookOpen, Share2, BookmarkPlus, Loader2 } from "lucide-react";
 import Header from "@/components/Header";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { contentService } from "@/services/contentService";
+import { API_BASE_URL } from "@/services/api";
+import { useQuery } from "@tanstack/react-query";
 
 // Mock data for the sidebar lessons
 const courseLessons = [
@@ -17,13 +19,21 @@ const courseLessons = [
 
 export default function Watch() {
   const { id } = useParams();
-  const [videoUrl, setVideoUrl] = useState("https://www.w3schools.com/html/mov_bbb.mp4");
+  const { data: video, isLoading, error } = useQuery({
+    queryKey: ["video", id],
+    queryFn: () => contentService.getVideo(id as string),
+    enabled: Boolean(id),
+  });
 
-  // In a real app, you would fetch the specific video details from the backend based on the `id`
-  useEffect(() => {
-    // Simulate fetching video data
-    window.scrollTo(0, 0);
-  }, [id]);
+  const videoUrl = video?.originalUrl
+    ? `${API_BASE_URL}${video.originalUrl}`
+    : "https://www.w3schools.com/html/mov_bbb.mp4";
+
+  const title = video?.title || id?.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()) || "Video Title";
+  const description = video?.description || "This lesson is ready to stream from EduStream.";
+  const durationLabel = video?.duration
+    ? `${Math.floor(video.duration / 60)}:${String(video.duration % 60).padStart(2, "0")}`
+    : "0:00";
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -38,7 +48,7 @@ export default function Watch() {
           <span className="mx-2">/</span>
           <span className="truncate">Course Name</span>
           <span className="mx-2">/</span>
-          <span className="text-white font-medium truncate">{id?.replace(/-/g, ' ').toUpperCase() || 'Video Player'}</span>
+          <span className="text-white font-medium truncate">{title}</span>
         </div>
 
         <div className="flex flex-col lg:flex-row gap-8">
@@ -51,15 +61,25 @@ export default function Watch() {
               transition={{ duration: 0.5 }}
               className="relative w-full aspect-video bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl"
             >
-              <video
-                controls
-                autoPlay
-                className="w-full h-full object-contain bg-black"
-                poster="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=1200"
-              >
-                <source src={videoUrl} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
+              {isLoading ? (
+                <div className="h-full w-full flex items-center justify-center">
+                  <Loader2 className="h-10 w-10 animate-spin text-primary" />
+                </div>
+              ) : error ? (
+                <div className="h-full w-full flex items-center justify-center text-zinc-400">
+                  Unable to load this video.
+                </div>
+              ) : (
+                <video
+                  controls
+                  autoPlay
+                  className="w-full h-full object-contain bg-black"
+                  poster={video?.thumbnail}
+                >
+                  <source src={videoUrl} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              )}
             </motion.div>
 
             {/* Video Info & Controls */}
@@ -71,11 +91,11 @@ export default function Watch() {
             >
               <div>
                 <h1 className="text-3xl font-bold mb-2 text-white">
-                  {id?.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()) || "Video Title"}
+                  {title}
                 </h1>
                 <div className="flex items-center text-sm text-zinc-400 gap-4 mb-4">
-                  <span className="flex items-center"><Clock className="h-4 w-4 mr-1" /> 22:10</span>
-                  <span className="flex items-center"><BookOpen className="h-4 w-4 mr-1" /> Lesson 3 of 5</span>
+                  <span className="flex items-center"><Clock className="h-4 w-4 mr-1" /> {durationLabel}</span>
+                  <span className="flex items-center"><BookOpen className="h-4 w-4 mr-1" /> {video?.courseId || "EduStream"}</span>
                 </div>
               </div>
 
@@ -106,10 +126,7 @@ export default function Watch() {
                 <TabsContent value="overview" className="mt-6 p-6 bg-zinc-900/30 rounded-xl border border-zinc-800">
                   <h3 className="text-xl font-semibold mb-4 text-white">About this lesson</h3>
                   <p className="text-zinc-400 leading-relaxed">
-                    In this lesson, we will cover the core concepts of building modern web applications. 
-                    You'll learn how to structure your code, manage state efficiently, and create reusable 
-                    UI components. By the end of this video, you'll have a solid foundation to start 
-                    building your own complex interfaces.
+                    {description}
                   </p>
                   
                   <div className="mt-8 pt-8 border-t border-zinc-800 flex items-center">

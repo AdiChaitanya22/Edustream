@@ -1,11 +1,20 @@
 import { Link } from "react-router-dom";
-import { Search, Bell, User, Menu } from "lucide-react";
+import { Search, Bell, User, Menu, LogOut } from "lucide-react";
 import { useState } from "react";
 import SearchBar from "./SearchBar";
 import NotificationBell from "./NotificationBell";
+import { Button } from "@/components/ui/button";
+import { useAuthStore } from "@/store/authStore";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const isAuthenticated = useAuthStore((state) => state.isAuthenticated);
+  const logout = useAuthStore((state) => state.logout);
+
+  const handleLogout = async () => {
+    await logout();
+    window.location.href = "/auth";
+  };
 
   return (
     <header className="fixed top-0 z-50 w-full bg-gradient-to-b from-background via-background to-transparent">
@@ -59,12 +68,26 @@ export default function Header() {
           <div className="flex items-center gap-4">
             <SearchBar />
             <NotificationBell />
-            <Link 
-              to="/auth"
-              className="h-10 w-10 rounded-full bg-gradient-to-br from-primary via-secondary to-accent flex items-center justify-center hover:shadow-lg hover:shadow-primary/25 transition-all"
-            >
-              <User className="h-5 w-5 text-primary-foreground" />
-            </Link>
+            {isAuthenticated ? (
+              <Button
+                type="button"
+                variant="ghost"
+                size="icon"
+                onClick={handleLogout}
+                className="h-10 w-10 rounded-full bg-card hover:bg-card/80"
+                title="Log out"
+              >
+                <LogOut className="h-5 w-5 text-foreground/70" />
+              </Button>
+            ) : (
+              <Link
+                to="/auth"
+                className="h-10 w-10 rounded-full bg-gradient-to-br from-primary via-secondary to-accent flex items-center justify-center hover:shadow-lg hover:shadow-primary/25 transition-all"
+                title="Log in"
+              >
+                <User className="h-5 w-5 text-primary-foreground" />
+              </Link>
+            )}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="md:hidden h-10 w-10 rounded-full bg-card hover:bg-card/80 transition-colors flex items-center justify-center"

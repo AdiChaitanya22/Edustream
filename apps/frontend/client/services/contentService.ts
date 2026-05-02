@@ -27,6 +27,13 @@ export interface CreateVideoData {
   resolution?: string;
 }
 
+export interface UploadVideoData {
+  file: File;
+  title: string;
+  description?: string;
+  courseId: string;
+}
+
 export const contentService = {
   async getVideos(params?: { skip?: number; limit?: number; courseId?: string; search?: string }): Promise<Video[]> {
     const response = await api.get<Video[]>('/content', { params });
@@ -40,6 +47,20 @@ export const contentService = {
 
   async createVideo(data: CreateVideoData): Promise<Video> {
     const response = await api.post<Video>('/content', data);
+    return response.data;
+  },
+
+  async uploadVideo(data: UploadVideoData): Promise<Video> {
+    const formData = new FormData();
+    formData.append('file', data.file);
+    formData.append('title', data.title);
+    formData.append('courseId', data.courseId);
+
+    if (data.description) {
+      formData.append('description', data.description);
+    }
+
+    const response = await api.post<Video>('/content/upload', formData);
     return response.data;
   },
 

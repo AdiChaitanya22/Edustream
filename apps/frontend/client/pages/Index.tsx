@@ -4,6 +4,8 @@ import { Play } from "lucide-react";
 import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import ContentRow from "@/components/ContentRow";
+import { contentService } from "@/services/contentService";
+import { useQuery } from "@tanstack/react-query";
 
 const FEATURED_COURSE = {
   title: "Featured Course",
@@ -31,16 +33,26 @@ const continueWatching = [
   { title: "AWS Cloud Intro", progress: 80, image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800" },
 ];
 
-const trendingVideos = [
-  { title: "JavaScript Masterclass", image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800" },
-  { title: "Learn React Fast", image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800" },
-  { title: "Python AI Projects", image: "https://images.unsplash.com/photo-1526379095098-d400fd0bfce8?w=800" },
-  { title: "Cloud Computing Basics", image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800" },
-];
-
 export default function Index() {
   const [isAutoPlay] = useState(true);
   const navigate = useNavigate();
+  const { data: videos = [] } = useQuery({
+    queryKey: ["home-trending"],
+    queryFn: () => contentService.getTrending(8),
+  });
+
+  const trendingVideos = videos.length > 0
+    ? videos.map((video) => ({
+        id: video.id,
+        title: video.title,
+        image: video.thumbnail,
+      }))
+    : [
+        { title: "JavaScript Masterclass", image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800" },
+        { title: "Learn React Fast", image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800" },
+        { title: "Python AI Projects", image: "https://images.unsplash.com/photo-1526379095098-d400fd0bfce8?w=800" },
+        { title: "Cloud Computing Basics", image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800" },
+      ];
 
   return (
     <div className="min-h-screen bg-background">

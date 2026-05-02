@@ -76,7 +76,12 @@ export const useAuthStore = create<AuthState>((set) => ({
   },
 
   logout: async () => {
-    await authService.logout();
+    try {
+      await authService.logout();
+    } catch (error) {
+      // Clear local auth even when the server session is already expired.
+    }
+
     set({
       user: null,
       accessToken: null,

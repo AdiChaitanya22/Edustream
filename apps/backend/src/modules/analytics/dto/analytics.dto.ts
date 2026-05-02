@@ -54,3 +54,34 @@ export class VideoMetricsResponseDto {
   @ApiProperty()
   completionRate: number;
 }
+
+export class RecentActivityDto {
+  @ApiProperty()
+  id: string;
+
+  @ApiProperty()
+  type: 'completed' | 'started' | 'badge';
+
+  @ApiProperty()
+  title: string;
+
+  @ApiProperty()
+  timestamp: Date;
+}
+
+export class UserStatsResponseDto {
+  @ApiProperty()
+  totalWatchTimeMinutes: number;
+
+  @ApiProperty()
+  completedCourses: number;
+
+  @ApiProperty()
+  inProgressCourses: number;
+
+  @ApiProperty()
+  badgesEarned: number;
+
+  @ApiProperty({ type: [RecentActivityDto] })
+  recentActivity: RecentActivityDto[];
+}

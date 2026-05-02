@@ -44,6 +44,23 @@ export class CreateVideoDto {
   resolution?: string;
 }
 
+export class UploadVideoDto {
+  @ApiProperty({ description: 'Video title' })
+  @IsString()
+  @IsNotEmpty()
+  title: string;
+
+  @ApiPropertyOptional({ description: 'Video description' })
+  @IsString()
+  @IsOptional()
+  description?: string;
+
+  @ApiProperty({ description: 'Course ID' })
+  @IsString()
+  @IsNotEmpty()
+  courseId: string;
+}
+
 export class UpdateVideoDto {
   @ApiPropertyOptional({ description: 'Video title' })
   @IsString()

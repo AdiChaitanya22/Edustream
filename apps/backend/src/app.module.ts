@@ -2,6 +2,8 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { ThrottlerModule } from '@nestjs/throttler';
 import { MongooseModule } from '@nestjs/mongoose';
+import { ServeStaticModule } from '@nestjs/serve-static';
+import { join } from 'path';
 import { APP_GUARD } from '@nestjs/core';
 import { DatabaseConfig } from './config/database.config';
 import { RabbitMQConfig } from './config/rabbitmq.config';
@@ -17,6 +19,12 @@ import { NotificationsModule } from './modules/notifications/notification.module
 
 @Module({
   imports: [
+    // Static files
+    ServeStaticModule.forRoot({
+      rootPath: join(process.cwd(), 'uploads'),
+      serveRoot: '/uploads',
+    }),
+
     // Environment configuration
     ConfigModule.forRoot({
       isGlobal: true,

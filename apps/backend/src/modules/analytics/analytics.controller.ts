@@ -17,6 +17,19 @@ export class AnalyticsController {
   constructor(private analyticsService: AnalyticsService) {}
 
   /**
+   * Get User Statistics
+   */
+  @Get('user/stats')
+  @ApiOperation({ summary: 'Get user analytics statistics' })
+  @ApiResponse({
+    status: 200,
+    description: 'User statistics retrieved',
+  })
+  async getUserStats(@CurrentUser('id') userId: string): Promise<any> {
+    return this.analyticsService.getUserStats(userId);
+  }
+
+  /**
    * Track Analytics Event
    */
   @Post('track')

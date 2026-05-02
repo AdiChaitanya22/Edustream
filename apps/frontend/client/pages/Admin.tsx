@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { 
   Users, 
@@ -9,9 +9,12 @@ import {
   Bell,
   MoreVertical,
   PlayCircle,
-  Home
+  Home,
+  Upload,
+  Loader2,
+  LogOut
 } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -25,10 +28,23 @@ import {
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { toast } from "sonner";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { contentService } from "@/services/contentService";
+import api from "@/services/api";
+import { useNavigate } from "react-router-dom";
+import { useAuthStore } from "@/store/authStore";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 const STATS = [
   { title: "Total Users", value: "12,453", change: "+14%", icon: Users },
@@ -36,23 +52,91 @@ const STATS = [
   { title: "Total Views", value: "1.2M", change: "+21%", icon: BarChart },
 ];
 
-const VIDEOS = [
-  { id: "1", title: "JavaScript Masterclass", views: "145K", status: "Published", date: "2024-03-10" },
-  { id: "2", title: "React Fundamentals", views: "89K", status: "Published", date: "2024-03-12" },
-  { id: "3", title: "Python Data Science", views: "210K", status: "Published", date: "2024-03-15" },
-  { id: "4", title: "Advanced CSS Animations", views: "0", status: "Draft", date: "2024-03-20" },
-  { id: "5", title: "Intro to Machine Learning", views: "45K", status: "Published", date: "2024-03-22" },
-];
-
 export default function Admin() {
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [notifTitle, setNotifTitle] = useState("");
   const [notifMessage, setNotifMessage] = useState("");
+  
+  // Upload state
+  const [uploadOpen, setUploadOpen] = useState(false);
+  const [uploadTitle, setUploadTitle] = useState("");
+  const [uploadDesc, setUploadDesc] = useState("");
+  const [courseId, setCourseId] = useState("react-basics");
+  const [videoFile, setVideoFile] = useState<File | null>(null);
+
   const queryClient = useQueryClient();
+  const navigate = useNavigate();
+  const logout = useAuthStore((state) => state.logout);
+
+  const clearAuth = () => {
+    localStorage.removeItem("accessToken");
+    localStorage.removeItem("refreshToken");
+    localStorage.removeItem("user");
+  };
+
+  const { data: currentUser, isLoading: userLoading } = useQuery({
+    queryKey: ["admin-current-user"],
+    queryFn: async () => {
+      const response = await api.get("/auth/me");
+      return response.data;
+    },
+    enabled: Boolean(localStorage.getItem("accessToken")),
+    retry: false,
+  });
+
+  const isAdmin = currentUser?.role === "admin";
+
+  const handleLogout = async () => {
+    await logout();
+    navigate("/auth");
+  };
+
+  // Fetch real videos
+  const { data: videos = [], isLoading: videosLoading } = useQuery({
+    queryKey: ["admin-videos"],
+    queryFn: () => contentService.getVideos({ limit: 50 }),
+  });
+
+  const uploadMutation = useMutation({
+    mutationFn: async () => {
+      if (!videoFile) return;
+      if (!localStorage.getItem("accessToken")) {
+        throw new Error("Please log in again before uploading.");
+      }
+      if (!isAdmin) {
+        throw new Error("Your account is not an admin account.");
+      }
+      return contentService.uploadVideo({
+        file: videoFile,
+        title: uploadTitle,
+        description: uploadDesc,
+        courseId,
+      });
+    },
+    onSuccess: () => {
+      toast.success("Video uploaded successfully!");
+      setUploadOpen(false);
+      setUploadTitle("");
+      setUploadDesc("");
+      setVideoFile(null);
+      queryClient.invalidateQueries({ queryKey: ["admin-videos"] });
+    },
+    onError: (error: any) => {
+      if (error?.response?.status === 401) {
+        clearAuth();
+        toast.error("Your login session expired. Please log in again.");
+        navigate("/auth");
+        return;
+      }
+
+      const message = error?.response?.data?.message || error.message || "Upload failed";
+      toast.error(`Upload failed: ${message}`);
+    }
+  });
 
   const broadcastMutation = useMutation({
     mutationFn: async () => {
-      const token = localStorage.getItem("token");
+      const token = localStorage.getItem("accessToken");
       const res = await fetch("http://localhost:3000/notifications", {
         method: "POST",
         headers: {
@@ -135,6 +219,15 @@ export default function Admin() {
             <Button variant="ghost" size="icon" className="rounded-full">
               <Bell className="h-5 w-5 text-zinc-400" />
             </Button>
+            <Button
+              variant="ghost"
+              size="icon"
+              className="rounded-full"
+              onClick={handleLogout}
+              title="Log out"
+            >
+              <LogOut className="h-5 w-5 text-zinc-400" />
+            </Button>
             <Avatar className="h-9 w-9 border border-zinc-800">
               <AvatarImage src="https://i.pravatar.cc/150?u=admin" />
               <AvatarFallback>AD</AvatarFallback>
@@ -144,6 +237,36 @@ export default function Admin() {
 
         {/* Dashboard Content */}
         <div className="p-6 md:p-8 space-y-8 overflow-y-auto">
+          {userLoading ? (
+            <Card className="bg-zinc-900/50 border-zinc-800">
+              <CardContent className="flex items-center justify-center py-10">
+                <Loader2 className="h-8 w-8 animate-spin text-primary" />
+              </CardContent>
+            </Card>
+          ) : !currentUser ? (
+            <Card className="bg-zinc-900/50 border-zinc-800">
+              <CardContent className="py-10 text-center space-y-4">
+                <p className="text-zinc-300">Please log in before using the admin dashboard.</p>
+                <Button onClick={() => navigate("/auth")} className="bg-primary hover:bg-primary/90 text-white">
+                  Go to Login
+                </Button>
+                <Button variant="outline" onClick={() => navigate("/admin-login")} className="border-zinc-700 bg-zinc-900/50 text-white">
+                  Admin Login
+                </Button>
+              </CardContent>
+            </Card>
+          ) : !isAdmin ? (
+            <Card className="bg-zinc-900/50 border-zinc-800">
+              <CardContent className="py-10 text-center space-y-4">
+                <p className="text-zinc-300">You are logged in as {currentUser.email}, but this account is not an admin.</p>
+                <p className="text-sm text-zinc-500">Video uploads require an account with the admin role.</p>
+                <Button onClick={() => navigate("/admin-login")} className="bg-primary hover:bg-primary/90 text-white">
+                  Log in with admin account
+                </Button>
+              </CardContent>
+            </Card>
+          ) : null}
+
           <div>
             <h1 className="text-3xl font-bold text-white mb-2">Dashboard Overview</h1>
             <p className="text-zinc-400">Welcome back, Admin. Here's what's happening today.</p>
@@ -194,47 +317,138 @@ export default function Admin() {
                   <CardTitle className="text-xl text-white">Recent Content</CardTitle>
                   <p className="text-sm text-zinc-400 mt-1">Manage and view your uploaded videos.</p>
                 </div>
-                <Button size="sm" className="bg-primary hover:bg-primary/90 text-white gap-2">
-                  <PlayCircle className="h-4 w-4" />
-                  Upload New
-                </Button>
+                <Dialog open={uploadOpen} onOpenChange={setUploadOpen}>
+                  <DialogTrigger asChild>
+                    <Button size="sm" className="bg-primary hover:bg-primary/90 text-white gap-2">
+                      <Upload className="h-4 w-4" />
+                      Upload New
+                    </Button>
+                  </DialogTrigger>
+                  <DialogContent className="bg-zinc-950 border-zinc-800 text-white sm:max-w-[425px]">
+                    <DialogHeader>
+                      <DialogTitle>Upload New Video</DialogTitle>
+                      <DialogDescription className="text-zinc-400">
+                        Add a new video to your library. It will be available to users immediately.
+                      </DialogDescription>
+                    </DialogHeader>
+                    <div className="grid gap-4 py-4">
+                      <div className="grid gap-2">
+                        <Label htmlFor="title" className="text-zinc-300">Video Title</Label>
+                        <Input
+                          id="title"
+                          placeholder="E.g. Advanced React Hooks"
+                          className="bg-zinc-900 border-zinc-800 focus-visible:ring-primary"
+                          value={uploadTitle}
+                          onChange={(e) => setUploadTitle(e.target.value)}
+                        />
+                      </div>
+                      <div className="grid gap-2">
+                        <Label htmlFor="desc" className="text-zinc-300">Description</Label>
+                        <Textarea
+                          id="desc"
+                          placeholder="What is this video about?"
+                          className="bg-zinc-900 border-zinc-800 focus-visible:ring-primary"
+                          value={uploadDesc}
+                          onChange={(e) => setUploadDesc(e.target.value)}
+                        />
+                      </div>
+                      <div className="grid gap-2">
+                        <Label htmlFor="course" className="text-zinc-300">Course ID</Label>
+                        <Input
+                          id="course"
+                          placeholder="react-basics"
+                          className="bg-zinc-900 border-zinc-800 focus-visible:ring-primary"
+                          value={courseId}
+                          onChange={(e) => setCourseId(e.target.value)}
+                        />
+                      </div>
+                      <div className="grid gap-2">
+                        <Label htmlFor="file" className="text-zinc-300">Video File</Label>
+                        <Input
+                          id="file"
+                          type="file"
+                          accept="video/*"
+                          className="bg-zinc-900 border-zinc-800 focus-visible:ring-primary file:text-primary file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-primary/10 hover:file:bg-primary/20"
+                          onChange={(e) => setVideoFile(e.target.files?.[0] || null)}
+                        />
+                      </div>
+                    </div>
+                    <DialogFooter>
+                      <Button
+                        variant="ghost"
+                        onClick={() => setUploadOpen(false)}
+                        className="text-zinc-400 hover:text-white"
+                      >
+                        Cancel
+                      </Button>
+                      <Button
+                        onClick={() => uploadMutation.mutate()}
+                        disabled={uploadMutation.isPending || userLoading || !isAdmin || !videoFile || !uploadTitle}
+                        className="bg-primary hover:bg-primary/90 text-white min-w-[100px]"
+                      >
+                        {uploadMutation.isPending ? (
+                          <>
+                            <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                            Uploading...
+                          </>
+                        ) : (
+                          "Upload Video"
+                        )}
+                      </Button>
+                    </DialogFooter>
+                  </DialogContent>
+                </Dialog>
               </CardHeader>
               <CardContent>
-                <Table>
-                  <TableHeader>
-                    <TableRow className="border-zinc-800 hover:bg-zinc-800/50">
-                      <TableHead className="text-zinc-400">Video Title</TableHead>
-                      <TableHead className="text-zinc-400">Status</TableHead>
-                      <TableHead className="text-zinc-400">Views</TableHead>
-                      <TableHead className="text-zinc-400">Date</TableHead>
-                      <TableHead className="text-zinc-400 text-right">Actions</TableHead>
-                    </TableRow>
-                  </TableHeader>
-                  <TableBody>
-                    {VIDEOS.map((video) => (
-                      <TableRow key={video.id} className="border-zinc-800 hover:bg-zinc-800/50">
-                        <TableCell className="font-medium text-white">
-                          {video.title}
-                        </TableCell>
-                        <TableCell>
-                          <Badge 
-                            variant={video.status === 'Published' ? 'default' : 'secondary'}
-                            className={video.status === 'Published' ? 'bg-emerald-500/10 text-emerald-500 hover:bg-emerald-500/20' : 'bg-zinc-800 text-zinc-400 hover:bg-zinc-800/80'}
-                          >
-                            {video.status}
-                          </Badge>
-                        </TableCell>
-                        <TableCell className="text-zinc-300">{video.views}</TableCell>
-                        <TableCell className="text-zinc-400">{video.date}</TableCell>
-                        <TableCell className="text-right">
-                          <Button variant="ghost" size="icon" className="h-8 w-8 text-zinc-400 hover:text-white">
-                            <MoreVertical className="h-4 w-4" />
-                          </Button>
-                        </TableCell>
+                {videosLoading ? (
+                  <div className="flex items-center justify-center py-10">
+                    <Loader2 className="h-8 w-8 animate-spin text-primary" />
+                  </div>
+                ) : (
+                  <Table>
+                    <TableHeader>
+                      <TableRow className="border-zinc-800 hover:bg-zinc-800/50">
+                        <TableHead className="text-zinc-400">Video Title</TableHead>
+                        <TableHead className="text-zinc-400">Status</TableHead>
+                        <TableHead className="text-zinc-400">Course</TableHead>
+                        <TableHead className="text-zinc-400">Date</TableHead>
+                        <TableHead className="text-zinc-400 text-right">Actions</TableHead>
                       </TableRow>
-                    ))}
-                  </TableBody>
-                </Table>
+                    </TableHeader>
+                    <TableBody>
+                      {videos.length === 0 ? (
+                        <TableRow>
+                          <TableCell colSpan={5} className="text-center py-10 text-zinc-500">
+                            No videos found. Upload your first video!
+                          </TableCell>
+                        </TableRow>
+                      ) : (
+                        videos.map((video: any) => (
+                          <TableRow key={video.id} className="border-zinc-800 hover:bg-zinc-800/50">
+                            <TableCell className="font-medium text-white">
+                              {video.title}
+                            </TableCell>
+                            <TableCell>
+                              <Badge 
+                                variant={video.status === 'READY' ? 'default' : 'secondary'}
+                                className={video.status === 'READY' ? 'bg-emerald-500/10 text-emerald-500 hover:bg-emerald-500/20' : 'bg-zinc-800 text-zinc-400 hover:bg-zinc-800/80'}
+                              >
+                                {video.status}
+                              </Badge>
+                            </TableCell>
+                            <TableCell className="text-zinc-300">{video.courseId}</TableCell>
+                            <TableCell className="text-zinc-400">{new Date(video.createdAt).toLocaleDateString()}</TableCell>
+                            <TableCell className="text-right">
+                              <Button variant="ghost" size="icon" className="h-8 w-8 text-zinc-400 hover:text-white">
+                                <MoreVertical className="h-4 w-4" />
+                              </Button>
+                            </TableCell>
+                          </TableRow>
+                        ))
+                      )}
+                    </TableBody>
+                  </Table>
+                )}
               </CardContent>
             </Card>
           </motion.div>
