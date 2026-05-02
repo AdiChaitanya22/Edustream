@@ -25,6 +25,10 @@ import {
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { toast } from "sonner";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
 
 const STATS = [
   { title: "Total Users", value: "12,453", change: "+14%", icon: Users },
@@ -42,6 +46,37 @@ const VIDEOS = [
 
 export default function Admin() {
   const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [notifTitle, setNotifTitle] = useState("");
+  const [notifMessage, setNotifMessage] = useState("");
+  const queryClient = useQueryClient();
+
+  const broadcastMutation = useMutation({
+    mutationFn: async () => {
+      const token = localStorage.getItem("token");
+      const res = await fetch("http://localhost:3000/notifications", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${token}`,
+        },
+        body: JSON.stringify({
+          title: notifTitle,
+          message: notifMessage,
+          type: "GLOBAL",
+        }),
+      });
+      if (!res.ok) throw new Error("Failed to send broadcast");
+    },
+    onSuccess: () => {
+      toast.success("Broadcast sent successfully!");
+      setNotifTitle("");
+      setNotifMessage("");
+      queryClient.invalidateQueries({ queryKey: ["notifications"] });
+    },
+    onError: () => {
+      toast.error("Failed to send broadcast. Make sure you are an Admin.");
+    }
+  });
 
   return (
     <div className="flex min-h-screen bg-background">
@@ -200,6 +235,48 @@ export default function Admin() {
                     ))}
                   </TableBody>
                 </Table>
+              </CardContent>
+            </Card>
+          </motion.div>
+
+          {/* Broadcast Notifications */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+          >
+            <Card className="bg-zinc-900/50 border-zinc-800">
+              <CardHeader>
+                <CardTitle className="text-xl text-white">Broadcast Announcement</CardTitle>
+                <p className="text-sm text-zinc-400 mt-1">Send a global notification to all registered users.</p>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="space-y-2">
+                  <Label className="text-zinc-300">Title</Label>
+                  <Input 
+                    placeholder="E.g., Server Maintenance, New Course Added!" 
+                    className="bg-zinc-900 border-zinc-800 focus-visible:ring-primary text-white"
+                    value={notifTitle}
+                    onChange={(e) => setNotifTitle(e.target.value)}
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label className="text-zinc-300">Message</Label>
+                  <Textarea 
+                    placeholder="Type your announcement here..." 
+                    className="bg-zinc-900 border-zinc-800 focus-visible:ring-primary h-24 text-white"
+                    value={notifMessage}
+                    onChange={(e) => setNotifMessage(e.target.value)}
+                  />
+                </div>
+                <Button 
+                  className="bg-primary hover:bg-primary/90 text-white gap-2 mt-2"
+                  onClick={() => broadcastMutation.mutate()}
+                  disabled={broadcastMutation.isPending || !notifTitle || !notifMessage}
+                >
+                  <Bell className="h-4 w-4" />
+                  {broadcastMutation.isPending ? "Sending..." : "Send Global Notification"}
+                </Button>
               </CardContent>
             </Card>
           </motion.div>

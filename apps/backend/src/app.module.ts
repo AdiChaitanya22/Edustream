@@ -13,6 +13,7 @@ import { ContentModule } from './modules/content/content.module';
 import { StreamingModule } from './modules/streaming/streaming.module';
 import { EncodingModule } from './modules/encoding/encoding.module';
 import { AnalyticsModule } from './modules/analytics/analytics.module';
+import { NotificationsModule } from './modules/notifications/notification.module';
 
 @Module({
   imports: [
@@ -45,6 +46,7 @@ import { AnalyticsModule } from './modules/analytics/analytics.module';
     StreamingModule,
     EncodingModule,
     AnalyticsModule,
+    NotificationsModule,
   ],
   controllers: [HealthController],
   providers: [

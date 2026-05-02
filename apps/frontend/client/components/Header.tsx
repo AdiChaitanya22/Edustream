@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { Search, Bell, User, Menu } from "lucide-react";
 import { useState } from "react";
+import SearchBar from "./SearchBar";
+import NotificationBell from "./NotificationBell";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -49,12 +51,8 @@ export default function Header() {
 
           {/* Right Actions */}
           <div className="flex items-center gap-4">
-            <button className="hidden sm:inline-flex h-10 w-10 rounded-full bg-card hover:bg-card/80 transition-colors items-center justify-center">
-              <Search className="h-5 w-5 text-foreground/70" />
-            </button>
-            <button className="hidden sm:inline-flex h-10 w-10 rounded-full bg-card hover:bg-card/80 transition-colors items-center justify-center">
-              <Bell className="h-5 w-5 text-foreground/70" />
-            </button>
+            <SearchBar />
+            <NotificationBell />
             <Link 
               to="/auth"
               className="h-10 w-10 rounded-full bg-gradient-to-br from-primary via-secondary to-accent flex items-center justify-center hover:shadow-lg hover:shadow-primary/25 transition-all"
