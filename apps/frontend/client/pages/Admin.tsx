@@ -12,7 +12,10 @@ import {
   Home,
   Upload,
   Loader2,
-  LogOut
+  LogOut,
+  Trash2,
+  Edit,
+  Eye
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -45,6 +48,14 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const STATS = [
   { title: "Total Users", value: "12,453", change: "+14%", icon: Users },
@@ -63,6 +74,9 @@ export default function Admin() {
   const [uploadDesc, setUploadDesc] = useState("");
   const [courseId, setCourseId] = useState("react-basics");
   const [videoFile, setVideoFile] = useState<File | null>(null);
+
+  // Delete state
+  const [deleteId, setDeleteId] = useState<string | null>(null);
 
   const queryClient = useQueryClient();
   const navigate = useNavigate();
@@ -84,7 +98,7 @@ export default function Admin() {
     retry: false,
   });
 
-  const isAdmin = currentUser?.role === "admin";
+  const isAdmin = currentUser?.role?.toUpperCase() === "ADMIN";
 
   const handleLogout = async () => {
     await logout();
@@ -131,6 +145,21 @@ export default function Admin() {
 
       const message = error?.response?.data?.message || error.message || "Upload failed";
       toast.error(`Upload failed: ${message}`);
+    }
+  });
+
+  const deleteMutation = useMutation({
+    mutationFn: async (id: string) => {
+      return contentService.deleteVideo(id);
+    },
+    onSuccess: () => {
+      toast.success("Video deleted successfully");
+      setDeleteId(null);
+      queryClient.invalidateQueries({ queryKey: ["admin-videos"] });
+    },
+    onError: (error: any) => {
+      const message = error?.response?.data?.message || "Failed to delete video";
+      toast.error(message);
     }
   });
 
@@ -250,9 +279,6 @@ export default function Admin() {
                 <Button onClick={() => navigate("/auth")} className="bg-primary hover:bg-primary/90 text-white">
                   Go to Login
                 </Button>
-                <Button variant="outline" onClick={() => navigate("/admin-login")} className="border-zinc-700 bg-zinc-900/50 text-white">
-                  Admin Login
-                </Button>
               </CardContent>
             </Card>
           ) : !isAdmin ? (
@@ -260,7 +286,7 @@ export default function Admin() {
               <CardContent className="py-10 text-center space-y-4">
                 <p className="text-zinc-300">You are logged in as {currentUser.email}, but this account is not an admin.</p>
                 <p className="text-sm text-zinc-500">Video uploads require an account with the admin role.</p>
-                <Button onClick={() => navigate("/admin-login")} className="bg-primary hover:bg-primary/90 text-white">
+                <Button onClick={() => navigate("/auth")} className="bg-primary hover:bg-primary/90 text-white">
                   Log in with admin account
                 </Button>
               </CardContent>
@@ -439,9 +465,33 @@ export default function Admin() {
                             <TableCell className="text-zinc-300">{video.courseId}</TableCell>
                             <TableCell className="text-zinc-400">{new Date(video.createdAt).toLocaleDateString()}</TableCell>
                             <TableCell className="text-right">
-                              <Button variant="ghost" size="icon" className="h-8 w-8 text-zinc-400 hover:text-white">
-                                <MoreVertical className="h-4 w-4" />
-                              </Button>
+                              <DropdownMenu>
+                                <DropdownMenuTrigger asChild>
+                                  <Button variant="ghost" size="icon" className="h-8 w-8 text-zinc-400 hover:text-white">
+                                    <MoreVertical className="h-4 w-4" />
+                                  </Button>
+                                </DropdownMenuTrigger>
+                                <DropdownMenuContent align="end" className="bg-zinc-900 border-zinc-800 text-white w-40">
+                                  <DropdownMenuLabel>Actions</DropdownMenuLabel>
+                                  <DropdownMenuSeparator className="bg-zinc-800" />
+                                  <DropdownMenuItem 
+                                    className="cursor-pointer gap-2"
+                                    onClick={() => navigate(`/watch/${video.id}`)}
+                                  >
+                                    <Eye className="h-4 w-4" /> View
+                                  </DropdownMenuItem>
+                                  <DropdownMenuItem className="cursor-pointer gap-2">
+                                    <Edit className="h-4 w-4" /> Edit
+                                  </DropdownMenuItem>
+                                  <DropdownMenuSeparator className="bg-zinc-800" />
+                                  <DropdownMenuItem 
+                                    className="cursor-pointer text-red-500 focus:text-red-500 gap-2"
+                                    onClick={() => setDeleteId(video.id)}
+                                  >
+                                    <Trash2 className="h-4 w-4" /> Delete
+                                  </DropdownMenuItem>
+                                </DropdownMenuContent>
+                              </DropdownMenu>
                             </TableCell>
                           </TableRow>
                         ))
@@ -452,6 +502,35 @@ export default function Admin() {
               </CardContent>
             </Card>
           </motion.div>
+
+          {/* Delete Confirmation Dialog */}
+          <Dialog open={!!deleteId} onOpenChange={(open) => !open && setDeleteId(null)}>
+            <DialogContent className="bg-zinc-950 border-zinc-800 text-white">
+              <DialogHeader>
+                <DialogTitle>Are you absolutely sure?</DialogTitle>
+                <DialogDescription className="text-zinc-400">
+                  This action cannot be undone. This will permanently delete the video and remove the data from our servers.
+                </DialogDescription>
+              </DialogHeader>
+              <DialogFooter className="gap-2 sm:gap-0">
+                <Button
+                  variant="ghost"
+                  onClick={() => setDeleteId(null)}
+                  className="text-zinc-400 hover:text-white"
+                >
+                  Cancel
+                </Button>
+                <Button
+                  variant="destructive"
+                  onClick={() => deleteId && deleteMutation.mutate(deleteId)}
+                  disabled={deleteMutation.isPending}
+                  className="bg-red-600 hover:bg-red-700 text-white"
+                >
+                  {deleteMutation.isPending ? "Deleting..." : "Permanently Delete"}
+                </Button>
+              </DialogFooter>
+            </DialogContent>
+          </Dialog>
 
           {/* Broadcast Notifications */}
           <motion.div
