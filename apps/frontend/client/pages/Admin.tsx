@@ -78,6 +78,11 @@ export default function Admin() {
   // Delete state
   const [deleteId, setDeleteId] = useState<string | null>(null);
 
+  // Edit state
+  const [editVideo, setEditVideo] = useState<any | null>(null);
+  const [editTitle, setEditTitle] = useState("");
+  const [editDesc, setEditDesc] = useState("");
+
   const queryClient = useQueryClient();
   const navigate = useNavigate();
   const logout = useAuthStore((state) => state.logout);
@@ -162,6 +167,31 @@ export default function Admin() {
       toast.error(message);
     }
   });
+
+  const updateMutation = useMutation({
+    mutationFn: async () => {
+      if (!editVideo) return;
+      return contentService.updateVideo(editVideo.id, {
+        title: editTitle,
+        description: editDesc
+      });
+    },
+    onSuccess: () => {
+      toast.success("Video updated successfully");
+      setEditVideo(null);
+      queryClient.invalidateQueries({ queryKey: ["admin-videos"] });
+    },
+    onError: (error: any) => {
+      const message = error?.response?.data?.message || "Failed to update video";
+      toast.error(message);
+    }
+  });
+
+  const handleEditClick = (video: any) => {
+    setEditVideo(video);
+    setEditTitle(video.title);
+    setEditDesc(video.description || "");
+  };
 
   const broadcastMutation = useMutation({
     mutationFn: async () => {
@@ -480,7 +510,10 @@ export default function Admin() {
                                   >
                                     <Eye className="h-4 w-4" /> View
                                   </DropdownMenuItem>
-                                  <DropdownMenuItem className="cursor-pointer gap-2">
+                                  <DropdownMenuItem 
+                                    className="cursor-pointer gap-2"
+                                    onClick={() => handleEditClick(video)}
+                                  >
                                     <Edit className="h-4 w-4" /> Edit
                                   </DropdownMenuItem>
                                   <DropdownMenuSeparator className="bg-zinc-800" />
@@ -502,6 +535,61 @@ export default function Admin() {
               </CardContent>
             </Card>
           </motion.div>
+
+          {/* Edit Video Dialog */}
+          <Dialog open={!!editVideo} onOpenChange={(open) => !open && setEditVideo(null)}>
+            <DialogContent className="bg-zinc-950 border-zinc-800 text-white sm:max-w-[425px]">
+              <DialogHeader>
+                <DialogTitle>Edit Video Details</DialogTitle>
+                <DialogDescription className="text-zinc-400">
+                  Update the title and description for this video.
+                </DialogDescription>
+              </DialogHeader>
+              <div className="grid gap-4 py-4">
+                <div className="grid gap-2">
+                  <Label htmlFor="edit-title" className="text-zinc-300">Video Title</Label>
+                  <Input
+                    id="edit-title"
+                    className="bg-zinc-900 border-zinc-800 focus-visible:ring-primary"
+                    value={editTitle}
+                    onChange={(e) => setEditTitle(e.target.value)}
+                  />
+                </div>
+                <div className="grid gap-2">
+                  <Label htmlFor="edit-desc" className="text-zinc-300">Description</Label>
+                  <Textarea
+                    id="edit-desc"
+                    className="bg-zinc-900 border-zinc-800 focus-visible:ring-primary h-32"
+                    value={editDesc}
+                    onChange={(e) => setEditDesc(e.target.value)}
+                  />
+                </div>
+              </div>
+              <DialogFooter>
+                <Button
+                  variant="ghost"
+                  onClick={() => setEditVideo(null)}
+                  className="text-zinc-400 hover:text-white"
+                >
+                  Cancel
+                </Button>
+                <Button
+                  onClick={() => updateMutation.mutate()}
+                  disabled={updateMutation.isPending || !editTitle}
+                  className="bg-primary hover:bg-primary/90 text-white min-w-[100px]"
+                >
+                  {updateMutation.isPending ? (
+                    <>
+                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                      Saving...
+                    </>
+                  ) : (
+                    "Save Changes"
+                  )}
+                </Button>
+              </DialogFooter>
+            </DialogContent>
+          </Dialog>
 
           {/* Delete Confirmation Dialog */}
           <Dialog open={!!deleteId} onOpenChange={(open) => !open && setDeleteId(null)}>
