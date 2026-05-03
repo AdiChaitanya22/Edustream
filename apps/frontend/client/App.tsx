@@ -14,6 +14,7 @@ import Watch from "./pages/Watch";
 import Auth from "./pages/Auth";
 import Admin from "./pages/Admin";
 import Dashboard from "./pages/Dashboard";
+import Profile from "./pages/Profile";
 import NotFound from "./pages/NotFound";
 import { useAuthStore } from "./store/authStore";
 import ProtectedRoute from "./components/ProtectedRoute";
@@ -54,6 +55,14 @@ export default function App() {
               element={
                 <ProtectedRoute>
                   <MyLearning />
+                </ProtectedRoute>
+              } 
+            />
+            <Route 
+              path="/profile" 
+              element={
+                <ProtectedRoute>
+                  <Profile />
                 </ProtectedRoute>
               } 
             />

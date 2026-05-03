@@ -4,6 +4,7 @@ import { UsersService } from '../users/users.service';
 import { JwtService } from '@nestjs/jwt';
 import { UnauthorizedException, ConflictException } from '@nestjs/common';
 import { RegisterDto, LoginDto } from './dto/auth.dto';
+import { UserRole } from '../../types/user.types';
 
 describe('AuthService', () => {
   let service: AuthService;
@@ -16,7 +17,7 @@ describe('AuthService', () => {
     firstName: 'Test',
     lastName: 'User',
     password: 'hashedPassword123',
-    role: 'student',
+    role: UserRole.STUDENT,
   };
 
   const mockUsersService = {
@@ -64,7 +65,7 @@ describe('AuthService', () => {
       mockUsersService.create.mockResolvedValue({
         id: '1',
         ...registerDto,
-        role: 'student',
+        role: UserRole.STUDENT,
       });
 
       mockJwtService.sign.mockReturnValue('token123');

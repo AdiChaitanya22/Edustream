@@ -15,6 +15,8 @@ import { CreateVideoDto, UpdateVideoDto, VideoResponseDto, VideoListQueryDto } f
 import { VideoStatus } from '../../types/content.types';
 import { RabbitMQService } from '../../config/rabbitmq.service';
 
+import { S3Service } from '../../common/services/s3.service';
+
 /**
  * Content Service
  * Handles video content CRUD operations and upload processing
@@ -28,6 +30,7 @@ export class ContentService {
   constructor(
     @InjectModel(Video.name) private videoModel: Model<Video>,
     private rabbitMQService: RabbitMQService,
+    private s3Service: S3Service,
   ) {
     // Ensure upload directory exists
     if (!fs.existsSync(this.UPLOAD_DIR)) {
@@ -49,26 +52,42 @@ export class ContentService {
 
     const fileExt = path.extname(file.originalname);
     const fileName = `${uuidv4()}${fileExt}`;
-    const filePath = path.join(this.UPLOAD_DIR, fileName);
+    let videoUrl: string;
 
-    // Save file
-    fs.writeFileSync(filePath, file.buffer);
-
-    const videoUrl = `/uploads/videos/${fileName}`;
+    try {
+      // Try S3 first
+      this.logger.log(`Attempting S3 upload for: ${fileName}`);
+      videoUrl = await this.s3Service.uploadFile(
+        file.buffer,
+        fileName,
+        file.mimetype,
+      );
+      this.logger.log(`S3 upload successful: ${videoUrl}`);
+    } catch (error) {
+      this.logger.warn(`S3 upload failed, falling back to local storage: ${error.message}`);
+      
+      // Fallback to local
+      const filePath = path.join(this.UPLOAD_DIR, fileName);
+      fs.writeFileSync(filePath, file.buffer);
+      videoUrl = `/uploads/videos/${fileName}`;
+    }
 
     const video = new this.videoModel({
       title: metadata.title,
       description: metadata.description,
       courseId: metadata.courseId,
       uploadedBy: userId,
-      status: VideoStatus.READY, // Set to READY for immediate viewing
+      status: VideoStatus.PROCESSING,
       originalUrl: videoUrl,
       fileSize: file.size,
-      duration: 0, // Should ideally extract duration, but 0 for now
+      duration: 0, 
     });
 
     const savedVideo = await video.save();
-    this.logger.log(`Video uploaded and saved: ${savedVideo._id}`);
+    this.logger.log(`Video record saved: ${savedVideo._id}`);
+    
+    // In production, encoding would also use S3 URLs
+    await this.publishEncodingJob(savedVideo._id.toString(), videoUrl);
 
     return this.toResponseDto(savedVideo);
   }

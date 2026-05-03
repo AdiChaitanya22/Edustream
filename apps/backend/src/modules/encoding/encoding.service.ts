@@ -13,6 +13,7 @@ import { VideoStatus } from '../../types/content.types';
 @Injectable()
 export class EncodingService {
   private readonly logger = new Logger(EncodingService.name);
+  private readonly requiredQualities = ['240p', '360p', '480p', '720p'];
 
   constructor(
     @InjectModel(Encoding.name) private encodingModel: Model<Encoding>,
@@ -28,16 +29,18 @@ export class EncodingService {
     bitrate: number,
     resolution: string,
   ): Promise<Encoding> {
-    const encoding = new this.encodingModel({
-      videoId,
-      quality,
-      bitrate,
-      resolution,
-      hlsUrl: `${videoId}/${quality}/playlist.m3u8`,
-      status: EncodingStatus.PENDING,
-    });
-
-    return encoding.save();
+    return this.encodingModel.findOneAndUpdate(
+      { videoId, quality },
+      {
+        videoId,
+        quality,
+        bitrate,
+        resolution,
+        hlsUrl: `/uploads/hls/${videoId}/${quality}/playlist.m3u8`,
+        status: EncodingStatus.PENDING,
+      },
+      { new: true, upsert: true, setDefaultsOnInsert: true },
+    );
   }
 
   /**
@@ -111,9 +114,16 @@ export class EncodingService {
    */
   private async checkVideoReady(videoId: string): Promise<void> {
     const encodings = await this.findByVideoId(videoId);
-    const allComplete = encodings.every((e) => e.status === EncodingStatus.COMPLETED);
+    const completedQualities = new Set(
+      encodings
+        .filter((encoding) => encoding.status === EncodingStatus.COMPLETED)
+        .map((encoding) => encoding.quality),
+    );
+    const allComplete = this.requiredQualities.every((quality) =>
+      completedQualities.has(quality),
+    );
 
-    if (allComplete && encodings.length > 0) {
+    if (allComplete) {
       await this.contentService.updateStatus(videoId, VideoStatus.READY);
       this.logger.log(`Video ${videoId} is now ready for streaming`);
     }

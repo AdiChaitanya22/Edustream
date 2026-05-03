@@ -2,6 +2,8 @@ import { Injectable, Logger, NotFoundException } from '@nestjs/common';
 import { ContentService } from '../../content/content.service';
 import { EncodingService } from '../../encoding/encoding.service';
 import { EncodingStatus, VideoStatus } from '../../../types/content.types';
+import * as fs from 'fs/promises';
+import * as path from 'path';
 
 /**
  * HLS Generator Service
@@ -35,15 +37,21 @@ export class HlsGeneratorService {
     // Build master playlist
     let playlist = '#EXTM3U\n';
     playlist += '#EXT-X-VERSION:3\n';
-    playlist += `#EXT-X-STREAM-INF:BANDWIDTH=0\n`;
 
     // Add quality variants
+    let completedVariantCount = 0;
     for (const encoding of encodings) {
       if (encoding.status === EncodingStatus.COMPLETED) {
         const bandwidth = this.getBandwidthForQuality(encoding.quality);
+        const playlistUrl = encoding.hlsUrl || `/uploads/hls/${videoId}/${encoding.quality}/playlist.m3u8`;
         playlist += `#EXT-X-STREAM-INF:BANDWIDTH=${bandwidth},RESOLUTION=${encoding.resolution}\n`;
-        playlist += `${encoding.quality}/playlist.m3u8\n`;
+        playlist += `${playlistUrl}\n`;
+        completedVariantCount++;
       }
+    }
+
+    if (completedVariantCount === 0) {
+      throw new NotFoundException('No completed encodings available for this video');
     }
 
     this.logger.debug(`Master playlist generated for video: ${videoId}`);
@@ -60,21 +68,13 @@ export class HlsGeneratorService {
       throw new NotFoundException(`Encoding not found or not ready for quality: ${quality}`);
     }
 
-    // Build quality playlist
-    let playlist = '#EXTM3U\n';
-    playlist += '#EXT-X-VERSION:3\n';
-    playlist += '#EXT-X-TARGETDURATION:10\n';
-    playlist += '#EXT-X-MEDIA-SEQUENCE:0\n';
-
-    // In a real implementation, this would list actual segment files
-    // For now, we'll use a placeholder structure
-    const segmentCount = Math.ceil(encoding.duration / 10); // 10-second segments
-    for (let i = 0; i < segmentCount; i++) {
-      playlist += `#EXTINF:10.0,\n`;
-      playlist += `segment${i}.ts\n`;
-    }
-
-    playlist += '#EXT-X-ENDLIST\n';
+    const playlistPath = path.join(
+      process.cwd(),
+      encoding.hlsUrl.replace(/^\/uploads\//, 'uploads/'),
+    );
+    const playlist = await fs.readFile(playlistPath, 'utf8').catch(() => {
+      throw new NotFoundException(`Playlist file not found for quality: ${quality}`);
+    });
 
     this.logger.debug(`Quality playlist generated: ${videoId}/${quality}`);
     return playlist;

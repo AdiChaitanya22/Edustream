@@ -1,5 +1,6 @@
-import { Controller, Get, Put, Body, UseGuards, Request, Param, Delete, Patch, Query } from '@nestjs/common';
+import { Controller, Get, Put, Body, UseGuards, Request, Param, Delete, Patch, Query, UseInterceptors, UploadedFile } from '@nestjs/common';
 import { ApiTags, ApiOperation, ApiBearerAuth, ApiResponse } from '@nestjs/swagger';
+import { FileInterceptor } from '@nestjs/platform-express';
 import { JwtAuthGuard } from '../../common/guards/jwt.guard';
 import { RolesGuard } from '../../common/guards/roles.guard';
 import { Roles } from '../../common/decorators/roles.decorator';
@@ -15,6 +16,22 @@ import { UserRole } from '../../types/user.types';
 @Controller('users')
 export class UsersController {
   constructor(private usersService: UsersService) {}
+
+  /**
+   * Update user avatar
+   */
+  @Put('profile/avatar')
+  @UseGuards(JwtAuthGuard)
+  @UseInterceptors(FileInterceptor('avatar'))
+  @ApiBearerAuth('access-token')
+  @ApiOperation({ summary: 'Update user avatar' })
+  @ApiResponse({ status: 200, type: UserResponseDto })
+  async updateAvatar(
+    @Request() req: any,
+    @UploadedFile() file: any,
+  ): Promise<UserResponseDto> {
+    return this.usersService.updateAvatar(req.user.sub, file);
+  }
 
   /**
    * Get current user profile

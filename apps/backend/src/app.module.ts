@@ -15,10 +15,12 @@ import { ContentModule } from './modules/content/content.module';
 import { StreamingModule } from './modules/streaming/streaming.module';
 import { EncodingModule } from './modules/encoding/encoding.module';
 import { AnalyticsModule } from './modules/analytics/analytics.module';
+import { CommonModule } from './common/common.module';
 import { NotificationsModule } from './modules/notifications/notification.module';
 
 @Module({
   imports: [
+    CommonModule,
     // Static files
     ServeStaticModule.forRoot({
       rootPath: join(process.cwd(), 'uploads'),

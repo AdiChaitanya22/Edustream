@@ -1,6 +1,7 @@
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
+import Hls from "hls.js";
 import {
   ArrowLeft, PlayCircle, Clock, BookOpen, Share2, BookmarkPlus,
   Loader2, ThumbsUp, CheckCircle, ChevronRight, StickyNote,
@@ -113,6 +114,7 @@ export default function Watch() {
   const [question, setQuestion] = useState("");
   const [localQna, setLocalQna] = useState<{ q: string; a: string; votes: number }[]>([]);
   const [activeChapter, setActiveChapter] = useState(0);
+  const [playbackUrl, setPlaybackUrl] = useState<string>();
 
   const { data: video, isLoading, error } = useQuery({
     queryKey: ["video", id],
@@ -139,7 +141,10 @@ export default function Watch() {
     if (found) setActiveChapter(found.index);
   }, [currentTime]);
 
-  const videoUrl = video?.originalUrl
+  const hlsUrl = video?.status === "ready" && id
+    ? `${API_BASE_URL}/streaming/${id}/manifest.m3u8`
+    : undefined;
+  const fallbackVideoUrl = video?.originalUrl
     ? `${API_BASE_URL}${video.originalUrl}`
     : id === "welcome"
     ? "https://www.w3schools.com/html/mov_bbb.mp4"
@@ -170,6 +175,42 @@ export default function Watch() {
   };
 
   const completedChapters = chapters.filter(c => currentTime >= c.endSec).length;
+  const hasPlayableSource = Boolean(playbackUrl || hlsUrl);
+
+  useEffect(() => {
+    const player = videoRef.current;
+    if (!player) return;
+
+    const token = localStorage.getItem("accessToken");
+
+    if (hlsUrl && Hls.isSupported()) {
+      const hls = new Hls({
+        xhrSetup: (xhr) => {
+          if (token) {
+            xhr.setRequestHeader("Authorization", `Bearer ${token}`);
+          }
+        },
+      });
+
+      hls.loadSource(hlsUrl);
+      hls.attachMedia(player);
+      hls.on(Hls.Events.ERROR, (_, data) => {
+        if (data.fatal && fallbackVideoUrl) {
+          hls.destroy();
+          setPlaybackUrl(fallbackVideoUrl);
+        }
+      });
+
+      return () => hls.destroy();
+    }
+
+    if (hlsUrl && player.canPlayType("application/vnd.apple.mpegurl")) {
+      setPlaybackUrl(hlsUrl);
+      return;
+    }
+
+    setPlaybackUrl(fallbackVideoUrl);
+  }, [hlsUrl, fallbackVideoUrl]);
 
   return (
     <div className="min-h-screen bg-zinc-950 text-white">
@@ -202,22 +243,27 @@ export default function Watch() {
                   <Loader2 className="h-12 w-12 animate-spin text-primary" />
                 </div>
               )}
-              {!isLoading && !videoUrl && !error && (
+              {!isLoading && video?.status === "processing" && (
+                <div className="absolute inset-0 flex flex-col items-center justify-center bg-zinc-900 gap-4">
+                  <Loader2 className="h-12 w-12 animate-spin text-primary" />
+                  <p className="text-zinc-400">Preparing adaptive stream...</p>
+                </div>
+              )}
+              {!isLoading && !hasPlayableSource && video?.status !== "processing" && !error && (
                 <div className="absolute inset-0 flex flex-col items-center justify-center bg-zinc-900 gap-4">
                   <PlayCircle className="h-20 w-20 text-zinc-600" />
                   <p className="text-zinc-400">Video not available</p>
                 </div>
               )}
-              {videoUrl && (
+              {hasPlayableSource && video?.status !== "processing" && (
                 <video
                   ref={videoRef}
                   controls autoPlay
                   className="w-full h-full object-contain bg-black"
                   poster={video?.thumbnail}
                   onTimeUpdate={e => setCurrentTime((e.target as HTMLVideoElement).currentTime)}
-                >
-                  <source src={videoUrl} type="video/mp4" />
-                </video>
+                  src={playbackUrl || undefined}
+                />
               )}
             </motion.div>
 

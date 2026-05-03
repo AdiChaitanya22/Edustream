@@ -66,6 +66,8 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Switch } from "@/components/ui/switch";
 
+import { API_BASE_URL } from "@/services/api";
+
 const STATS = [
   { title: "Total Users", value: "12,453", change: "+14%", icon: Users },
   { title: "Active Courses", value: "84", change: "+5%", icon: Video },
@@ -226,7 +228,7 @@ export default function Admin() {
   const broadcastMutation = useMutation({
     mutationFn: async () => {
       const token = localStorage.getItem("accessToken");
-      const res = await fetch("http://localhost:3000/notifications", {
+      const res = await fetch(`${API_BASE_URL}/notifications`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

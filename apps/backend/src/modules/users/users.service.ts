@@ -5,6 +5,9 @@ import * as bcrypt from 'bcryptjs';
 import { User } from './schemas/user.schema';
 import { CreateUserDto, UpdateUserDto, UserResponseDto } from './dto/user.dto';
 import { UserRole } from '../../types/user.types';
+import { S3Service } from '../../common/services/s3.service';
+import { v4 as uuidv4 } from 'uuid';
+import * as path from 'path';
 
 /**
  * Users Service
@@ -12,7 +15,47 @@ import { UserRole } from '../../types/user.types';
  */
 @Injectable()
 export class UsersService {
-  constructor(@InjectModel(User.name) private userModel: Model<User>) {}
+  constructor(
+    @InjectModel(User.name) private userModel: Model<User>,
+    private s3Service: S3Service,
+  ) {}
+
+  /**
+   * Update user avatar
+   */
+  async updateAvatar(userId: string, file: any): Promise<UserResponseDto> {
+    if (!file) {
+      throw new BadRequestException('No image file provided');
+    }
+
+    const fileExt = path.extname(file.originalname);
+    const fileName = `${uuidv4()}${fileExt}`;
+    let avatarUrl: string;
+
+    try {
+      avatarUrl = await this.s3Service.uploadFile(
+        file.buffer,
+        fileName,
+        file.mimetype,
+        'avatars',
+      );
+    } catch (error) {
+      // For local dev fallback if S3 fails
+      avatarUrl = `https://api.dicebear.com/7.x/avataaars/svg?seed=${userId}`;
+    }
+
+    const user = await this.userModel.findByIdAndUpdate(
+      userId,
+      { avatar: avatarUrl },
+      { new: true },
+    );
+
+    if (!user) {
+      throw new NotFoundException('User not found');
+    }
+
+    return this.toResponseDto(user);
+  }
 
   /**
    * Create a new user

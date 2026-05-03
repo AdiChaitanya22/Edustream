@@ -50,6 +50,12 @@ export default function UserMenu() {
             </Link>
           </DropdownMenuItem>
           <DropdownMenuItem asChild>
+            <Link to="/profile" className="cursor-pointer">
+              <User className="mr-2 h-4 w-4" />
+              <span>Profile Settings</span>
+            </Link>
+          </DropdownMenuItem>
+          <DropdownMenuItem asChild>
             <Link to="/my-learning" className="cursor-pointer">
               <BookOpen className="mr-2 h-4 w-4" />
               <span>My Learning</span>

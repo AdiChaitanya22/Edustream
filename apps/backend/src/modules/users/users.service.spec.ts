@@ -4,10 +4,18 @@ import { UsersService } from './users.service';
 import { User } from './schemas/user.schema';
 import { CreateUserDto } from './dto/user.dto';
 import { ConflictException, NotFoundException } from '@nestjs/common';
+import { UserRole } from '../../types/user.types';
+
+type MockUserModel = jest.Mock & {
+  findOne: jest.Mock;
+  findById: jest.Mock;
+  findByIdAndUpdate: jest.Mock;
+  find: jest.Mock;
+};
 
 describe('UsersService', () => {
   let service: UsersService;
-  let mockUserModel;
+  let mockUserModel: MockUserModel;
 
   const mockUser = {
     _id: '507f1f77bcf86cd799439011',
@@ -15,7 +23,7 @@ describe('UsersService', () => {
     firstName: 'Test',
     lastName: 'User',
     password: 'hashedPassword123',
-    role: 'student',
+    role: UserRole.STUDENT,
     isActive: true,
     emailVerified: false,
     subscriptionTier: 'free',
@@ -25,12 +33,12 @@ describe('UsersService', () => {
   };
 
   beforeEach(async () => {
-    mockUserModel = {
+    mockUserModel = Object.assign(jest.fn(), {
       findOne: jest.fn(),
       findById: jest.fn(),
       findByIdAndUpdate: jest.fn(),
       find: jest.fn(),
-    };
+    });
 
     const module: TestingModule = await Test.createTestingModule({
       providers: [
@@ -57,7 +65,7 @@ describe('UsersService', () => {
         save: jest.fn().mockResolvedValue({
           ...createUserDto,
           _id: '507f1f77bcf86cd799439012',
-          role: 'student',
+          role: UserRole.STUDENT,
           isActive: true,
         }),
       }));

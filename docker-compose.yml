@@ -60,6 +60,8 @@ services:
 
   # ===== FFmpeg Service (for encoding) =====
   ffmpeg:
+    profiles:
+      - legacy-worker
     build:
       context: ./infra
       dockerfile: Dockerfile.ffmpeg
