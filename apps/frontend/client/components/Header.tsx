@@ -68,7 +68,7 @@ export default function Header() {
                   {link.name}
                 </Link>
               ))}
-              {user?.role === "ADMIN" && (
+              {(user?.role?.toUpperCase() === "ADMIN") && (
                 <Link
                   to="/admin"
                   className={`px-4 py-2 rounded-full text-sm font-bold transition-all ${

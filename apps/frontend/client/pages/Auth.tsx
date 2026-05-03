@@ -45,7 +45,7 @@ export default function Auth() {
       setAuth(data);
       toast({ title: "Welcome back!", description: "You have successfully logged in." });
       // Redirect will be handled by the useEffect above or manually here
-      const target = data.user?.role === "ADMIN" ? "/admin" : "/dashboard";
+      const target = data.user?.role?.toUpperCase() === "ADMIN" ? "/admin" : "/dashboard";
       navigate(target);
     } catch (err: any) {
       toast({ title: "Error", description: err.message, variant: "destructive" });

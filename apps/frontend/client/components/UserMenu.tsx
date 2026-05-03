@@ -55,7 +55,7 @@ export default function UserMenu() {
               <span>My Learning</span>
             </Link>
           </DropdownMenuItem>
-          {user.role === "ADMIN" && (
+          {user.role?.toUpperCase() === "ADMIN" && (
             <DropdownMenuItem asChild>
               <Link to="/admin" className="cursor-pointer text-primary font-medium">
                 <ShieldCheck className="mr-2 h-4 w-4" />
