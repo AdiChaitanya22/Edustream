@@ -187,7 +187,7 @@ export default function Index() {
         </div>
       </div>
 
-      {/* Meet the Builders Section */}
+      {/* Meet the Builders Section - RESTORED TO BOTTOM */}
       <div className="py-20 px-6 lg:px-12 bg-zinc-900/10">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 space-y-4">
@@ -203,20 +203,19 @@ export default function Index() {
             viewport={{ once: true }}
             className="relative rounded-[2rem] overflow-hidden glass border-white/5 p-4"
           >
-            <div className="aspect-[21/9] rounded-[1.5rem] overflow-hidden relative group">
+            <div className="rounded-[1.5rem] overflow-hidden relative group">
               <img 
-                src="/team.png" 
+                src={`/team.png?t=${new Date().getTime()}`} 
                 alt="EduStream Development Team" 
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
+                className="w-full h-auto object-contain group-hover:scale-[1.02] transition-transform duration-1000"
                 onError={(e) => {
-                  // Fallback if image doesn't exist yet
                   (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200";
                 }}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-              <div className="absolute bottom-8 left-8">
-                <h3 className="text-2xl font-bold text-white">The Engineering Team</h3>
-                <p className="text-zinc-300">Group Members & Project Mentors</p>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
+              <div className="absolute bottom-6 left-6 md:bottom-10 md:left-10 text-left">
+                <h3 className="text-xl md:text-3xl font-bold text-white mb-1">The Engineering Team</h3>
+                <p className="text-zinc-300 text-sm md:text-base">Group Members & Project Mentors</p>
               </div>
             </div>
           </motion.div>
