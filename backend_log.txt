@@ -2361,31 +2361,77 @@ Failed to start application: Error: listen EADDRINUSE: address already in use ::
 
 [[90m5:51:14 PM[0m] Found 1 error. Watching for file changes.
 
-;5;3m +0ms[39m
-[32m[Nest] 2134  - [39m05/03/2026, 5:46:45 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +0ms[39m
-[32m[Nest] 2134  - [39m05/03/2026, 5:46:45 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +0ms[39m
-[32m[Nest] 2134  - [39m05/03/2026, 5:46:45 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +0ms[39m
-[32m[Nest] 2134  - [39m05/03/2026, 5:46:45 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +0ms[39m
-[32m[Nest] 2134  - [39m05/03/2026, 5:46:45 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mUsersModule dependencies initialized[39m[38;5;3m +11ms[39m
-[32m[Nest] 2134  - [39m05/03/2026, 5:46:45 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mNotificationsModule dependencies initialized[39m[38;5;3m +0ms[39m
-[32m[Nest] 2134  - [39m05/03/2026, 5:46:45 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mContentModule dependencies initialized[39m[38;5;3m +0ms[39m
-[32m[Nest] 2134  - [39m05/03/2026, 5:46:45 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAnalyticsModule dependencies initialized[39m[38;5;3m +3ms[39m
-[32m[Nest] 2134  - [39m05/03/2026, 5:46:45 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mEncodingModule dependencies initialized[39m[38;5;3m +0ms[39m
-[32m[Nest] 2134  - [39m05/03/2026, 5:46:45 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAuthModule dependencies initialized[39m[38;5;3m +0ms[39m
-[32m[Nest] 2134  - [39m05/03/2026, 5:46:45 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mStreamingModule dependencies initialized[39m[38;5;3m +0ms[39m
-[32m[Nest] 2134  - [39m05/03/2026, 5:46:46 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mHealthController {/health}:[39m[38;5;3m +749ms[39m
-[32m[Nest] 2134  - [39m05/03/2026, 5:46:46 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/health, GET} route[39m[38;5;3m +3ms[39m
-[32m[Nest] 2134  - [39m05/03/2026, 5:46:46 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAuthController {/auth}:[39m[38;5;3m +0ms[39m
-[32m[Nest] 2134  - [39m05/03/2026, 5:46:46 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/register, POST} route[39m[38;5;3m +1ms[39m
-[32m[Nest] 2134  - [39m05/03/2026, 5:46:46 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/login, POST} route[39m[38;5;3m +3ms[39m
-[32m[Nest] 2134  - [39m05/03/2026, 5:46:46 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/refresh, POST} route[39m[38;5;3m +0ms[39m
-[32m[Nest] 2134  - [39m05/03/2026, 5:46:46 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/logout, POST} route[39m[38;5;3m +0ms[39m
-[32m[Nest] 2134  - [39m05/03/2026, 5:46:46 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/me, GET} route[39m[38;5;3m +2ms[39m
-[32m[Nest] 2134  - [39m05/03/2026, 5:46:46 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mUsersController {/users}:[39m[38;5;3m +0ms[39m
-[32m[Nest] 2134  - [39m05/03/2026, 5:46:46 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users/profile, GET} route[39m[38;5;3m +1ms[39m
-[32m[Nest] 2134  - [39m05/03/2026, 5:46:46 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users/profile, PUT} route[39m[38;5;3m +0ms[39m
-[32m[Nest] 2134  - [39m05/03/2026, 5:46:46 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users/:id, GET} route[39m[38;5;3m +1ms[39m
-[32m[Nest] 2134  - [39m05/03/2026, 5:46:46 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users, GET} route[39m[38;5;3m +5ms[39m
+[2J[3J[H[[90m1:36:22 PM[0m] File change detected. Starting incremental compilation...
+
+[96msrc/modules/content/content.service.ts[0m:[93m67[0m:[93m82[0m - [91merror[0m[90m TS2339: [0mProperty 'message' does not exist on type 'unknown'.
+
+[7m67[0m       this.logger.warn(`S3 upload failed, falling back to local storage: ${error.message}`);
+[7m  [0m [91m                                                                                 ~~~~~~~[0m
+
+[96msrc/modules/content/content.service.ts[0m:[93m249[0m:[93m42[0m - [91merror[0m[90m TS2339: [0mProperty 'message' does not exist on type 'unknown'.
+
+[7m249[0m       this.logger.debug(`Reason: ${error.message}`);
+[7m   [0m [91m                                         ~~~~~~~[0m
+
+[[90m1:37:05 PM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m1:40:23 PM[0m] File change detected. Starting incremental compilation...
+
+[96msrc/modules/content/content.service.ts[0m:[93m67[0m:[93m82[0m - [91merror[0m[90m TS2339: [0mProperty 'message' does not exist on type 'unknown'.
+
+[7m67[0m       this.logger.warn(`S3 upload failed, falling back to local storage: ${error.message}`);
+[7m  [0m [91m                                                                                 ~~~~~~~[0m
+
+[96msrc/modules/content/content.service.ts[0m:[93m249[0m:[93m42[0m - [91merror[0m[90m TS2339: [0mProperty 'message' does not exist on type 'unknown'.
+
+[7m249[0m       this.logger.debug(`Reason: ${error.message}`);
+[7m   [0m [91m                                         ~~~~~~~[0m
+
+[[90m1:40:32 PM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m1:40:48 PM[0m] File change detected. Starting incremental compilation...
+
+[96msrc/modules/content/content.service.ts[0m:[93m68[0m:[93m84[0m - [91merror[0m[90m TS2339: [0mProperty 'message' does not exist on type 'unknown'.
+
+[7m68[0m         this.logger.warn(`S3 upload failed, falling back to local storage: ${error.message}`);
+[7m  [0m [91m                                                                                   ~~~~~~~[0m
+
+[96msrc/modules/content/content.service.ts[0m:[93m77[0m:[93m74[0m - [91merror[0m[90m TS2339: [0mProperty 'message' does not exist on type 'unknown'.
+
+[7m77[0m           this.logger.error(`Local filesystem write failed: ${localError.message}`);
+[7m  [0m [91m                                                                         ~~~~~~~[0m
+
+[96msrc/modules/content/content.service.ts[0m:[93m101[0m:[93m65[0m - [91merror[0m[90m TS2339: [0mProperty 'message' does not exist on type 'unknown'.
+
+[7m101[0m       this.logger.error(`Critical Upload Failure: ${uploadError.message}`);
+[7m   [0m [91m                                                                ~~~~~~~[0m
+
+[96msrc/modules/content/content.service.ts[0m:[93m260[0m:[93m42[0m - [91merror[0m[90m TS2339: [0mProperty 'message' does not exist on type 'unknown'.
+
+[7m260[0m       this.logger.debug(`Reason: ${error.message}`);
+[7m   [0m [91m                                         ~~~~~~~[0m
+
+[[90m1:40:52 PM[0m] Found 4 errors. Watching for file changes.
+
+[2J[3J[H[[90m2:12:56 PM[0m] File change detected. Starting incremental compilation...
+
+[[90m2:13:04 PM[0m] Found 0 errors. Watching for file changes.
+
+node:internal/modules/cjs/loader:1210
+  throw err;
+  ^
+
+Error: Cannot find module '/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/apps/backend/dist/main'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+    at Module._load (node:internal/modules/cjs/loader:1038:27)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+    at node:internal/main/run_main_module:28:49 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v20.20.2
+[38;5;3m +5ms[39m
 [32m[Nest] 2134  - [39m05/03/2026, 5:46:46 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users/:id/role, PATCH} route[39m[38;5;3m +1ms[39m
 [32m[Nest] 2134  - [39m05/03/2026, 5:46:46 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/users/:id, DELETE} route[39m[38;5;3m +2ms[39m
 [32m[Nest] 2134  - [39m05/03/2026, 5:46:46 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mContentController {/content}:[39m[38;5;3m +0ms[39m
@@ -2530,3 +2576,73 @@ Failed to start application: Error: listen EADDRINUSE: address already in use ::
 
 [[90m5:50:56 PM[0m] Found 1 error. Watching for file changes.
 
+[2J[3J[H[[90m1:36:22 PM[0m] File change detected. Starting incremental compilation...
+
+[96msrc/modules/content/content.service.ts[0m:[93m67[0m:[93m82[0m - [91merror[0m[90m TS2339: [0mProperty 'message' does not exist on type 'unknown'.
+
+[7m67[0m       this.logger.warn(`S3 upload failed, falling back to local storage: ${error.message}`);
+[7m  [0m [91m                                                                                 ~~~~~~~[0m
+
+[96msrc/modules/content/content.service.ts[0m:[93m249[0m:[93m42[0m - [91merror[0m[90m TS2339: [0mProperty 'message' does not exist on type 'unknown'.
+
+[7m249[0m       this.logger.debug(`Reason: ${error.message}`);
+[7m   [0m [91m                                         ~~~~~~~[0m
+
+[[90m1:37:08 PM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m1:40:23 PM[0m] File change detected. Starting incremental compilation...
+
+[96msrc/modules/content/content.service.ts[0m:[93m67[0m:[93m82[0m - [91merror[0m[90m TS2339: [0mProperty 'message' does not exist on type 'unknown'.
+
+[7m67[0m       this.logger.warn(`S3 upload failed, falling back to local storage: ${error.message}`);
+[7m  [0m [91m                                                                                 ~~~~~~~[0m
+
+[96msrc/modules/content/content.service.ts[0m:[93m249[0m:[93m42[0m - [91merror[0m[90m TS2339: [0mProperty 'message' does not exist on type 'unknown'.
+
+[7m249[0m       this.logger.debug(`Reason: ${error.message}`);
+[7m   [0m [91m                                         ~~~~~~~[0m
+
+[[90m1:40:33 PM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m1:40:48 PM[0m] File change detected. Starting incremental compilation...
+
+[96msrc/modules/content/content.service.ts[0m:[93m68[0m:[93m84[0m - [91merror[0m[90m TS2339: [0mProperty 'message' does not exist on type 'unknown'.
+
+[7m68[0m         this.logger.warn(`S3 upload failed, falling back to local storage: ${error.message}`);
+[7m  [0m [91m                                                                                   ~~~~~~~[0m
+
+[96msrc/modules/content/content.service.ts[0m:[93m77[0m:[93m74[0m - [91merror[0m[90m TS2339: [0mProperty 'message' does not exist on type 'unknown'.
+
+[7m77[0m           this.logger.error(`Local filesystem write failed: ${localError.message}`);
+[7m  [0m [91m                                                                         ~~~~~~~[0m
+
+[96msrc/modules/content/content.service.ts[0m:[93m101[0m:[93m65[0m - [91merror[0m[90m TS2339: [0mProperty 'message' does not exist on type 'unknown'.
+
+[7m101[0m       this.logger.error(`Critical Upload Failure: ${uploadError.message}`);
+[7m   [0m [91m                                                                ~~~~~~~[0m
+
+[96msrc/modules/content/content.service.ts[0m:[93m260[0m:[93m42[0m - [91merror[0m[90m TS2339: [0mProperty 'message' does not exist on type 'unknown'.
+
+[7m260[0m       this.logger.debug(`Reason: ${error.message}`);
+[7m   [0m [91m                                         ~~~~~~~[0m
+
+[[90m1:40:53 PM[0m] Found 4 errors. Watching for file changes.
+
+[2J[3J[H[[90m2:12:56 PM[0m] File change detected. Starting incremental compilation...
+
+[[90m2:13:03 PM[0m] Found 0 errors. Watching for file changes.
+
+node:internal/modules/cjs/loader:1210
+  throw err;
+  ^
+
+Error: Cannot find module '/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/apps/backend/dist/main'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+    at Module._load (node:internal/modules/cjs/loader:1038:27)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+    at node:internal/main/run_main_module:28:49 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v20.20.2

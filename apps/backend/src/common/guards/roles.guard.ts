@@ -28,7 +28,7 @@ export class RolesGuard implements CanActivate {
       throw new ForbiddenException('User role not found');
     }
 
-    if (!requiredRoles.includes(user.role)) {
+    if (!requiredRoles.some(role => role.toLowerCase() === user.role.toLowerCase())) {
       throw new ForbiddenException('Insufficient permissions');
     }
 

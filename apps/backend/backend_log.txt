@@ -3177,3 +3177,73 @@ Failed to start application: Error: listen EADDRINUSE: address already in use ::
 
 [[90m5:51:13 PM[0m] Found 1 error. Watching for file changes.
 
+[2J[3J[H[[90m1:36:22 PM[0m] File change detected. Starting incremental compilation...
+
+[96msrc/modules/content/content.service.ts[0m:[93m67[0m:[93m82[0m - [91merror[0m[90m TS2339: [0mProperty 'message' does not exist on type 'unknown'.
+
+[7m67[0m       this.logger.warn(`S3 upload failed, falling back to local storage: ${error.message}`);
+[7m  [0m [91m                                                                                 ~~~~~~~[0m
+
+[96msrc/modules/content/content.service.ts[0m:[93m249[0m:[93m42[0m - [91merror[0m[90m TS2339: [0mProperty 'message' does not exist on type 'unknown'.
+
+[7m249[0m       this.logger.debug(`Reason: ${error.message}`);
+[7m   [0m [91m                                         ~~~~~~~[0m
+
+[[90m1:37:18 PM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m1:40:23 PM[0m] File change detected. Starting incremental compilation...
+
+[96msrc/modules/content/content.service.ts[0m:[93m67[0m:[93m82[0m - [91merror[0m[90m TS2339: [0mProperty 'message' does not exist on type 'unknown'.
+
+[7m67[0m       this.logger.warn(`S3 upload failed, falling back to local storage: ${error.message}`);
+[7m  [0m [91m                                                                                 ~~~~~~~[0m
+
+[96msrc/modules/content/content.service.ts[0m:[93m249[0m:[93m42[0m - [91merror[0m[90m TS2339: [0mProperty 'message' does not exist on type 'unknown'.
+
+[7m249[0m       this.logger.debug(`Reason: ${error.message}`);
+[7m   [0m [91m                                         ~~~~~~~[0m
+
+[[90m1:40:30 PM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m1:40:48 PM[0m] File change detected. Starting incremental compilation...
+
+[96msrc/modules/content/content.service.ts[0m:[93m68[0m:[93m84[0m - [91merror[0m[90m TS2339: [0mProperty 'message' does not exist on type 'unknown'.
+
+[7m68[0m         this.logger.warn(`S3 upload failed, falling back to local storage: ${error.message}`);
+[7m  [0m [91m                                                                                   ~~~~~~~[0m
+
+[96msrc/modules/content/content.service.ts[0m:[93m77[0m:[93m74[0m - [91merror[0m[90m TS2339: [0mProperty 'message' does not exist on type 'unknown'.
+
+[7m77[0m           this.logger.error(`Local filesystem write failed: ${localError.message}`);
+[7m  [0m [91m                                                                         ~~~~~~~[0m
+
+[96msrc/modules/content/content.service.ts[0m:[93m101[0m:[93m65[0m - [91merror[0m[90m TS2339: [0mProperty 'message' does not exist on type 'unknown'.
+
+[7m101[0m       this.logger.error(`Critical Upload Failure: ${uploadError.message}`);
+[7m   [0m [91m                                                                ~~~~~~~[0m
+
+[96msrc/modules/content/content.service.ts[0m:[93m260[0m:[93m42[0m - [91merror[0m[90m TS2339: [0mProperty 'message' does not exist on type 'unknown'.
+
+[7m260[0m       this.logger.debug(`Reason: ${error.message}`);
+[7m   [0m [91m                                         ~~~~~~~[0m
+
+[[90m1:40:53 PM[0m] Found 4 errors. Watching for file changes.
+
+[2J[3J[H[[90m2:12:57 PM[0m] File change detected. Starting incremental compilation...
+
+[[90m2:13:04 PM[0m] Found 0 errors. Watching for file changes.
+
+node:internal/modules/cjs/loader:1210
+  throw err;
+  ^
+
+Error: Cannot find module '/Users/adichaitanya/git-lab/my-first-repo/edustream/EDUSTREAM/apps/backend/dist/main'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+    at Module._load (node:internal/modules/cjs/loader:1038:27)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+    at node:internal/main/run_main_module:28:49 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v20.20.2
