@@ -187,39 +187,67 @@ export default function Index() {
         </div>
       </div>
 
-      {/* Newsletter Section */}
-      <div className="py-20 px-6 lg:px-12 border-t border-border bg-gradient-to-b from-transparent to-primary/5">
-        <div className="max-w-4xl mx-auto text-center space-y-8">
-          <div className="flex justify-center">
-            <div className="h-16 w-16 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-              <Mail className="h-8 w-8" />
-            </div>
-          </div>
-          <div className="space-y-4">
-            <h2 className="text-3xl font-bold text-white tracking-tight">Stay Ahead of the Curve</h2>
-            <p className="text-zinc-400 text-lg">
-              Get the latest course updates, industry news, and learning tips delivered straight to your inbox.
+      {/* Meet the Builders Section */}
+      <div className="py-20 px-6 lg:px-12 bg-zinc-900/10">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16 space-y-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight">Meet the Builders</h2>
+            <p className="text-zinc-400 max-w-2xl mx-auto">
+              EduStream was engineered by a dedicated group of students passionate about making quality education accessible to everyone, everywhere.
             </p>
           </div>
-          <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto relative group">
+
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="relative rounded-[2rem] overflow-hidden glass border-white/5 p-4"
+          >
+            <div className="aspect-[21/9] rounded-[1.5rem] overflow-hidden relative group">
+              <img 
+                src="/team.png" 
+                alt="EduStream Development Team" 
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
+                onError={(e) => {
+                  // Fallback if image doesn't exist yet
+                  (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200";
+                }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+              <div className="absolute bottom-8 left-8">
+                <h3 className="text-2xl font-bold text-white">The Engineering Team</h3>
+                <p className="text-zinc-300">Group Members & Project Mentors</p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Newsletter Section */}
+      <div className="py-20 px-6 lg:px-12 border-t border-white/5 bg-gradient-to-b from-transparent to-primary/5">
+        <div className="max-w-4xl mx-auto text-center space-y-8">
+          <div className="mx-auto w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center">
+            <Mail className="w-8 h-8 text-primary" />
+          </div>
+          <div className="space-y-2">
+            <h2 className="text-3xl font-bold text-white">Join the EduStream Community</h2>
+            <p className="text-zinc-400">Get the latest course updates and educational resources delivered to your inbox.</p>
+          </div>
+          
+          <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
             <input 
               type="email" 
+              placeholder="Enter your email" 
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="Enter your email" 
-              className="flex-1 bg-zinc-900/50 border border-zinc-800 rounded-full px-6 h-14 text-white focus:outline-none focus:ring-2 focus:ring-primary backdrop-blur-sm transition-all"
+              className="flex-1 px-6 py-4 rounded-full bg-zinc-900 border border-white/10 text-white focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
             />
             <button 
               type="submit"
               disabled={isSubscribing}
-              className="bg-primary text-white rounded-full px-8 h-14 font-bold hover:bg-primary/90 transition-all active:scale-95 flex items-center justify-center gap-2 shadow-lg shadow-primary/20 disabled:opacity-50"
+              className="px-8 py-4 rounded-full bg-primary hover:bg-primary/90 text-white font-bold transition-all flex items-center justify-center gap-2 disabled:opacity-50"
             >
-              {isSubscribing ? "Joining..." : (
-                <>
-                  Subscribe
-                  <Send className="h-4 w-4" />
-                </>
-              )}
+              {isSubscribing ? "Joining..." : <>Subscribe <Send className="w-4 h-4" /></>}
             </button>
           </form>
           <p className="text-[10px] text-zinc-500 uppercase tracking-widest font-semibold">
@@ -228,9 +256,61 @@ export default function Index() {
         </div>
       </div>
 
-      {/* Footer */}
-      <footer className="border-t border-border px-6 py-10 text-center text-sm text-muted-foreground">
-        © 2024 EduStream. All rights reserved.
+      {/* Final Footer */}
+      <footer className="py-12 px-6 lg:px-12 border-t border-white/5 bg-black">
+        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-12 mb-12">
+          <div className="col-span-2 md:col-span-1 space-y-6">
+            <div className="flex items-center gap-2">
+              <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-primary via-secondary to-accent flex items-center justify-center">
+                <span className="text-sm font-bold text-primary-foreground">E</span>
+              </div>
+              <span className="text-xl font-bold text-white">EduStream</span>
+            </div>
+            <p className="text-sm text-zinc-500 leading-relaxed">
+              Empowering learners worldwide with adaptive streaming and interactive education. Built with passion for a better future.
+            </p>
+          </div>
+          
+          <div className="space-y-4">
+            <h4 className="text-white font-bold">Platform</h4>
+            <ul className="space-y-2 text-sm text-zinc-500">
+              <li className="hover:text-primary transition-colors cursor-pointer">Browse Courses</li>
+              <li className="hover:text-primary transition-colors cursor-pointer">Learning Paths</li>
+              <li className="hover:text-primary transition-colors cursor-pointer">Mentorship</li>
+              <li className="hover:text-primary transition-colors cursor-pointer">Pricing</li>
+            </ul>
+          </div>
+
+          <div className="space-y-4">
+            <h4 className="text-white font-bold">Community</h4>
+            <ul className="space-y-2 text-sm text-zinc-500">
+              <li className="hover:text-primary transition-colors cursor-pointer">About Us</li>
+              <li className="hover:text-primary transition-colors cursor-pointer">Careers</li>
+              <li className="hover:text-primary transition-colors cursor-pointer">Blog</li>
+              <li className="hover:text-primary transition-colors cursor-pointer">Help Center</li>
+            </ul>
+          </div>
+
+          <div className="space-y-4">
+            <h4 className="text-white font-bold">Legal</h4>
+            <ul className="space-y-2 text-sm text-zinc-500">
+              <li className="hover:text-primary transition-colors cursor-pointer">Privacy Policy</li>
+              <li className="hover:text-primary transition-colors cursor-pointer">Terms of Service</li>
+              <li className="hover:text-primary transition-colors cursor-pointer">Cookie Policy</li>
+              <li className="hover:text-primary transition-colors cursor-pointer">Contact Us</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="max-w-7xl mx-auto pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-zinc-600">
+          <p>© 2024 EduStream Project. All rights reserved.</p>
+          <div className="flex items-center gap-6">
+            <span className="hover:text-white cursor-pointer transition-colors">Twitter</span>
+            <span className="hover:text-white cursor-pointer transition-colors">LinkedIn</span>
+            <span className="hover:text-white cursor-pointer transition-colors">GitHub</span>
+            <span className="hover:text-white cursor-pointer transition-colors">Discord</span>
+          </div>
+        </div>
       </footer>
     </div>
   );
