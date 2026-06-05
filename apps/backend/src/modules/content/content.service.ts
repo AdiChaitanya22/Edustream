@@ -124,11 +124,13 @@ export class ContentService {
     return this.toResponseDto(savedVideo);
   }
 
-  /**
-   * Get video by ID
-   */
   async findById(id: string): Promise<VideoResponseDto> {
-    const video = await this.videoModel.findById(id);
+    let video;
+    if (id.match(/^[0-9a-fA-F]{24}$/)) {
+      video = await this.videoModel.findById(id);
+    } else {
+      video = await this.videoModel.findOne({ courseId: id });
+    }
     if (!video) {
       throw new NotFoundException('Video not found');
     }

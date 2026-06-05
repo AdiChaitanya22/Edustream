@@ -3,7 +3,7 @@ import { JwtService } from '@nestjs/jwt';
 import { UsersService } from '../users/users.service';
 import { RegisterDto, LoginDto } from './dto/auth.dto';
 import { AuthResponseDto } from './dto/auth.dto';
-import { ITokenPayload } from '../../types/user.types';
+import { ITokenPayload, UserRole } from '../../types/user.types';
 
 /**
  * Auth Service
@@ -149,6 +149,64 @@ export class AuthService {
   async validateUser(payload: ITokenPayload) {
     this.logger.debug(`Validating user: ${payload.sub}`);
     return await this.usersService.findById(payload.sub);
+  }
+
+  /**
+   * Google OAuth Login
+   * Finds existing user by email or creates a new one from Google profile,
+   * then returns the same AuthResponseDto as regular login.
+   */
+  async googleLogin(googleUser: {
+    email: string;
+    firstName: string;
+    lastName: string;
+    avatar?: string;
+    googleId: string;
+  }): Promise<AuthResponseDto> {
+    this.logger.debug(`Google login attempt for: ${googleUser.email}`);
+
+    let user: any;
+
+    try {
+      // Try to find existing user by email
+      const existingUser = await this.usersService.findByEmail(googleUser.email);
+      user = existingUser;
+      this.logger.debug(`Existing user found for Google login: ${googleUser.email}`);
+    } catch {
+      // User not found — create a new one
+      this.logger.debug(`Creating new user from Google profile: ${googleUser.email}`);
+      const randomPassword = Math.random().toString(36).slice(-12) + 'Aa1!';
+      const newUser = await this.usersService.create({
+        email: googleUser.email,
+        firstName: googleUser.firstName,
+        lastName: googleUser.lastName,
+        password: randomPassword,
+        role: UserRole.STUDENT,
+      } as RegisterDto);
+
+      // Fetch the full user object (findByEmail returns with password field)
+      user = await this.usersService.findByEmail(googleUser.email);
+    }
+
+    const userId = user._id?.toString() || user.id;
+    await this.usersService.updateLastLogin(userId);
+
+    const tokens = this.generateTokens(userId, user.email, user.role);
+    await this.usersService.updateRefreshToken(userId, tokens.refreshToken);
+
+    this.logger.log(`Google login successful: ${googleUser.email}`);
+
+    return {
+      accessToken: tokens.accessToken,
+      refreshToken: tokens.refreshToken,
+      user: {
+        id: userId,
+        email: user.email,
+        firstName: user.firstName,
+        lastName: user.lastName,
+        role: user.role,
+      },
+    };
   }
 
   /**

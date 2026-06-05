@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { Link, useNavigate, useLocation, useSearchParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -13,10 +13,28 @@ import { useAuthStore } from "@/store/authStore";
 
 export default function Auth() {
   const [isLoading, setIsLoading] = useState(false);
+  const [searchParams] = useSearchParams();
   const { toast } = useToast();
   const navigate = useNavigate();
   const location = useLocation();
   const { setAuth, isAuthenticated, user } = useAuthStore();
+
+  useEffect(() => {
+    const errorParam = searchParams.get("error");
+    if (errorParam) {
+      toast({
+        title: "Authentication Error",
+        description: errorParam,
+        variant: "destructive",
+      });
+      // Clear query parameters
+      navigate("/auth", { replace: true });
+    }
+  }, [searchParams, toast, navigate]);
+
+  const handleGoogleLogin = () => {
+    window.location.href = `${API_BASE_URL}/auth/google`;
+  };
 
   // Systematic check: if already logged in, redirect away from auth page
   useEffect(() => {
@@ -190,6 +208,7 @@ export default function Auth() {
                     <Lock className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-zinc-600 group-focus-within:text-primary transition-colors" />
                     <Input 
                       id="password" name="password" type="password" placeholder="••••••••"
+                      dir="ltr"
                       className="pl-11 h-12 bg-zinc-900/50 border-zinc-800 focus:border-primary/50 focus:ring-primary/20 rounded-xl" required 
                     />
                   </div>
@@ -232,6 +251,7 @@ export default function Auth() {
                     <Lock className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-zinc-600 group-focus-within:text-primary transition-colors" />
                     <Input 
                       id="reg-password" name="password" type="password" placeholder="Min. 8 characters"
+                      dir="ltr"
                       className="pl-11 h-12 bg-zinc-900/50 border-zinc-800 focus:border-primary/50 focus:ring-primary/20 rounded-xl" required minLength={8}
                     />
                   </div>
@@ -246,6 +266,33 @@ export default function Auth() {
               </form>
             </TabsContent>
           </Tabs>
+
+          <div className="relative my-6 flex items-center justify-center">
+            <div className="absolute inset-0 flex items-center">
+              <span className="w-full border-t border-zinc-800" />
+            </div>
+            <span className="relative bg-zinc-950 px-4 text-xs font-bold text-zinc-500 uppercase tracking-widest">
+              Or
+            </span>
+          </div>
+
+          <Button
+            type="button"
+            variant="outline"
+            className="w-full h-12 bg-transparent hover:bg-zinc-900/50 border-zinc-800 text-white font-bold rounded-xl flex items-center justify-center gap-3 transition-colors"
+            onClick={handleGoogleLogin}
+            disabled={isLoading}
+          >
+            <svg className="h-5 w-5" viewBox="0 0 24 24" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+              <g transform="matrix(1, 0, 0, 1, 0, 0)">
+                <path d="M21.35,11.1H12v2.7h5.38c-0.24,1.28 -0.96,2.37 -2.04,3.1v2.57h3.3c1.93,-1.78 3.04,-4.4 3.04,-7.49C21.68,12.02 21.56,11.52 21.35,11.1z" fill="#4285F4" />
+                <path d="M12,20.9c2.4,0 4.4,-0.8 5.88,-2.16l-3.3,-2.57c-0.91,0.61 -2.08,0.97 -3.23,0.97 -2.48,0 -4.59,-1.68 -5.34,-3.93H2.03v2.66c1.49,2.96 4.54,4.98 8.08,4.98z" fill="#34A853" />
+                <path d="M6.66,13.22c-0.19,-0.57 -0.3,-1.18 -0.3,-1.8s0.11,-1.23 0.3,-1.8V6.96H2.03c-0.7,1.4 -1.1,2.97 -1.1,4.66s0.4,3.26 1.1,4.66L6.66,13.22z" fill="#FBBC05" />
+                <path d="M12,5.77c1.31,0 2.48,0.45 3.4,1.33l2.55,-2.55C16.4,3.08 14.4,2.2 12,2.2c-3.54,0 -6.59,2.02 -8.08,4.98l4.63,3.59c0.75,-2.25 2.86,-3.93 5.34,-3.93z" fill="#EA4335" />
+              </g>
+            </svg>
+            Continue with Google
+          </Button>
           
           <div className="mt-10 flex flex-col items-center gap-6">
              <div className="flex items-center gap-4 w-full">

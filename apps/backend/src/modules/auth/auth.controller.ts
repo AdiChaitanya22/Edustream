@@ -1,5 +1,7 @@
-import { Controller, Post, Get, Body, UseGuards, Request, HttpCode, HttpStatus } from '@nestjs/common';
+import { Controller, Post, Get, Body, UseGuards, Request, HttpCode, HttpStatus, Redirect, Res } from '@nestjs/common';
 import { ApiTags, ApiOperation, ApiBearerAuth, ApiResponse } from '@nestjs/swagger';
+import { AuthGuard } from '@nestjs/passport';
+import { Response } from 'express';
 import { AuthService } from './auth.service';
 import { RegisterDto, LoginDto, RefreshTokenDto, AuthResponseDto } from './dto/auth.dto';
 import { JwtAuthGuard } from '../../common/guards/jwt.guard';
@@ -122,5 +124,39 @@ export class AuthController {
   })
   async getCurrentUser(@CurrentUser() user: any) {
     return user;
+  }
+
+  /**
+   * Google OAuth - Redirect to Google consent screen
+   */
+  @Public()
+  @Get('google')
+  @UseGuards(AuthGuard('google'))
+  @ApiOperation({ summary: 'Initiate Google OAuth login' })
+  async googleAuth() {
+    // Passport redirects automatically — no body needed
+  }
+
+  /**
+   * Google OAuth - Handle callback from Google
+   * Issues JWT tokens and redirects to frontend
+   */
+  @Public()
+  @Get('google/callback')
+  @UseGuards(AuthGuard('google'))
+  @ApiOperation({ summary: 'Google OAuth callback handler' })
+  async googleAuthCallback(@Request() req: any, @Res() res: Response) {
+    const frontendUrl = process.env.FRONTEND_URL || 'http://localhost:8080';
+    try {
+      const authResponse = await this.authService.googleLogin(req.user);
+      const params = new URLSearchParams({
+        token: authResponse.accessToken,
+        refresh: authResponse.refreshToken,
+        user: JSON.stringify(authResponse.user),
+      });
+      return res.redirect(`${frontendUrl}/auth/callback?${params.toString()}`);
+    } catch (error: any) {
+      return res.redirect(`${frontendUrl}/auth?error=${encodeURIComponent(error.message || 'Google login failed')}`);
+    }
   }
 }

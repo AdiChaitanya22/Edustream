@@ -12,6 +12,7 @@ import Browse from "./pages/Browse";
 import MyLearning from "./pages/MyLearning";
 import Watch from "./pages/Watch";
 import Auth from "./pages/Auth";
+import OAuthCallback from "./pages/OAuthCallback";
 import Admin from "./pages/Admin";
 import Dashboard from "./pages/Dashboard";
 import Profile from "./pages/Profile";
@@ -39,6 +40,7 @@ export default function App() {
             {/* Public Routes */}
             <Route path="/" element={<Index />} />
             <Route path="/auth" element={<Auth />} />
+            <Route path="/auth/callback" element={<OAuthCallback />} />
             <Route path="/browse" element={<Browse />} />
 
             {/* User Protected Routes */}

@@ -146,6 +146,7 @@ export default function AdminLogin() {
                         id="admin-password"
                         name="password"
                         type="password"
+                        dir="ltr"
                         className="pl-9 bg-zinc-900 border-zinc-800"
                         required
                       />
@@ -217,6 +218,7 @@ export default function AdminLogin() {
                         id="new-admin-password"
                         name="password"
                         type="password"
+                        dir="ltr"
                         className="pl-9 bg-zinc-900 border-zinc-800"
                         required
                         minLength={8}
